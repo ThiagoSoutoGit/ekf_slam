@@ -138,11 +138,16 @@ public:
                 if (current_position_.size() > 0)
                 {
                     // double theta_sum = pose2d.theta + current_position_(2);
-                    // double xw = (pose.position.x * cos(theta_sum)) - (pose.position.z * sin(theta_sum));
-                    // double yw = (pose.position.z * cos(theta_sum)) - (pose.position.x * sin(theta_sum));
+                    // double xw = (pose.position.x * cos(theta_sum)) - (pose.position.z * sin(theta_sum) + pose.position.x);
+                    // double yw = (pose.position.z * cos(theta_sum)) - (pose.position.x * sin(theta_sum) + pose.position.y);
 
-                    double xw = (pose.position.x * cos(pose2d.theta)) - (z * sin(pose2d.theta));
-                    double yw = (z * cos(pose2d.theta)) - (pose.position.x * sin(pose2d.theta));
+                    //Without xz and yz
+                    double theta_sum = pose2d.theta + current_position_(2);
+                    double xw = (pose.position.x * cos(theta_sum)) - (pose.position.z * sin(theta_sum));
+                    double yw = (pose.position.z * cos(theta_sum)) - (pose.position.x * sin(theta_sum));
+
+                    // double xw = (pose.position.x * cos(pose2d.theta)) - (z * sin(pose2d.theta));
+                    // double yw = (z * cos(pose2d.theta)) - (pose.position.x * sin(pose2d.theta));
 
                     landmark_position_(0) = current_position_(0) + xw;
                     landmark_position_(1) = current_position_(1) + yw;

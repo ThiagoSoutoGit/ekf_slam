@@ -8,7 +8,6 @@ Panels:
         - /Status1
         - /MarkerArray1
         - /MarkerArray2
-        - /RobotModel1/Status1
       Splitter Ratio: 0.5
     Tree Height: 746
   - Class: rviz/Selection
@@ -289,7 +288,7 @@ Visualization Manager:
         Z: -0.10747566819190979
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
-      Invert Z Axis: true
+      Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
       Pitch: 1.139796257019043

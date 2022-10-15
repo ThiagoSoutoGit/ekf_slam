@@ -4,7 +4,11 @@
 
     <include file="/home/thiago/turtlebot2/src/turtlebot_simulator/turtlebot_gazebo/launch/turtlebot_world.launch">
         <!-- <arg name="world_file" value="/home/thiago/catkin_ws/src/ekf_slam/config/gazebo/aruco_world"/> -->
-        <arg name="world_file" value="/home/thiago/catkin_ws/src/ekf_slam/config/gazebo/aruco_world_from_0"/>
+        <!-- <arg name="world_file" value="/home/thiago/catkin_ws/src/ekf_slam/config/gazebo/aruco_world_from_0"/> -->
+        <!-- <arg name="world_file" value="/home/thiago/catkin_ws/src/ekf_slam/config/gazebo/aruco_world_4_markers"/> -->
+        <arg name="world_file" value="/home/thiago/catkin_ws/src/ekf_slam/config/gazebo/aruco_see_4"/>
+
+
 
     </include>
 
