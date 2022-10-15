@@ -1,0 +1,23 @@
+#goal definition
+
+# Desired pose - frame_id sets which world space to move in
+geometry_msgs/PoseStamped target_pose
+
+# End Effector ID to move to target_pose
+std_msgs/String link_id
+
+# Arm command
+# Enumeration 0 - 255
+uint8 STOP      = 0
+uint8 MOVE      = 1
+uint8 RESET     = 2
+uint8 ACTUATE   = 3
+uint8 command
+---
+#result definition
+uint8 status
+---
+#feedback
+
+# Enumeration 0 - 255
+uint8 status

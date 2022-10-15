@@ -1,0 +1,48 @@
+#goal definition
+# Arm Command Enumeration
+uint8 STOP    = 0
+uint8 MAP     = 1
+uint8 MOVE    = 2 # Move Arm to Position
+uint8 ACTUATE = 3 # e.g. prune/pick/thin
+
+# Arm command
+uint8 command
+
+# Initial Pose to move arm too
+geometry_msgs/PoseStamped init_pose
+
+# Planning Link
+std_msgs/String planning_link
+
+# World Link
+std_msgs/String world_link
+
+# To seek out alignment marker or not before scanning
+std_msgs/Bool get_marker
+
+# Path ID from path factory to generate scanning path
+uint8 path_id
+
+# Path to save data too
+std_msgs/String file_path
+---
+#result definition
+uint8 result
+---
+#feedback
+
+#Enumeration
+uint8 INIT       = 0
+uint8 MARKER     = 1
+uint8 CAPTURING  = 2
+uint8 ERROR      = 3
+#Task status
+uint8 status
+
+#Enumeration
+uint8 MOVING  = 4
+uint8 IDLE    = 5
+uint8 arm_status
+
+uint8 count
+uint8 total

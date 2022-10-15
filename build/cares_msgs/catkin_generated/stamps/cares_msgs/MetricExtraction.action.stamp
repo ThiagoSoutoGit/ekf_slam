@@ -1,0 +1,24 @@
+#goal definition
+# Arm Command Enumeration
+uint8 RESET    = 0
+uint8 CAPTURE  = 1
+uint8 MEASURE  = 2
+
+# Arm command
+uint8 command
+
+# Path to save data too
+std_msgs/String file_path
+---
+#result definition
+uint8 result
+---
+#feedback definition
+#Enumeration
+uint8 CAPTURING = 0
+uint8 MEASURING = 1
+#Task status
+uint8 status
+
+uint8 processed
+uint8 queued

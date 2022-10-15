@@ -1,0 +1,119 @@
+; Auto-generated. Do not edit!
+
+
+(cl:in-package cares_msgs-msg)
+
+
+;//! \htmlinclude MappingGoal.msg.html
+
+(cl:defclass <MappingGoal> (roslisp-msg-protocol:ros-message)
+  ((command
+    :reader command
+    :initarg :command
+    :type cl:fixnum
+    :initform 0)
+   (scanning_goals
+    :reader scanning_goals
+    :initarg :scanning_goals
+    :type (cl:vector cares_msgs-msg:ScanningGoal)
+   :initform (cl:make-array 0 :element-type 'cares_msgs-msg:ScanningGoal :initial-element (cl:make-instance 'cares_msgs-msg:ScanningGoal)))
+   (metric_goal
+    :reader metric_goal
+    :initarg :metric_goal
+    :type cares_msgs-msg:MetricExtractionGoal
+    :initform (cl:make-instance 'cares_msgs-msg:MetricExtractionGoal)))
+)
+
+(cl:defclass MappingGoal (<MappingGoal>)
+  ())
+
+(cl:defmethod cl:initialize-instance :after ((m <MappingGoal>) cl:&rest args)
+  (cl:declare (cl:ignorable args))
+  (cl:unless (cl:typep m 'MappingGoal)
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name cares_msgs-msg:<MappingGoal> is deprecated: use cares_msgs-msg:MappingGoal instead.")))
+
+(cl:ensure-generic-function 'command-val :lambda-list '(m))
+(cl:defmethod command-val ((m <MappingGoal>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader cares_msgs-msg:command-val is deprecated.  Use cares_msgs-msg:command instead.")
+  (command m))
+
+(cl:ensure-generic-function 'scanning_goals-val :lambda-list '(m))
+(cl:defmethod scanning_goals-val ((m <MappingGoal>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader cares_msgs-msg:scanning_goals-val is deprecated.  Use cares_msgs-msg:scanning_goals instead.")
+  (scanning_goals m))
+
+(cl:ensure-generic-function 'metric_goal-val :lambda-list '(m))
+(cl:defmethod metric_goal-val ((m <MappingGoal>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader cares_msgs-msg:metric_goal-val is deprecated.  Use cares_msgs-msg:metric_goal instead.")
+  (metric_goal m))
+(cl:defmethod roslisp-msg-protocol:symbol-codes ((msg-type (cl:eql '<MappingGoal>)))
+    "Constants for message type '<MappingGoal>"
+  '((:STOP . 0)
+    (:MAP . 1)
+    (:ACTUATE . 3))
+)
+(cl:defmethod roslisp-msg-protocol:symbol-codes ((msg-type (cl:eql 'MappingGoal)))
+    "Constants for message type 'MappingGoal"
+  '((:STOP . 0)
+    (:MAP . 1)
+    (:ACTUATE . 3))
+)
+(cl:defmethod roslisp-msg-protocol:serialize ((msg <MappingGoal>) ostream)
+  "Serializes a message object of type '<MappingGoal>"
+  (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'command)) ostream)
+  (cl:let ((__ros_arr_len (cl:length (cl:slot-value msg 'scanning_goals))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) __ros_arr_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) __ros_arr_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) __ros_arr_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) __ros_arr_len) ostream))
+  (cl:map cl:nil #'(cl:lambda (ele) (roslisp-msg-protocol:serialize ele ostream))
+   (cl:slot-value msg 'scanning_goals))
+  (roslisp-msg-protocol:serialize (cl:slot-value msg 'metric_goal) ostream)
+)
+(cl:defmethod roslisp-msg-protocol:deserialize ((msg <MappingGoal>) istream)
+  "Deserializes a message object of type '<MappingGoal>"
+    (cl:setf (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'command)) (cl:read-byte istream))
+  (cl:let ((__ros_arr_len 0))
+    (cl:setf (cl:ldb (cl:byte 8 0) __ros_arr_len) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 8) __ros_arr_len) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 16) __ros_arr_len) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 24) __ros_arr_len) (cl:read-byte istream))
+  (cl:setf (cl:slot-value msg 'scanning_goals) (cl:make-array __ros_arr_len))
+  (cl:let ((vals (cl:slot-value msg 'scanning_goals)))
+    (cl:dotimes (i __ros_arr_len)
+    (cl:setf (cl:aref vals i) (cl:make-instance 'cares_msgs-msg:ScanningGoal))
+  (roslisp-msg-protocol:deserialize (cl:aref vals i) istream))))
+  (roslisp-msg-protocol:deserialize (cl:slot-value msg 'metric_goal) istream)
+  msg
+)
+(cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<MappingGoal>)))
+  "Returns string type for a message object of type '<MappingGoal>"
+  "cares_msgs/MappingGoal")
+(cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'MappingGoal)))
+  "Returns string type for a message object of type 'MappingGoal"
+  "cares_msgs/MappingGoal")
+(cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<MappingGoal>)))
+  "Returns md5sum for a message object of type '<MappingGoal>"
+  "f45265005af9eb076d6afb20e6b32c3b")
+(cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'MappingGoal)))
+  "Returns md5sum for a message object of type 'MappingGoal"
+  "f45265005af9eb076d6afb20e6b32c3b")
+(cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<MappingGoal>)))
+  "Returns full string definition for message of type '<MappingGoal>"
+  (cl:format cl:nil "# ====== DO NOT MODIFY! AUTOGENERATED FROM AN ACTION DEFINITION ======~%#goal definition~%# Mapping Command Enumeration~%uint8 STOP    = 0~%uint8 MAP     = 1~%uint8 ACTUATE = 3 # e.g. prune/pick/thin~%~%uint8 command~%~%cares_msgs/ScanningGoal[] scanning_goals~%cares_msgs/MetricExtractionGoal metric_goal~%~%================================================================================~%MSG: cares_msgs/ScanningGoal~%# ====== DO NOT MODIFY! AUTOGENERATED FROM AN ACTION DEFINITION ======~%#goal definition~%# Arm Command Enumeration~%uint8 STOP    = 0~%uint8 MAP     = 1~%uint8 MOVE    = 2 # Move Arm to Position~%uint8 ACTUATE = 3 # e.g. prune/pick/thin~%~%# Arm command~%uint8 command~%~%# Initial Pose to move arm too~%geometry_msgs/PoseStamped init_pose~%~%# Planning Link~%std_msgs/String planning_link~%~%# World Link~%std_msgs/String world_link~%~%# To seek out alignment marker or not before scanning~%std_msgs/Bool get_marker~%~%# Path ID from path factory to generate scanning path~%uint8 path_id~%~%# Path to save data too~%std_msgs/String file_path~%~%================================================================================~%MSG: geometry_msgs/PoseStamped~%# A Pose with reference coordinate frame and timestamp~%Header header~%Pose pose~%~%================================================================================~%MSG: std_msgs/Header~%# Standard metadata for higher-level stamped data types.~%# This is generally used to communicate timestamped data ~%# in a particular coordinate frame.~%# ~%# sequence ID: consecutively increasing ID ~%uint32 seq~%#Two-integer timestamp that is expressed as:~%# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')~%# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')~%# time-handling sugar is provided by the client library~%time stamp~%#Frame this data is associated with~%string frame_id~%~%================================================================================~%MSG: geometry_msgs/Pose~%# A representation of pose in free space, composed of position and orientation. ~%Point position~%Quaternion orientation~%~%================================================================================~%MSG: geometry_msgs/Point~%# This contains the position of a point in free space~%float64 x~%float64 y~%float64 z~%~%================================================================================~%MSG: geometry_msgs/Quaternion~%# This represents an orientation in free space in quaternion form.~%~%float64 x~%float64 y~%float64 z~%float64 w~%~%================================================================================~%MSG: std_msgs/String~%string data~%~%================================================================================~%MSG: std_msgs/Bool~%bool data~%================================================================================~%MSG: cares_msgs/MetricExtractionGoal~%# ====== DO NOT MODIFY! AUTOGENERATED FROM AN ACTION DEFINITION ======~%#goal definition~%# Arm Command Enumeration~%uint8 RESET    = 0~%uint8 CAPTURE  = 1~%uint8 MEASURE  = 2~%~%# Arm command~%uint8 command~%~%# Path to save data too~%std_msgs/String file_path~%~%~%"))
+(cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'MappingGoal)))
+  "Returns full string definition for message of type 'MappingGoal"
+  (cl:format cl:nil "# ====== DO NOT MODIFY! AUTOGENERATED FROM AN ACTION DEFINITION ======~%#goal definition~%# Mapping Command Enumeration~%uint8 STOP    = 0~%uint8 MAP     = 1~%uint8 ACTUATE = 3 # e.g. prune/pick/thin~%~%uint8 command~%~%cares_msgs/ScanningGoal[] scanning_goals~%cares_msgs/MetricExtractionGoal metric_goal~%~%================================================================================~%MSG: cares_msgs/ScanningGoal~%# ====== DO NOT MODIFY! AUTOGENERATED FROM AN ACTION DEFINITION ======~%#goal definition~%# Arm Command Enumeration~%uint8 STOP    = 0~%uint8 MAP     = 1~%uint8 MOVE    = 2 # Move Arm to Position~%uint8 ACTUATE = 3 # e.g. prune/pick/thin~%~%# Arm command~%uint8 command~%~%# Initial Pose to move arm too~%geometry_msgs/PoseStamped init_pose~%~%# Planning Link~%std_msgs/String planning_link~%~%# World Link~%std_msgs/String world_link~%~%# To seek out alignment marker or not before scanning~%std_msgs/Bool get_marker~%~%# Path ID from path factory to generate scanning path~%uint8 path_id~%~%# Path to save data too~%std_msgs/String file_path~%~%================================================================================~%MSG: geometry_msgs/PoseStamped~%# A Pose with reference coordinate frame and timestamp~%Header header~%Pose pose~%~%================================================================================~%MSG: std_msgs/Header~%# Standard metadata for higher-level stamped data types.~%# This is generally used to communicate timestamped data ~%# in a particular coordinate frame.~%# ~%# sequence ID: consecutively increasing ID ~%uint32 seq~%#Two-integer timestamp that is expressed as:~%# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')~%# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')~%# time-handling sugar is provided by the client library~%time stamp~%#Frame this data is associated with~%string frame_id~%~%================================================================================~%MSG: geometry_msgs/Pose~%# A representation of pose in free space, composed of position and orientation. ~%Point position~%Quaternion orientation~%~%================================================================================~%MSG: geometry_msgs/Point~%# This contains the position of a point in free space~%float64 x~%float64 y~%float64 z~%~%================================================================================~%MSG: geometry_msgs/Quaternion~%# This represents an orientation in free space in quaternion form.~%~%float64 x~%float64 y~%float64 z~%float64 w~%~%================================================================================~%MSG: std_msgs/String~%string data~%~%================================================================================~%MSG: std_msgs/Bool~%bool data~%================================================================================~%MSG: cares_msgs/MetricExtractionGoal~%# ====== DO NOT MODIFY! AUTOGENERATED FROM AN ACTION DEFINITION ======~%#goal definition~%# Arm Command Enumeration~%uint8 RESET    = 0~%uint8 CAPTURE  = 1~%uint8 MEASURE  = 2~%~%# Arm command~%uint8 command~%~%# Path to save data too~%std_msgs/String file_path~%~%~%"))
+(cl:defmethod roslisp-msg-protocol:serialization-length ((msg <MappingGoal>))
+  (cl:+ 0
+     1
+     4 (cl:reduce #'cl:+ (cl:slot-value msg 'scanning_goals) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ (roslisp-msg-protocol:serialization-length ele))))
+     (roslisp-msg-protocol:serialization-length (cl:slot-value msg 'metric_goal))
+))
+(cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <MappingGoal>))
+  "Converts a ROS message object to a list"
+  (cl:list 'MappingGoal
+    (cl:cons ':command (command msg))
+    (cl:cons ':scanning_goals (scanning_goals msg))
+    (cl:cons ':metric_goal (metric_goal msg))
+))

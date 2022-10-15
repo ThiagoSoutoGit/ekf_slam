@@ -1,0 +1,2 @@
+aruco_detector:cares_msgs:ekf_slam:rosdoc_lite
+-DCATKIN_DEVEL_PREFIX=/home/thiago/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/thiago/catkin_ws/install -G Unix Makefiles

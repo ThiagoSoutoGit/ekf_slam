@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<launch>
+
+    <include file="/home/thiago/turtlebot2/src/turtlebot_simulator/turtlebot_gazebo/launch/turtlebot_world.launch">
+        <!-- <arg name="world_file" value="/home/thiago/catkin_ws/src/ekf_slam/config/gazebo/aruco_world"/> -->
+        <arg name="world_file" value="/home/thiago/catkin_ws/src/ekf_slam/config/gazebo/aruco_world_from_0"/>
+
+    </include>
+
+    <include file="/home/thiago/turtlebot2/src/turtlebot/turtlebot_teleop/launch/keyboard_teleop.launch">
+    </include>
+
+    <node type="rviz" name="rviz" pkg="rviz" args="-d /home/thiago/catkin_ws/src/ekf_slam/config/rviz/ekf.rviz" launch-prefix="xterm -e"/>
+    <!-- <node type="rviz" name="rviz" pkg="rviz" args="-d /home/thiago/catkin_ws/src/ekf_slam/config/rviz/ekf.rviz" launch-prefix="xterm -e"/> -->
+
+
+
+    <include file="src/aruco_detector/launch/mono_aruco_detector.launch">
+        <arg name="dictionary" value="1"/>
+        <arg name="image" value="/camera/rgb/image_raw"/>
+        <arg name="camera_info" value="/camera/rgb/camera_info"/>
+        <arg name="marker_length" value="170.666173697"/>
+    </include>
+
+    <!-- <node type="landmarks_node" name="landmarks_node" pkg="ekf_slam" launch-prefix="gnome-terminal -x"/> -->
+    <node type="landmarks_node" name="landmarks_node" pkg="ekf_slam" launch-prefix="xterm -e"/>
+
+    <node type="draw_map_node" name="draw_map_node" pkg="ekf_slam"/>
+
+
+</launch>
+
+

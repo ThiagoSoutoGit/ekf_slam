@@ -1,0 +1,8 @@
+prefix=/home/thiago/catkin_ws/install
+
+Name: rosdoc_lite
+Description: Description of rosdoc_lite
+Version: 0.2.10
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
