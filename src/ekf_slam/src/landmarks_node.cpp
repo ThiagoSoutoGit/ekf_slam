@@ -39,35 +39,28 @@ class PublishLandmarks
 public:
     PublishLandmarks(ros::NodeHandle &nh)
     {
-        // aruco_sub_ = nh.subscribe("stereo_pair/markers", 1000, &PublishLandmarks::calculateArucoPosition, this);
 
+        //GOODish TimeSynchronizer
         // message_filters::Subscriber<nav_msgs::Odometry::ConstPtr> odom_filter_sub_(nh, "odom", 1);
         // message_filters::Subscriber<cares_msgs::ArucoMarkers::ConstPtr> aruco_filter_sub_.subscribe(nh, "stereo_pair/markers", 1);
         // message_filters::TimeSynchronizer<nav_msgs::Odometry::ConstPtr, cares_msgs::ArucoMarkers> sync(odom_filter_sub_, aruco_filter_sub_, 10);
         // sync.registerCallback(std::bind(&PublishLandmarks::moveRobot, this,_1, _2));
 
-        message_filters::Subscriber<cares_msgs::ArucoMarkers> aruco_sub_(nh, "stereo_pair/markers", 100);
-        message_filters::Subscriber<nav_msgs::Odometry> odom_sub_(nh, "odom", 100);
 
-
-        typedef message_filters::sync_policies::ApproximateTime<cares_msgs::ArucoMarkers, nav_msgs::Odometry> MySyncPolicy;
-        // ApproximateTime takes a queue size as its constructor argument, hence MySyncPolicy(10)
-        message_filters::Synchronizer<MySyncPolicy> sync(MySyncPolicy(100), aruco_sub_, odom_sub_);
-        sync.registerCallback(boost::bind(&PublishLandmarks::moveRobot, this, _1, _2));
-
-
-
-
-
-
-        // message_filters::ApproximateTimeSynchronizer<cares_msgs::ArucoMarkers, nav_msgs::Odometry> sync(image_sub, info_sub, 100);
+        //GOODish ApproximateTime
+        // message_filters::Subscriber<cares_msgs::ArucoMarkers> aruco_sub_(nh, "stereo_pair/markers", 100);
+        // message_filters::Subscriber<nav_msgs::Odometry> odom_sub_(nh, "odom", 100);
+        // typedef message_filters::sync_policies::ApproximateTime<cares_msgs::ArucoMarkers, nav_msgs::Odometry> MySyncPolicy;
+        // // ApproximateTime takes a queue size as its constructor argument, hence MySyncPolicy(10)
+        // message_filters::Synchronizer<MySyncPolicy> sync(MySyncPolicy(100), aruco_sub_, odom_sub_);
         // sync.registerCallback(boost::bind(&PublishLandmarks::moveRobot, this, _1, _2));
 
 
 
+
         
-        // aruco_sub_ = nh.subscribe("stereo_pair/markers", 100, &PublishLandmarks::moveRobot, this);
-        // odom_sub_ = nh.subscribe("odom", 100, &PublishLandmarks::currentPosition, this);
+        aruco_sub_ = nh.subscribe("stereo_pair/markers", 100, &PublishLandmarks::calculateArucoPosition, this);
+        odom_sub_ = nh.subscribe("odom", 100, &PublishLandmarks::currentPosition, this);
 
         landmark_pub_ = nh.advertise<ekf_slam::LandmarksMap>("landmarks", 100, true);
         odom_pub_ = nh.advertise<ekf_slam::LandmarksMap>("robot_path", 100, true);
@@ -99,13 +92,13 @@ public:
     }
 
 
-    void moveRobot(const cares_msgs::ArucoMarkers::ConstPtr &aruco_marker, const nav_msgs::Odometry::ConstPtr &odom_msg)
-    {
-        // calculateArucoPosition(aruco_marker);
-        // std::cout << odom_msg->pose.pose.position.x << std::endl;
-        std::cout << "ECHO" << std::endl;
+    // void moveRobot(const cares_msgs::ArucoMarkers::ConstPtr &aruco_marker, const nav_msgs::Odometry::ConstPtr &odom_msg)
+    // {
+    //     // calculateArucoPosition(aruco_marker);
+    //     // std::cout << odom_msg->pose.pose.position.x << std::endl;
+    //     std::cout << "ECHO" << std::endl;
 
-    }
+    // }
 
     
 
@@ -217,8 +210,7 @@ public:
                     }
 
                     else if (contains(marker_ids_, aruco_marker->marker_ids[i])){
-                        int ind = 0;
-                        getIndex(land_map_.id, aruco_marker->marker_ids[i]);
+                        int ind = getIndex(land_map_.id, aruco_marker->marker_ids[i]);
                         land_map_.id[ind] = aruco_marker->marker_ids[i];
                         land_map_.x[ind] = landmark_position_(0);
                         land_map_.y[ind] = landmark_position_(1);
@@ -374,8 +366,8 @@ public:
 private:
     ros::Publisher landmark_pub_;
     ros::Publisher odom_pub_;
-    // ros::Subscriber aruco_sub_;
-    // ros::Subscriber odom_sub_;
+    ros::Subscriber aruco_sub_;
+    ros::Subscriber odom_sub_;
     Eigen::Vector3d current_position_;
     Eigen::Vector3d landmark_position_;
     ekf_slam::LandmarksMap land_map_;

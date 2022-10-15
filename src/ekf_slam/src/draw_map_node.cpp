@@ -127,7 +127,7 @@ public:
             marker.color.b = 0;
             marker.scale.z = 1.0;
             // 5 Hz publish rate
-            marker.lifetime = ros::Duration(1000);
+            marker.lifetime = ros::Duration(1 / 4.0);
             break;
         case 2:
             shape = visualization_msgs::Marker::SPHERE;
