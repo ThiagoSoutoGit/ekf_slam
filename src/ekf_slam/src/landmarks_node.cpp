@@ -34,31 +34,20 @@
 #include <message_filters/sync_policies/approximate_time.h>
 
 
+//!  PublishLandmarks class. 
+/*!
+* Reads aruco markers from the arucomarkers detector, calculates their positions, classifies them based on the ID, and publishes: odometry(robot_path) and the landmarks positions classified(landmarks).
+    1. Reads /landmaks topic
+    2. Classify landmarks and publish to rviz
+    3. Reads /robot_path topic
+    4. Publish odometry to rviz
+*/
 class PublishLandmarks
 {
 public:
     PublishLandmarks(ros::NodeHandle &nh)
     {
 
-        //GOODish TimeSynchronizer
-        // message_filters::Subscriber<nav_msgs::Odometry::ConstPtr> odom_filter_sub_(nh, "odom", 1);
-        // message_filters::Subscriber<cares_msgs::ArucoMarkers::ConstPtr> aruco_filter_sub_.subscribe(nh, "stereo_pair/markers", 1);
-        // message_filters::TimeSynchronizer<nav_msgs::Odometry::ConstPtr, cares_msgs::ArucoMarkers> sync(odom_filter_sub_, aruco_filter_sub_, 10);
-        // sync.registerCallback(std::bind(&PublishLandmarks::moveRobot, this,_1, _2));
-
-
-        //GOODish ApproximateTime
-        // message_filters::Subscriber<cares_msgs::ArucoMarkers> aruco_sub_(nh, "stereo_pair/markers", 100);
-        // message_filters::Subscriber<nav_msgs::Odometry> odom_sub_(nh, "odom", 100);
-        // typedef message_filters::sync_policies::ApproximateTime<cares_msgs::ArucoMarkers, nav_msgs::Odometry> MySyncPolicy;
-        // // ApproximateTime takes a queue size as its constructor argument, hence MySyncPolicy(10)
-        // message_filters::Synchronizer<MySyncPolicy> sync(MySyncPolicy(100), aruco_sub_, odom_sub_);
-        // sync.registerCallback(boost::bind(&PublishLandmarks::moveRobot, this, _1, _2));
-
-
-
-
-        
         aruco_sub_ = nh.subscribe("stereo_pair/markers", 100, &PublishLandmarks::calculateArucoPosition, this);
         odom_sub_ = nh.subscribe("odom", 100, &PublishLandmarks::currentPosition, this);
 
@@ -83,14 +72,12 @@ public:
         return result;
     }
 
-
     int getIndex(std::vector<int64_t> v, int K)
     {
         auto it = std::find(v.begin(), v.end(), K);
         int index = it - v.begin();
         return index;
     }
-
 
     // void moveRobot(const cares_msgs::ArucoMarkers::ConstPtr &aruco_marker, const nav_msgs::Odometry::ConstPtr &odom_msg)
     // {
@@ -100,9 +87,7 @@ public:
 
     // }
 
-    
-
-    /// \brief save the scan from the lidar, cluste the points, call circle fitting algorithm
+    /// \brief calculates the aruco marker position and publishs them classified
     void calculateArucoPosition(const cares_msgs::ArucoMarkers::ConstPtr &aruco_marker)
     {
         if (!aruco_marker->marker_ids.empty())
@@ -141,7 +126,7 @@ public:
                     // double xw = (pose.position.x * cos(theta_sum)) - (pose.position.z * sin(theta_sum) + pose.position.x);
                     // double yw = (pose.position.z * cos(theta_sum)) - (pose.position.x * sin(theta_sum) + pose.position.y);
 
-                    //Without xz and yz
+                    // Without xz and yz
                     double theta_sum = pose2d.theta + current_position_(2);
                     double xw = (pose.position.x * cos(theta_sum)) - (pose.position.z * sin(theta_sum));
                     double yw = (pose.position.z * cos(theta_sum)) - (pose.position.x * sin(theta_sum));
@@ -176,7 +161,7 @@ public:
                     //     land_map_.y.erase(land_map_.y.begin());
                     //     land_map_.size.erase(land_map_.size.begin());
                     //     land_map_.map.erase(land_map_.map.begin());
-                    // } 
+                    // }
 
                     if (land_map_.id.empty())
                     {
@@ -187,24 +172,25 @@ public:
                         land_map_.map.emplace_back(1);
                         landmark_pub_.publish(land_map_);
                         marker_ids_.push_back(aruco_marker->marker_ids[i]);
-                    } 
-                    //else if (contains(marker_ids_, aruco_marker->marker_ids[i]))
-                    // {
-                    //     for ( int j = 0; j < land_map_.id.size(); j++){
-                    //         if (land_map_.id[j] == i){
-                    //             land_map_.id[j] = aruco_marker->marker_ids[i];
-                    //             land_map_.x[j] = landmark_position_(0);
-                    //             land_map_.y[j] = landmark_position_(1);
-                    //             land_map_.size[j] = size_;
-                    //             land_map_.map[j] = 1;
+                    }
+                    // else if (contains(marker_ids_, aruco_marker->marker_ids[i]))
+                    //  {
+                    //      for ( int j = 0; j < land_map_.id.size(); j++){
+                    //          if (land_map_.id[j] == i){
+                    //              land_map_.id[j] = aruco_marker->marker_ids[i];
+                    //              land_map_.x[j] = landmark_position_(0);
+                    //              land_map_.y[j] = landmark_position_(1);
+                    //              land_map_.size[j] = size_;
+                    //              land_map_.map[j] = 1;
 
                     //             landmark_pub_.publish(land_map_);
                     //             // marker_ids_.push_back(aruco_marker->marker_ids[i]);
                     //         }
                     //     }
-                        
-                    // } 
-                    else if (!contains(marker_ids_, aruco_marker->marker_ids[i])){
+
+                    // }
+                    else if (!contains(marker_ids_, aruco_marker->marker_ids[i]))
+                    {
                         land_map_.id.emplace_back(aruco_marker->marker_ids[i]);
                         land_map_.x.emplace_back(landmark_position_(0));
                         land_map_.y.emplace_back(landmark_position_(1));
@@ -214,7 +200,8 @@ public:
                         marker_ids_.push_back(aruco_marker->marker_ids[i]);
                     }
 
-                    else if (contains(marker_ids_, aruco_marker->marker_ids[i])){
+                    else if (contains(marker_ids_, aruco_marker->marker_ids[i]))
+                    {
                         int ind = getIndex(land_map_.id, aruco_marker->marker_ids[i]);
                         land_map_.id[ind] = aruco_marker->marker_ids[i];
                         land_map_.x[ind] = landmark_position_(0);
@@ -225,12 +212,7 @@ public:
                         // marker_ids_.push_back(aruco_marker->marker_ids[i]);
                     }
 
-
-                    
-
-                    
-
-                                        // else if ((fabs(landmark_position_(0) - land_map_.x.back()) > land_map_threshold_) ||
+                    // else if ((fabs(landmark_position_(0) - land_map_.x.back()) > land_map_threshold_) ||
                     //          (fabs(landmark_position_(1) - land_map_.y.back()) > land_map_threshold_))
                     // {
                     //     land_map_.id.emplace_back(aruco_marker->marker_ids[i]);
@@ -311,7 +293,7 @@ public:
         }
     }
 
-    /// \brief save the scan from the lidar, cluste the points, call circle fitting algorithm
+    /// \brief read odometry and publishes the robot's path.
     void currentPosition(const nav_msgs::Odometry::ConstPtr &msg)
     {
         geometry_msgs::Pose2D pose2d;
@@ -388,13 +370,7 @@ private:
     double odom_marker_size_threshold_;
     double land_map_threshold_;
     double size_;
-
-
-
-    // message_filters::Subscriber<nav_msgs::Odometry::ConstPtr> odom_filter_sub_;
-    // message_filters::Subscriber<cares_msgs::ArucoMarkers::ConstPtr> aruco_filter_sub_;
 };
-
 
 int main(int argc, char *argv[])
 {
@@ -404,8 +380,6 @@ int main(int argc, char *argv[])
     ros::NodeHandle nh;
 
     PublishLandmarks pl = PublishLandmarks(nh);
-
-
 
     // ros::Rate rate(5);
 

@@ -29,6 +29,8 @@ var menudata={children:[
 {text:"a",url:"functions.html#index_a"},
 {text:"c",url:"functions.html#index_c"},
 {text:"d",url:"functions.html#index_d"},
+{text:"e",url:"functions.html#index_e"},
+{text:"g",url:"functions.html#index_g"},
 {text:"l",url:"functions.html#index_l"},
 {text:"m",url:"functions.html#index_m"},
 {text:"o",url:"functions.html#index_o"},

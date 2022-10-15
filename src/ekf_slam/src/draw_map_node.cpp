@@ -16,17 +16,29 @@
 #include <ekf_slam/LandmarksMap.h>
 #include <string>
 
-/**
-* Reads landmarks and odometry and publishes to rviz:
-* 1. Reads /landmaks topic
-* 2. Classify landmarks and publish to rviz
-* 3. Reads /robot_path topic
-* 4. Publish odometry to rviz
-*
+//!  DrawMap class. 
+/*!
+Reads landmarks and odometry and publishes to rviz:
+    1. Reads /landmaks topic
+    2. Classify landmarks and publish to rviz
+    3. Reads /robot_path topic
+    4. Publish odometry to rviz
 */
 class DrawMap
 {
 public:
+    //!  \brief The constructor initializes the publishers and subscribers.
+    /*!
+    PUBLISHERS:
+
+        map_pub_(/map_rviz)
+        robot_path_pub_(/robot_path_rviz)
+
+    SUBSCRIBERS:
+
+        map_sub_(/landmarks)
+        robot_path_sub_(/robot_path)
+    */
     DrawMap(ros::NodeHandle &nh)
     {
         map_pub_ = nh.advertise<visualization_msgs::MarkerArray>("map_rviz", 100, true);

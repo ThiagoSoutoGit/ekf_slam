@@ -25,6 +25,9 @@ $(function() {
 <div class="title">DrawMap Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="classDrawMap.html" title="DrawMap class.">DrawMap</a> class.  
+ <a href="classDrawMap.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -32,6 +35,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a985c7f225784f4b0f01f39c24ddcbcd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">create markers  <a href="classDrawMap.html#a985c7f225784f4b0f01f39c24ddcbcd0">More...</a><br /></td></tr>
 <tr class="separator:a985c7f225784f4b0f01f39c24ddcbcd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a805fd62ac5373cc010714ccfce366b00"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDrawMap.html#a805fd62ac5373cc010714ccfce366b00">DrawMap</a> (ros::NodeHandle &amp;nh)</td></tr>
+<tr class="memdesc:a805fd62ac5373cc010714ccfce366b00"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor initializes the publishers and subscribers.  <a href="classDrawMap.html#a805fd62ac5373cc010714ccfce366b00">More...</a><br /></td></tr>
 <tr class="separator:a805fd62ac5373cc010714ccfce366b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f73896a59209c7a9bf3a83c2f3f5ecd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDrawMap.html#a6f73896a59209c7a9bf3a83c2f3f5ecd">sub_landmark</a> (const ekf_slam::LandmarksMap &amp;msg)</td></tr>
 <tr class="memdesc:a6f73896a59209c7a9bf3a83c2f3f5ecd"><td class="mdescLeft">&#160;</td><td class="mdescRight">receive landmark positions  <a href="classDrawMap.html#a6f73896a59209c7a9bf3a83c2f3f5ecd">More...</a><br /></td></tr>
@@ -58,7 +62,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ac0c45f19be5af817e5e7417a16d2b1f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Reads landmarks and odometry and publishes to rviz:</p><ol type="1">
+<div class="textblock"><p><a class="el" href="classDrawMap.html" title="DrawMap class.">DrawMap</a> class. </p>
+<p>Reads landmarks and odometry and publishes to rviz:</p><ol type="1">
 <li>Reads /landmaks topic</li>
 <li>Classify landmarks and publish to rviz</li>
 <li>Reads /robot_path topic</li>
@@ -91,7 +96,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00030">30</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
+<p>The constructor initializes the publishers and subscribers. </p>
+<p>PUBLISHERS: </p><pre class="fragment">map_pub_(/map_rviz)
+robot_path_pub_(/robot_path_rviz)
+</pre><p>SUBSCRIBERS: </p><pre class="fragment">map_sub_(/landmarks)
+robot_path_sub_(/robot_path)
+</pre> 
+<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00042">42</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -150,7 +161,7 @@ Private Attributes</h2></td></tr>
 
 <p>create markers </p>
 
-<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00107">107</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00133">133</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -180,7 +191,7 @@ Private Attributes</h2></td></tr>
 
 <p>receive landmark positions </p>
 
-<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00055">55</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00067">67</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -210,7 +221,7 @@ Private Attributes</h2></td></tr>
 
 <p>receive robot paths positions </p>
 
-<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00083">83</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00109">109</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -235,7 +246,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00216">216</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00247">247</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -259,7 +270,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00217">217</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00248">248</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -283,7 +294,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00221">221</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00252">252</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -307,7 +318,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00222">222</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00253">253</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -331,7 +342,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00218">218</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00249">249</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -355,7 +366,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00219">219</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00250">250</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -379,7 +390,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00223">223</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00254">254</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -392,7 +403,7 @@ Private Attributes</h2></td></tr>
 <hr size="1"><div style="align: right;">
 <a href="http://wiki.ros.org/ekf_slam">ekf_slam</a><br />
 Author(s): </br />
-<small>autogenerated on Fri Oct 14 2022 11:19:46</small>
+<small>autogenerated on Sun Oct 16 2022 09:07:55</small>
 </div>
 </body>
 </html>

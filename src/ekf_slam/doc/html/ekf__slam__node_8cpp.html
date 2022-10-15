@@ -28,14 +28,38 @@ $(function() {
 <div class="title">ekf_slam_node.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;ros/ros.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;message_filters/subscriber.h&gt;</code><br />
+<code>#include &lt;message_filters/time_synchronizer.h&gt;</code><br />
+<code>#include &lt;message_filters/synchronizer.h&gt;</code><br />
+<code>#include &lt;message_filters/sync_policies/approximate_time.h&gt;</code><br />
+<code>#include &lt;sensor_msgs/Image.h&gt;</code><br />
+<code>#include &lt;sensor_msgs/CameraInfo.h&gt;</code><br />
+<code>#include &lt;cares_msgs/StereoCameraInfo.h&gt;</code><br />
+<code>#include &quot;cares_msgs/ArucoDetect.h&quot;</code><br />
+<code>#include &quot;cares_msgs/ArucoMarkers.h&quot;</code><br />
+<code>#include &quot;nav_msgs/Odometry.h&quot;</code><br />
+<code>#include &lt;Eigen/Core&gt;</code><br />
+<code>#include &lt;Eigen/Geometry&gt;</code><br />
+<code>#include &lt;Eigen/Dense&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for ekf_slam_node.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="ekf__slam__node_8cpp__incl.png" border="0" usemap="#ekf__slam__node_8cpp" alt=""/></div>
 <map name="ekf__slam__node_8cpp" id="ekf__slam__node_8cpp">
-<area shape="rect" title=" " alt="" coords="5,5,153,32"/>
-<area shape="rect" title=" " alt="" coords="40,80,119,107"/>
+<area shape="rect" title=" " alt="" coords="1317,5,1465,32"/>
+<area shape="rect" title=" " alt="" coords="5,95,215,121"/>
+<area shape="rect" title=" " alt="" coords="239,87,399,129"/>
+<area shape="rect" title=" " alt="" coords="424,95,649,121"/>
+<area shape="rect" title=" " alt="" coords="673,80,840,136"/>
+<area shape="rect" title=" " alt="" coords="864,95,1028,121"/>
+<area shape="rect" title=" " alt="" coords="1052,95,1251,121"/>
+<area shape="rect" title=" " alt="" coords="1275,95,1508,121"/>
+<area shape="rect" title=" " alt="" coords="1533,95,1727,121"/>
+<area shape="rect" title=" " alt="" coords="1752,95,1956,121"/>
+<area shape="rect" title=" " alt="" coords="1980,95,2147,121"/>
+<area shape="rect" title=" " alt="" coords="2171,95,2263,121"/>
+<area shape="rect" title=" " alt="" coords="2287,95,2413,121"/>
+<area shape="rect" title=" " alt="" coords="2437,95,2540,121"/>
 </map>
 </div>
 </div>
@@ -43,17 +67,17 @@ Include dependency graph for ekf_slam_node.cpp:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPublishLandmarks.html">PublishLandmarks</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html">EkfSlam</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ekf__slam__node_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
-<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ekf__slam__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a0ddf1224851353fc92bfbff6f499fa97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&nbsp;</a></span>main()</h2>
+<a id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&nbsp;</a></span>main()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -67,8 +91,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>argv</em>[]&#160;</td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -78,7 +102,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00020">20</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00105">105</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -88,7 +112,7 @@ Functions</h2></td></tr>
 <hr size="1"><div style="align: right;">
 <a href="http://wiki.ros.org/ekf_slam">ekf_slam</a><br />
 Author(s): </br />
-<small>autogenerated on Fri Oct 14 2022 11:19:46</small>
+<small>autogenerated on Sun Oct 16 2022 09:07:55</small>
 </div>
 </body>
 </html>

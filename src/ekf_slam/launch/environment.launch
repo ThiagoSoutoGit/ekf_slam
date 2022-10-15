@@ -30,6 +30,8 @@
     <!-- <node type="landmarks_node" name="landmarks_node" pkg="ekf_slam" launch-prefix="gnome-terminal -x"/> -->
     <node type="landmarks_node" name="landmarks_node" pkg="ekf_slam" launch-prefix="xterm -e"/>
 
+    <node type="ekf_slam_node" name="ekf_slam_node" pkg="ekf_slam" launch-prefix="xterm -e"/>
+
     <node type="draw_map_node" name="draw_map_node" pkg="ekf_slam"/>
 
 
