@@ -19,42 +19,42 @@ add_custom_target(cares_msgs_generate_messages ALL)
 
 get_filename_component(_filename "/home/thiago/catkin_ws/src/cares_msgs/msg/ArucoMarkers.msg" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/src/cares_msgs/msg/ArucoMarkers.msg" "geometry_msgs/Point:geometry_msgs/Quaternion:std_msgs/Header:geometry_msgs/Pose"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/src/cares_msgs/msg/ArucoMarkers.msg" "geometry_msgs/Quaternion:geometry_msgs/Point:geometry_msgs/Pose:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/src/cares_msgs/msg/InstanceMasks.msg" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/src/cares_msgs/msg/InstanceMasks.msg" "std_msgs/Header:sensor_msgs/RegionOfInterest:sensor_msgs/Image"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/src/cares_msgs/msg/InstanceMasks.msg" "sensor_msgs/Image:sensor_msgs/RegionOfInterest:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg" "std_msgs/Header:sensor_msgs/RegionOfInterest:sensor_msgs/CameraInfo"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg" "sensor_msgs/CameraInfo:sensor_msgs/RegionOfInterest:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingAction.msg" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingAction.msg" "std_msgs/Bool:geometry_msgs/Point:cares_msgs/MetricExtractionFeedback:std_msgs/String:actionlib_msgs/GoalID:cares_msgs/MappingGoal:cares_msgs/MappingActionGoal:cares_msgs/ScanningGoal:geometry_msgs/Quaternion:cares_msgs/MappingResult:cares_msgs/MetricExtractionGoal:actionlib_msgs/GoalStatus:cares_msgs/MappingFeedback:geometry_msgs/PoseStamped:cares_msgs/MappingActionResult:std_msgs/Header:geometry_msgs/Pose:cares_msgs/MappingActionFeedback:cares_msgs/ScanningFeedback"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingAction.msg" "geometry_msgs/Quaternion:actionlib_msgs/GoalID:cares_msgs/MetricExtractionFeedback:cares_msgs/MappingGoal:geometry_msgs/PoseStamped:cares_msgs/MetricExtractionGoal:geometry_msgs/Pose:cares_msgs/MappingResult:cares_msgs/MappingActionResult:cares_msgs/MappingActionGoal:geometry_msgs/Point:std_msgs/Header:cares_msgs/MappingActionFeedback:cares_msgs/MappingFeedback:cares_msgs/ScanningGoal:cares_msgs/ScanningFeedback:std_msgs/Bool:actionlib_msgs/GoalStatus:std_msgs/String"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionGoal.msg" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionGoal.msg" "geometry_msgs/Quaternion:std_msgs/Bool:std_msgs/String:actionlib_msgs/GoalID:cares_msgs/MappingGoal:geometry_msgs/Point:cares_msgs/MetricExtractionGoal:geometry_msgs/PoseStamped:std_msgs/Header:cares_msgs/ScanningGoal:geometry_msgs/Pose"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionGoal.msg" "cares_msgs/MetricExtractionGoal:geometry_msgs/Pose:geometry_msgs/Quaternion:geometry_msgs/Point:std_msgs/Bool:actionlib_msgs/GoalID:std_msgs/String:cares_msgs/ScanningGoal:cares_msgs/MappingGoal:geometry_msgs/PoseStamped:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionResult.msg" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionResult.msg" "actionlib_msgs/GoalStatus:std_msgs/Header:cares_msgs/MappingResult:actionlib_msgs/GoalID"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionResult.msg" "cares_msgs/MappingResult:actionlib_msgs/GoalID:actionlib_msgs/GoalStatus:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionFeedback.msg" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionFeedback.msg" "cares_msgs/MetricExtractionFeedback:actionlib_msgs/GoalID:actionlib_msgs/GoalStatus:cares_msgs/MappingFeedback:std_msgs/Header:cares_msgs/ScanningFeedback"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionFeedback.msg" "cares_msgs/ScanningFeedback:actionlib_msgs/GoalStatus:actionlib_msgs/GoalID:cares_msgs/MetricExtractionFeedback:cares_msgs/MappingFeedback:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg" "geometry_msgs/Quaternion:std_msgs/Bool:std_msgs/String:cares_msgs/MetricExtractionGoal:geometry_msgs/Point:geometry_msgs/PoseStamped:std_msgs/Header:cares_msgs/ScanningGoal:geometry_msgs/Pose"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg" "cares_msgs/MetricExtractionGoal:geometry_msgs/Pose:geometry_msgs/Quaternion:std_msgs/Bool:std_msgs/Header:std_msgs/String:cares_msgs/ScanningGoal:geometry_msgs/PoseStamped:geometry_msgs/Point"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingResult.msg" NAME_WE)
@@ -64,27 +64,27 @@ add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg" "cares_msgs/MetricExtractionFeedback:cares_msgs/ScanningFeedback"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg" "cares_msgs/ScanningFeedback:cares_msgs/MetricExtractionFeedback"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionAction.msg" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionAction.msg" "cares_msgs/MetricExtractionActionResult:cares_msgs/MetricExtractionFeedback:cares_msgs/MetricExtractionActionGoal:std_msgs/String:actionlib_msgs/GoalID:cares_msgs/MetricExtractionGoal:actionlib_msgs/GoalStatus:cares_msgs/MetricExtractionResult:std_msgs/Header:cares_msgs/MetricExtractionActionFeedback"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionAction.msg" "cares_msgs/MetricExtractionGoal:actionlib_msgs/GoalStatus:cares_msgs/MetricExtractionResult:cares_msgs/MetricExtractionActionFeedback:actionlib_msgs/GoalID:std_msgs/String:cares_msgs/MetricExtractionActionGoal:cares_msgs/MetricExtractionFeedback:cares_msgs/MetricExtractionActionResult:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionGoal.msg" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionGoal.msg" "std_msgs/String:std_msgs/Header:actionlib_msgs/GoalID:cares_msgs/MetricExtractionGoal"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionGoal.msg" "cares_msgs/MetricExtractionGoal:actionlib_msgs/GoalID:std_msgs/String:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionResult.msg" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionResult.msg" "actionlib_msgs/GoalStatus:cares_msgs/MetricExtractionResult:std_msgs/Header:actionlib_msgs/GoalID"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionResult.msg" "actionlib_msgs/GoalID:actionlib_msgs/GoalStatus:cares_msgs/MetricExtractionResult:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionFeedback.msg" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionFeedback.msg" "actionlib_msgs/GoalStatus:cares_msgs/MetricExtractionFeedback:std_msgs/Header:actionlib_msgs/GoalID"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionFeedback.msg" "cares_msgs/MetricExtractionFeedback:actionlib_msgs/GoalID:actionlib_msgs/GoalStatus:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg" NAME_WE)
@@ -104,22 +104,22 @@ add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationAction.msg" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationAction.msg" "cares_msgs/NavigationActionGoal:cares_msgs/NavigationActionFeedback:actionlib_msgs/GoalID:cares_msgs/NavigationActionResult:actionlib_msgs/GoalStatus:cares_msgs/NavigationGoal:cares_msgs/NavigationFeedback:cares_msgs/NavigationResult:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationAction.msg" "cares_msgs/NavigationGoal:cares_msgs/NavigationActionFeedback:actionlib_msgs/GoalStatus:cares_msgs/NavigationResult:std_msgs/Header:actionlib_msgs/GoalID:cares_msgs/NavigationFeedback:cares_msgs/NavigationActionGoal:cares_msgs/NavigationActionResult"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionGoal.msg" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionGoal.msg" "std_msgs/Header:cares_msgs/NavigationGoal:actionlib_msgs/GoalID"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionGoal.msg" "actionlib_msgs/GoalID:cares_msgs/NavigationGoal:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionResult.msg" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionResult.msg" "actionlib_msgs/GoalStatus:std_msgs/Header:cares_msgs/NavigationResult:actionlib_msgs/GoalID"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionResult.msg" "actionlib_msgs/GoalID:actionlib_msgs/GoalStatus:cares_msgs/NavigationResult:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionFeedback.msg" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionFeedback.msg" "actionlib_msgs/GoalStatus:std_msgs/Header:cares_msgs/NavigationFeedback:actionlib_msgs/GoalID"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionFeedback.msg" "cares_msgs/NavigationFeedback:actionlib_msgs/GoalID:actionlib_msgs/GoalStatus:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationGoal.msg" NAME_WE)
@@ -139,27 +139,27 @@ add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalAction.msg" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalAction.msg" "geometry_msgs/Quaternion:cares_msgs/PlatformGoalActionGoal:std_msgs/String:cares_msgs/PlatformGoalResult:actionlib_msgs/GoalID:geometry_msgs/Point:cares_msgs/PlatformGoalGoal:actionlib_msgs/GoalStatus:geometry_msgs/PoseStamped:cares_msgs/PlatformGoalActionFeedback:cares_msgs/PlatformGoalActionResult:std_msgs/Header:cares_msgs/PlatformGoalFeedback:geometry_msgs/Pose"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalAction.msg" "cares_msgs/PlatformGoalActionFeedback:cares_msgs/PlatformGoalFeedback:geometry_msgs/Pose:geometry_msgs/Quaternion:geometry_msgs/Point:actionlib_msgs/GoalStatus:cares_msgs/PlatformGoalActionGoal:actionlib_msgs/GoalID:cares_msgs/PlatformGoalGoal:std_msgs/String:cares_msgs/PlatformGoalActionResult:cares_msgs/PlatformGoalResult:geometry_msgs/PoseStamped:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionGoal.msg" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionGoal.msg" "geometry_msgs/Quaternion:std_msgs/String:actionlib_msgs/GoalID:geometry_msgs/Point:cares_msgs/PlatformGoalGoal:geometry_msgs/PoseStamped:std_msgs/Header:geometry_msgs/Pose"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionGoal.msg" "geometry_msgs/Pose:geometry_msgs/Quaternion:geometry_msgs/Point:actionlib_msgs/GoalID:cares_msgs/PlatformGoalGoal:std_msgs/String:geometry_msgs/PoseStamped:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionResult.msg" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionResult.msg" "actionlib_msgs/GoalStatus:std_msgs/Header:cares_msgs/PlatformGoalResult:actionlib_msgs/GoalID"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionResult.msg" "cares_msgs/PlatformGoalResult:actionlib_msgs/GoalID:actionlib_msgs/GoalStatus:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionFeedback.msg" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionFeedback.msg" "actionlib_msgs/GoalStatus:std_msgs/Header:cares_msgs/PlatformGoalFeedback:actionlib_msgs/GoalID"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionFeedback.msg" "cares_msgs/PlatformGoalFeedback:actionlib_msgs/GoalID:actionlib_msgs/GoalStatus:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg" "geometry_msgs/Quaternion:std_msgs/String:geometry_msgs/Point:geometry_msgs/PoseStamped:std_msgs/Header:geometry_msgs/Pose"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg" "geometry_msgs/Quaternion:geometry_msgs/Pose:std_msgs/Header:std_msgs/String:geometry_msgs/PoseStamped:geometry_msgs/Point"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalResult.msg" NAME_WE)
@@ -174,27 +174,27 @@ add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningAction.msg" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningAction.msg" "geometry_msgs/Quaternion:std_msgs/Bool:cares_msgs/ScanningActionGoal:cares_msgs/ScanningActionResult:std_msgs/String:actionlib_msgs/GoalID:geometry_msgs/Point:actionlib_msgs/GoalStatus:cares_msgs/ScanningFeedback:geometry_msgs/PoseStamped:cares_msgs/ScanningActionFeedback:std_msgs/Header:cares_msgs/ScanningResult:cares_msgs/ScanningGoal:geometry_msgs/Pose"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningAction.msg" "cares_msgs/ScanningFeedback:cares_msgs/ScanningActionResult:geometry_msgs/Pose:geometry_msgs/Quaternion:geometry_msgs/Point:cares_msgs/ScanningActionFeedback:std_msgs/Bool:cares_msgs/ScanningActionGoal:actionlib_msgs/GoalStatus:cares_msgs/ScanningResult:actionlib_msgs/GoalID:std_msgs/String:cares_msgs/ScanningGoal:geometry_msgs/PoseStamped:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionGoal.msg" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionGoal.msg" "geometry_msgs/Quaternion:std_msgs/Bool:std_msgs/String:actionlib_msgs/GoalID:geometry_msgs/Point:geometry_msgs/PoseStamped:std_msgs/Header:cares_msgs/ScanningGoal:geometry_msgs/Pose"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionGoal.msg" "geometry_msgs/Pose:geometry_msgs/Quaternion:geometry_msgs/Point:std_msgs/Bool:actionlib_msgs/GoalID:std_msgs/String:cares_msgs/ScanningGoal:geometry_msgs/PoseStamped:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionResult.msg" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionResult.msg" "actionlib_msgs/GoalStatus:std_msgs/Header:cares_msgs/ScanningResult:actionlib_msgs/GoalID"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionResult.msg" "cares_msgs/ScanningResult:actionlib_msgs/GoalID:actionlib_msgs/GoalStatus:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionFeedback.msg" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionFeedback.msg" "actionlib_msgs/GoalStatus:std_msgs/Header:cares_msgs/ScanningFeedback:actionlib_msgs/GoalID"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionFeedback.msg" "cares_msgs/ScanningFeedback:actionlib_msgs/GoalID:actionlib_msgs/GoalStatus:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg" "geometry_msgs/Quaternion:std_msgs/Bool:std_msgs/String:geometry_msgs/Point:geometry_msgs/PoseStamped:std_msgs/Header:geometry_msgs/Pose"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg" "geometry_msgs/Quaternion:geometry_msgs/Pose:std_msgs/Bool:std_msgs/Header:std_msgs/String:geometry_msgs/PoseStamped:geometry_msgs/Point"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningResult.msg" NAME_WE)
@@ -209,17 +209,17 @@ add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/thiago/catkin_ws/src/cares_msgs/srv/ArucoDetect.srv" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/src/cares_msgs/srv/ArucoDetect.srv" "geometry_msgs/Quaternion:sensor_msgs/RegionOfInterest:sensor_msgs/CameraInfo:geometry_msgs/TransformStamped:cares_msgs/StereoCameraInfo:geometry_msgs/Transform:geometry_msgs/Vector3:std_msgs/Header:sensor_msgs/Image"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/src/cares_msgs/srv/ArucoDetect.srv" "sensor_msgs/RegionOfInterest:geometry_msgs/TransformStamped:geometry_msgs/Transform:geometry_msgs/Quaternion:sensor_msgs/Image:sensor_msgs/CameraInfo:geometry_msgs/Vector3:cares_msgs/StereoCameraInfo:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/src/cares_msgs/srv/CalibrationService.srv" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/src/cares_msgs/srv/CalibrationService.srv" "sensor_msgs/RegionOfInterest:std_msgs/Header:cares_msgs/StereoCameraInfo:sensor_msgs/CameraInfo"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/src/cares_msgs/srv/CalibrationService.srv" "sensor_msgs/CameraInfo:cares_msgs/StereoCameraInfo:sensor_msgs/RegionOfInterest:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/thiago/catkin_ws/src/cares_msgs/srv/Detection.srv" NAME_WE)
 add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/src/cares_msgs/srv/Detection.srv" "cares_msgs/InstanceMasks:std_msgs/Header:sensor_msgs/RegionOfInterest:sensor_msgs/Image"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cares_msgs" "/home/thiago/catkin_ws/src/cares_msgs/srv/Detection.srv" "sensor_msgs/Image:sensor_msgs/RegionOfInterest:cares_msgs/InstanceMasks:std_msgs/Header"
 )
 
 #
@@ -231,49 +231,49 @@ add_custom_target(_cares_msgs_generate_messages_check_deps_${_filename}
 _generate_msg_cpp(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/msg/ArucoMarkers.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_cpp(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/msg/InstanceMasks.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_cpp(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_cpp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_cpp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_cpp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_cpp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_cpp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_cpp(cares_msgs
@@ -285,31 +285,31 @@ _generate_msg_cpp(cares_msgs
 _generate_msg_cpp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_cpp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionFeedback.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_cpp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_cpp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_cpp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_cpp(cares_msgs
@@ -333,25 +333,25 @@ _generate_msg_cpp(cares_msgs
 _generate_msg_cpp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionResult.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_cpp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_cpp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_cpp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_cpp(cares_msgs
@@ -375,31 +375,31 @@ _generate_msg_cpp(cares_msgs
 _generate_msg_cpp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalResult.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_cpp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_cpp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_cpp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_cpp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_cpp(cares_msgs
@@ -417,31 +417,31 @@ _generate_msg_cpp(cares_msgs
 _generate_msg_cpp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionResult.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_cpp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_cpp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_cpp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_cpp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_cpp(cares_msgs
@@ -461,19 +461,19 @@ _generate_msg_cpp(cares_msgs
 _generate_srv_cpp(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/srv/ArucoDetect.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/TransformStamped.msg;/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/TransformStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_srv_cpp(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/srv/CalibrationService.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 _generate_srv_cpp(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/srv/Detection.srv"
   "${MSG_I_FLAGS}"
-  "/home/thiago/catkin_ws/src/cares_msgs/msg/InstanceMasks.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/thiago/catkin_ws/src/cares_msgs/msg/InstanceMasks.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cares_msgs
 )
 
@@ -584,49 +584,49 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS cares_msgs_generate_messages_cpp)
 _generate_msg_eus(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/msg/ArucoMarkers.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_eus(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/msg/InstanceMasks.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_eus(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_eus(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_eus(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_eus(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_eus(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_eus(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_eus(cares_msgs
@@ -638,31 +638,31 @@ _generate_msg_eus(cares_msgs
 _generate_msg_eus(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_eus(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionFeedback.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_eus(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_eus(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_eus(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_eus(cares_msgs
@@ -686,25 +686,25 @@ _generate_msg_eus(cares_msgs
 _generate_msg_eus(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionResult.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_eus(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_eus(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_eus(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_eus(cares_msgs
@@ -728,31 +728,31 @@ _generate_msg_eus(cares_msgs
 _generate_msg_eus(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalResult.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_eus(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_eus(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_eus(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_eus(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_eus(cares_msgs
@@ -770,31 +770,31 @@ _generate_msg_eus(cares_msgs
 _generate_msg_eus(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionResult.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_eus(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_eus(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_eus(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_eus(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_eus(cares_msgs
@@ -814,19 +814,19 @@ _generate_msg_eus(cares_msgs
 _generate_srv_eus(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/srv/ArucoDetect.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/TransformStamped.msg;/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/TransformStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_srv_eus(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/srv/CalibrationService.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 _generate_srv_eus(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/srv/Detection.srv"
   "${MSG_I_FLAGS}"
-  "/home/thiago/catkin_ws/src/cares_msgs/msg/InstanceMasks.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/thiago/catkin_ws/src/cares_msgs/msg/InstanceMasks.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cares_msgs
 )
 
@@ -937,49 +937,49 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS cares_msgs_generate_messages_eus)
 _generate_msg_lisp(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/msg/ArucoMarkers.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_lisp(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/msg/InstanceMasks.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_lisp(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_lisp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_lisp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_lisp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_lisp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_lisp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_lisp(cares_msgs
@@ -991,31 +991,31 @@ _generate_msg_lisp(cares_msgs
 _generate_msg_lisp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_lisp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionFeedback.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_lisp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_lisp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_lisp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_lisp(cares_msgs
@@ -1039,25 +1039,25 @@ _generate_msg_lisp(cares_msgs
 _generate_msg_lisp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionResult.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_lisp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_lisp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_lisp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_lisp(cares_msgs
@@ -1081,31 +1081,31 @@ _generate_msg_lisp(cares_msgs
 _generate_msg_lisp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalResult.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_lisp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_lisp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_lisp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_lisp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_lisp(cares_msgs
@@ -1123,31 +1123,31 @@ _generate_msg_lisp(cares_msgs
 _generate_msg_lisp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionResult.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_lisp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_lisp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_lisp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_lisp(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_lisp(cares_msgs
@@ -1167,19 +1167,19 @@ _generate_msg_lisp(cares_msgs
 _generate_srv_lisp(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/srv/ArucoDetect.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/TransformStamped.msg;/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/TransformStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_srv_lisp(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/srv/CalibrationService.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 _generate_srv_lisp(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/srv/Detection.srv"
   "${MSG_I_FLAGS}"
-  "/home/thiago/catkin_ws/src/cares_msgs/msg/InstanceMasks.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/thiago/catkin_ws/src/cares_msgs/msg/InstanceMasks.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cares_msgs
 )
 
@@ -1290,49 +1290,49 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS cares_msgs_generate_messages_lisp)
 _generate_msg_nodejs(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/msg/ArucoMarkers.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_nodejs(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/msg/InstanceMasks.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_nodejs(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_nodejs(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_nodejs(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_nodejs(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_nodejs(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_nodejs(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_nodejs(cares_msgs
@@ -1344,31 +1344,31 @@ _generate_msg_nodejs(cares_msgs
 _generate_msg_nodejs(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_nodejs(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionFeedback.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_nodejs(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_nodejs(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_nodejs(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_nodejs(cares_msgs
@@ -1392,25 +1392,25 @@ _generate_msg_nodejs(cares_msgs
 _generate_msg_nodejs(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionResult.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_nodejs(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_nodejs(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_nodejs(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_nodejs(cares_msgs
@@ -1434,31 +1434,31 @@ _generate_msg_nodejs(cares_msgs
 _generate_msg_nodejs(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalResult.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_nodejs(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_nodejs(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_nodejs(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_nodejs(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_nodejs(cares_msgs
@@ -1476,31 +1476,31 @@ _generate_msg_nodejs(cares_msgs
 _generate_msg_nodejs(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionResult.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_nodejs(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_nodejs(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_nodejs(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_nodejs(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_nodejs(cares_msgs
@@ -1520,19 +1520,19 @@ _generate_msg_nodejs(cares_msgs
 _generate_srv_nodejs(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/srv/ArucoDetect.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/TransformStamped.msg;/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/TransformStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_srv_nodejs(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/srv/CalibrationService.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 _generate_srv_nodejs(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/srv/Detection.srv"
   "${MSG_I_FLAGS}"
-  "/home/thiago/catkin_ws/src/cares_msgs/msg/InstanceMasks.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/thiago/catkin_ws/src/cares_msgs/msg/InstanceMasks.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cares_msgs
 )
 
@@ -1643,49 +1643,49 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS cares_msgs_generate_messages_nodejs
 _generate_msg_py(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/msg/ArucoMarkers.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_py(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/msg/InstanceMasks.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_py(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_py(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_py(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_py(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_py(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_py(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_py(cares_msgs
@@ -1697,31 +1697,31 @@ _generate_msg_py(cares_msgs
 _generate_msg_py(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_py(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionFeedback.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_py(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_py(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_py(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_py(cares_msgs
@@ -1745,25 +1745,25 @@ _generate_msg_py(cares_msgs
 _generate_msg_py(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionResult.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_py(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_py(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_py(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_py(cares_msgs
@@ -1787,31 +1787,31 @@ _generate_msg_py(cares_msgs
 _generate_msg_py(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalResult.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_py(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_py(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_py(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_py(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_py(cares_msgs
@@ -1829,31 +1829,31 @@ _generate_msg_py(cares_msgs
 _generate_msg_py(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionGoal.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningResult.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionResult.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionFeedback.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_py(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_py(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_py(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
+  "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_py(cares_msgs
   "/home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Bool.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_msg_py(cares_msgs
@@ -1873,19 +1873,19 @@ _generate_msg_py(cares_msgs
 _generate_srv_py(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/srv/ArucoDetect.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/TransformStamped.msg;/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/TransformStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_srv_py(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/srv/CalibrationService.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 _generate_srv_py(cares_msgs
   "/home/thiago/catkin_ws/src/cares_msgs/srv/Detection.srv"
   "${MSG_I_FLAGS}"
-  "/home/thiago/catkin_ws/src/cares_msgs/msg/InstanceMasks.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/thiago/catkin_ws/src/cares_msgs/msg/InstanceMasks.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cares_msgs
 )
 

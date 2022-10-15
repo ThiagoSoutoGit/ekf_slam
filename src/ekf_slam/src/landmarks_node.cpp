@@ -30,6 +30,8 @@
 
 #include <message_filters/subscriber.h>
 #include <message_filters/time_synchronizer.h>
+#include <message_filters/synchronizer.h>
+#include <message_filters/sync_policies/approximate_time.h>
 
 
 class PublishLandmarks
@@ -44,10 +46,22 @@ public:
         // message_filters::TimeSynchronizer<nav_msgs::Odometry::ConstPtr, cares_msgs::ArucoMarkers> sync(odom_filter_sub_, aruco_filter_sub_, 10);
         // sync.registerCallback(std::bind(&PublishLandmarks::moveRobot, this,_1, _2));
 
-        message_filters::Subscriber<cares_msgs::ArucoMarkers> image_sub(nh, "image", 1);
-        message_filters::Subscriber<nav_msgs::Odometry> info_sub(nh, "camera_info", 1);
-        message_filters::TimeSynchronizer<cares_msgs::ArucoMarkers, nav_msgs::Odometry> sync(image_sub, info_sub, 10);
+        message_filters::Subscriber<cares_msgs::ArucoMarkers> aruco_sub_(nh, "stereo_pair/markers", 100);
+        message_filters::Subscriber<nav_msgs::Odometry> odom_sub_(nh, "odom", 100);
+
+
+        typedef message_filters::sync_policies::ApproximateTime<cares_msgs::ArucoMarkers, nav_msgs::Odometry> MySyncPolicy;
+        // ApproximateTime takes a queue size as its constructor argument, hence MySyncPolicy(10)
+        message_filters::Synchronizer<MySyncPolicy> sync(MySyncPolicy(100), aruco_sub_, odom_sub_);
         sync.registerCallback(boost::bind(&PublishLandmarks::moveRobot, this, _1, _2));
+
+
+
+
+
+
+        // message_filters::ApproximateTimeSynchronizer<cares_msgs::ArucoMarkers, nav_msgs::Odometry> sync(image_sub, info_sub, 100);
+        // sync.registerCallback(boost::bind(&PublishLandmarks::moveRobot, this, _1, _2));
 
 
 
@@ -76,14 +90,7 @@ public:
         return result;
     }
 
-    // void moveRobot2(const nav_msgs::Odometry::ConstPtr &msg, const cares_msgs::ArucoMarkers &aruco_marker)
-    // {
-    //     for (int i = 0; i < 1000; i++)
-    //     {
-    //         calculateArucoPosition(aruco_marker);
-    //     }
-    // }
-    
+
     int getIndex(std::vector<int64_t> v, int K)
     {
         auto it = std::find(v.begin(), v.end(), K);
@@ -91,126 +98,13 @@ public:
         return index;
     }
 
+
     void moveRobot(const cares_msgs::ArucoMarkers::ConstPtr &aruco_marker, const nav_msgs::Odometry::ConstPtr &odom_msg)
     {
-        if (!aruco_marker->marker_ids.empty())
-        {
-            for (auto pose : aruco_marker->marker_poses)
-            {
-                int i = 0;
-                double z = pose.position.z;
-                geometry_msgs::Pose2D pose2d;
-                pose2d.x = pose.position.x;
-                pose2d.y = pose.position.y;
+        // calculateArucoPosition(aruco_marker);
+        // std::cout << odom_msg->pose.pose.position.x << std::endl;
+        std::cout << "ECHO" << std::endl;
 
-                tf::Quaternion q(
-                    pose.orientation.x,
-                    pose.orientation.y,
-                    pose.orientation.z,
-                    pose.orientation.w);
-
-                tf::Matrix3x3 m(q);
-                double roll, pitch, yaw;
-                m.getEulerYPR(yaw, pitch, roll);
-
-                pose2d.theta = yaw;
-
-                std::cout << std::endl
-                          << "Aruco marker pose from stereo_pair:" << std::endl
-                          << std::endl;
-                std::cout << "Position X: " << pose2d.x << std::endl;
-                std::cout << "Position Y: " << pose2d.y << std::endl;
-                std::cout << "Position Z: " << z << std::endl;
-                std::cout << "Position theta: " << pose2d.theta << std::endl;
-
-                if (current_position_.size() > 0)
-                {
-                    // double theta_sum = pose2d.theta + current_position_(2);
-                    // double xw = (pose.position.x * cos(theta_sum)) - (pose.position.z * sin(theta_sum));
-                    // double yw = (pose.position.z * cos(theta_sum)) - (pose.position.x * sin(theta_sum));
-
-                    double xw = (pose.position.x * cos(pose2d.theta)) - (z * sin(pose2d.theta));
-                    double yw = (z * cos(pose2d.theta)) - (pose.position.x * sin(pose2d.theta));
-
-                    landmark_position_(0) = current_position_(0) + xw;
-                    landmark_position_(1) = current_position_(1) + yw;
-                    landmark_position_(2) = current_position_(2) + pose2d.theta;
-
-                    std::cout << std::endl
-                              << "landmark detected id:" << aruco_marker->marker_ids[i] << std::endl
-                              << std::endl;
-                    std::cout << "Position Xw: " << xw << std::endl;
-                    std::cout << "Position Yw: " << yw << std::endl
-                              << std::endl;
-                    std::cout << "Position X: " << landmark_position_(0) << std::endl;
-                    std::cout << "Position Y: " << landmark_position_(1) << std::endl;
-                    std::cout << "Position theta: " << landmark_position_(2) << std::endl;
-
-                    std::cout << std::endl
-                              << "Odom position:" << std::endl
-                              << std::endl;
-                    std::cout << "Position Xw: " << current_position_(0) << std::endl;
-                    std::cout << "Position Yw: " << current_position_(1) << std::endl;
-                    std::cout << "Position theta: " << current_position_(2) << std::endl;
-
-                    // if(land_map_.id.size() > 100) {
-                    //     land_map_.id.erase(land_map_.id.begin());
-                    //     land_map_.x.erase(land_map_.x.begin());
-                    //     land_map_.y.erase(land_map_.y.begin());
-                    //     land_map_.size.erase(land_map_.size.begin());
-                    //     land_map_.map.erase(land_map_.map.begin());
-                    // } 
-
-                    if (land_map_.id.empty())
-                    {
-                        land_map_.id.emplace_back(aruco_marker->marker_ids[i]);
-                        land_map_.x.emplace_back(landmark_position_(0));
-                        land_map_.y.emplace_back(landmark_position_(1));
-                        land_map_.size.emplace_back(size_);
-                        land_map_.map.emplace_back(1);
-                        landmark_pub_.publish(land_map_);
-                        marker_ids_.push_back(aruco_marker->marker_ids[i]);
-                    } 
-                    //else if (contains(marker_ids_, aruco_marker->marker_ids[i]))
-                    // {
-                    //     for ( int j = 0; j < land_map_.id.size(); j++){
-                    //         if (land_map_.id[j] == i){
-                    //             land_map_.id[j] = aruco_marker->marker_ids[i];
-                    //             land_map_.x[j] = landmark_position_(0);
-                    //             land_map_.y[j] = landmark_position_(1);
-                    //             land_map_.size[j] = size_;
-                    //             land_map_.map[j] = 1;
-
-                    //             landmark_pub_.publish(land_map_);
-                    //             // marker_ids_.push_back(aruco_marker->marker_ids[i]);
-                    //         }
-                    //     }
-                        
-                    // } 
-                    else if (!contains(marker_ids_, aruco_marker->marker_ids[i])){
-                        land_map_.id.emplace_back(aruco_marker->marker_ids[i]);
-                        land_map_.x.emplace_back(landmark_position_(0));
-                        land_map_.y.emplace_back(landmark_position_(1));
-                        land_map_.size.emplace_back(size_);
-                        land_map_.map.emplace_back(1);
-                        landmark_pub_.publish(land_map_);
-                        marker_ids_.push_back(aruco_marker->marker_ids[i]);
-                    }
-
-                    else if (contains(marker_ids_, aruco_marker->marker_ids[i])){
-                        int ind = 0;
-                        getIndex(land_map_.id, aruco_marker->marker_ids[i]);
-                        land_map_.id[ind] = aruco_marker->marker_ids[i];
-                        land_map_.x[ind] = landmark_position_(0);
-                        land_map_.y[ind] = landmark_position_(1);
-                        land_map_.size[ind] = size_;
-                        land_map_.map[ind] = 1;
-                        landmark_pub_.publish(land_map_);
-                        // marker_ids_.push_back(aruco_marker->marker_ids[i]);
-                    }
-                }
-            }
-        }
     }
 
     
@@ -480,8 +374,8 @@ public:
 private:
     ros::Publisher landmark_pub_;
     ros::Publisher odom_pub_;
-    ros::Subscriber aruco_sub_;
-    ros::Subscriber odom_sub_;
+    // ros::Subscriber aruco_sub_;
+    // ros::Subscriber odom_sub_;
     Eigen::Vector3d current_position_;
     Eigen::Vector3d landmark_position_;
     ekf_slam::LandmarksMap land_map_;

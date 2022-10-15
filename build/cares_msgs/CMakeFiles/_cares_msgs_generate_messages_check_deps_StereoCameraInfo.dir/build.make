@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/thiago/catkin_ws/build
 include cares_msgs/CMakeFiles/_cares_msgs_generate_messages_check_deps_StereoCameraInfo.dir/progress.make
 
 cares_msgs/CMakeFiles/_cares_msgs_generate_messages_check_deps_StereoCameraInfo:
-	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py cares_msgs /home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg std_msgs/Header:sensor_msgs/RegionOfInterest:sensor_msgs/CameraInfo
+	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py cares_msgs /home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg sensor_msgs/CameraInfo:sensor_msgs/RegionOfInterest:std_msgs/Header
 
 _cares_msgs_generate_messages_check_deps_StereoCameraInfo: cares_msgs/CMakeFiles/_cares_msgs_generate_messages_check_deps_StereoCameraInfo
 _cares_msgs_generate_messages_check_deps_StereoCameraInfo: cares_msgs/CMakeFiles/_cares_msgs_generate_messages_check_deps_StereoCameraInfo.dir/build.make
