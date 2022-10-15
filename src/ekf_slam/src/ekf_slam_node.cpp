@@ -21,35 +21,16 @@ class EkfSlam
 public:
     EkfSlam(ros::NodeHandle &nh)
     {
-        // message_filters::Subscriber<cares_msgs::ArucoMarkers> image_sub(nh, "image", 1);
-        // message_filters::Subscriber<nav_msgs::Odometry> info_sub(nh, "camera_info", 1);
-        // TimeSynchronizer<cares_msgs::ArucoMarkers, nav_msgs::Odometry> sync(image_sub, info_sub, 10);
-        // sync.registerCallback(boost::bind(&DrawMap::callback, this, _1, _2));
 
-        // GOODish ApproximateTime
-        message_filters::Subscriber<cares_msgs::ArucoMarkers> aruco_sub_(nh, "stereo_pair/markers", 100);
-        message_filters::Subscriber<nav_msgs::Odometry> odom_sub_(nh, "odom", 100);
-        typedef message_filters::sync_policies::ApproximateTime<cares_msgs::ArucoMarkers, nav_msgs::Odometry> MySyncPolicy;
-        // ApproximateTime takes a queue size as its constructor argument, hence MySyncPolicy(10)
-        message_filters::Synchronizer<MySyncPolicy> sync(MySyncPolicy(100), aruco_sub_, odom_sub_);
-        sync.registerCallback(boost::bind(&EkfSlam::callback, this, _1, _2));
-
-        // message_filters::Subscriber<ArucoMarkers> image1_sub(nh, "image1", 1);
-        // message_filters::Subscriber<Odometry> image2_sub(nh, "image2", 1);
-
-        // typedef sync_policies::ApproximateTime<ArucoMarkers, Odometry> MySyncPolicy;
-        // // ApproximateTime takes a queue size as its constructor argument, hence MySyncPolicy(10)
-        // Synchronizer<MySyncPolicy> sync(MySyncPolicy(10), image1_sub, image2_sub);
-        // sync.registerCallback(boost::bind(&DrawMap::callback, this, _1, _2));
-
-        // message_filters::Subscriber<nav_msgs::Odometry::ConstPtr> odom_filter_sub_(nh, "odom", 1);
-        // message_filters::Subscriber<cares_msgs::ArucoMarkers::ConstPtr> aruco_filter_sub_.subscribe(nh, "stereo_pair/markers", 1);
-        // message_filters::TimeSynchronizer<nav_msgs::Odometry::ConstPtr, cares_msgs::ArucoMarkers> sync(odom_filter_sub_, aruco_filter_sub_, 10);
-        // sync.registerCallback(std::bind(&PublishLandmarks::moveRobot, this,_1, _2));
+        // GOOD TimeSynchronizer
+        aruco_sub_.subscribe(nh, "stereo_pair/markers", 100); 
+        odom_sub_.subscribe(nh, "odom", 100);
+        sync.reset(new sync_policy_(aruco_sub_, odom_sub_, 10));
+        sync->registerCallback(std::bind(&EkfSlam::ekfCallback, this, std::placeholders::_1, std::placeholders::_2));
     }
 
     /// \brief receive a vector of Eigen::VectorXd and returns a Eigen::VectorXd with the menas of each element index.
-    Eigen::VectorXd EigenMeans(std::vector<Eigen::VectorXd> &data)
+    Eigen::VectorXd eigenMeans(std::vector<Eigen::VectorXd> &data)
     {
         Eigen::VectorXd means(data[0].rows());
         for (unsigned i = 0; i < means.rows(); i++)
@@ -78,9 +59,9 @@ public:
     }
 
     /// \brief Computes the covariance given 2 elements (X and Y).
-    double ComputeEigenCovariance(int &x, int &y, std::vector<Eigen::VectorXd> &data)
+    double computeEigenCovariance(int &x, int &y, std::vector<Eigen::VectorXd> &data)
     {
-        Eigen::VectorXd componentMeans = EigenMeans(data);
+        Eigen::VectorXd componentMeans = eigenMeans(data);
 
         double covxy;
         double sum;
@@ -94,12 +75,20 @@ public:
     }
 
     /// \brief receive landmark positions
-    void callback(const cares_msgs::ArucoMarkers::ConstPtr &image1, const nav_msgs::Odometry::ConstPtr &msg)
+    void ekfCallback(const cares_msgs::ArucoMarkers::ConstPtr &aruco_marker, const nav_msgs::Odometry::ConstPtr &msg)
     {
         std::cout << "Callback X: " << msg->pose.pose.position.x << std::endl;
+        if (!aruco_marker->marker_poses.empty())
+            std::cout << "Callback Poses X: " << aruco_marker->marker_poses[0].position.x << std::endl;
     }
-
+    
 private:
+    // TimeSynchronizer
+    message_filters::Subscriber<cares_msgs::ArucoMarkers> aruco_sub_; /**< message_filters subscriber */
+    message_filters::Subscriber<nav_msgs::Odometry> odom_sub_; /**< message_filters subscriber */
+    typedef message_filters::TimeSynchronizer<cares_msgs::ArucoMarkers, nav_msgs::Odometry> sync_policy_; /**< Defines the sync policy */
+    std::shared_ptr<sync_policy_> sync; /**< a shared pointer to the sync policy - has to be std::shared_ptr and has to be reset at the constructor with a new sync_policy_*/
+
 };
 
 int main(int argc, char **argv)

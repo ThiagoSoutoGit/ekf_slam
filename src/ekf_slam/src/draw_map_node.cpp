@@ -1,14 +1,15 @@
-/** \file
-* \brief Node for receiving the detected landmarks, check what kind of landmarks it is, and plot them to rviz
-*
-* PUBLISHES:
-*     map_rviz (visualization_msgs::MarkerArray): publish the center, size, and type of map of the landmarks in a MarkerArray
-*     robot_path_rviz (visualization_msgs::MarkerArray): publish positions of odometer(x,y) in a MarkerArray
-*
-* SUBSCRIBERS:
-*     /landmarks (ekf_slam/LandmarksMap): subscribe to landmarks topic
-*     /robot_path (ekf_slam/LandmarksMap): subscribe to robot_path topic
-*
+//! \file
+/*! \brief Node for receiving the detected landmarks, check what kind of landmarks it is, and plot them to rviz
+
+PUBLISHES:
+
+    map_rviz (visualization_msgs::MarkerArray): publish the center, size, and type of map of the landmarks in a MarkerArray
+    robot_path_rviz (visualization_msgs::MarkerArray): publish positions of odometer(x,y) in a MarkerArray
+
+SUBSCRIBERS:
+
+    /landmarks (ekf_slam/LandmarksMap): subscribe to landmarks topic
+    /robot_path (ekf_slam/LandmarksMap): subscribe to robot_path topic
 */
 #include "ros/ros.h"
 #include <visualization_msgs/Marker.h>
@@ -27,40 +28,13 @@ Reads landmarks and odometry and publishes to rviz:
 class DrawMap
 {
 public:
-    //!  \brief The constructor initializes the publishers and subscribers.
-    /*!
-    PUBLISHERS:
-
-        map_pub_(/map_rviz)
-        robot_path_pub_(/robot_path_rviz)
-
-    SUBSCRIBERS:
-
-        map_sub_(/landmarks)
-        robot_path_sub_(/robot_path)
-    */
+    //!  \brief The constructor initializes the publishers (`map_pub_` and `robot_path_pub_`) and subscribers (`map_sub_` and `robot_path_sub_`).
     DrawMap(ros::NodeHandle &nh)
     {
         map_pub_ = nh.advertise<visualization_msgs::MarkerArray>("map_rviz", 100, true);
         map_sub_ = nh.subscribe("landmarks", 1000, &DrawMap::sub_landmark, this);
         robot_path_pub_ = nh.advertise<visualization_msgs::MarkerArray>("robot_path_rviz", 100, true);
         robot_path_sub_ = nh.subscribe("robot_path", 1000, &DrawMap::sub_robot_path, this);
-
-        ros::param::get("~what_map", what_map_);
-
-
-        // if (what_map_ == "mesurements")
-        // {
-        //     publish_frame_ = "base_link";
-        // }
-        // else if (what_map_ == "groundtruth_map")
-        // {
-        //     publish_frame_ = "map";
-        // }
-        // else
-        // {
-        //     publish_frame_ = "map";
-        // }
     }
 
     /// \brief receive landmark positions
@@ -113,10 +87,6 @@ public:
             visualization_msgs::MarkerArray marker_array;
             for (int i = 0; i < msg.x.size(); i++)
             {
-                // visualization_msgs::Marker marker_landmark = create_landmark_marker(msg.x.at(i),
-                //                                                                     msg.y.at(i),
-                //                                                                     msg.size.at(i),
-                //                                                                     publish_frame_);
                 visualization_msgs::Marker marker_landmark = create_landmark_marker(msg.x.at(i),
                                                                                     msg.y.at(i),
                                                                                     msg.size.at(i),
@@ -179,12 +149,6 @@ public:
         default:
             break;
         };
-
-
-
-        
-
-        
 
         marker.type = shape;
 
