@@ -45,23 +45,17 @@ public:
             visualization_msgs::MarkerArray marker_array;
             for (int i = 0; i < msg.x.size(); i++)
             {
-                visualization_msgs::Marker marker_landmark = create_landmark_marker(msg.y.at(i),
-                                                                                    -msg.x.at(i),
-                                                                                    msg.size.at(i),
-                                                                                    msg.map.at(i),
-                                                                                    "base_link");
-                // double rotation_angle = 0.261799;
-                // visualization_msgs::Marker marker_landmark = create_landmark_marker(((msg.y.at(i) * sin(rotation_angle))+ -msg.x.at(i) * cos(rotation_angle)),
-                //                                                                     ((msg.y.at(i) * cos(rotation_angle))+ -msg.x.at(i) * sin(rotation_angle)),
-                                                                                    
+                // visualization_msgs::Marker marker_landmark = create_landmark_marker(msg.x.at(i),
+                //                                                                     msg.y.at(i),                                                                                    
                 //                                                                     msg.size.at(i),
                 //                                                                     msg.map.at(i),
                 //                                                                     "base_link");
-
-                // X=(xcosθ+ysinθ) and and Y=(−xsinθ+ycosθ).
-                // X=((msg.x.at(i) * cos(0.785398))+ msg.y.at(i) * sin(0.785398))
-
-                // Y=((msg.x.at(i) * sin(0.785398))+ msg.y.at(i) * cos(0.785398))
+                double rotation_angle = 1.5708 ;
+                visualization_msgs::Marker marker_landmark = create_landmark_marker(((msg.x.at(i) * cos(rotation_angle)) + msg.y.at(i) * sin(rotation_angle)),
+                                                                                    ((-msg.x.at(i) * sin(rotation_angle)) + msg.y.at(i) * cos(rotation_angle)),                                                                                   
+                                                                                    msg.size.at(i),
+                                                                                    msg.map.at(i),
+                                                                                    "base_link");
 
                 // 0.785398 = 45
                 // 1.5708 = 90

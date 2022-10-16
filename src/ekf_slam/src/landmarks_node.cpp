@@ -63,7 +63,7 @@ public:
         odom_marker_size_threshold_ = 0.1;
         land_map_threshold_ = 0.3;
     }
-
+    /// \todo Make function `contains` commom
     template <typename T>
     bool contains(std::vector<T> vec, const T &elem)
     {
@@ -113,7 +113,9 @@ public:
                 double roll, pitch, yaw;
                 m.getEulerYPR(yaw, pitch, roll);
 
-                pose2d.theta = yaw + 1.5708;
+                // pose2d.theta = yaw + 1.5708;
+                pose2d.theta = yaw;
+
 
                 std::cout << std::endl
                           << "Aruco marker pose from stereo_pair:" << std::endl

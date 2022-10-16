@@ -52,9 +52,9 @@ class EkfSlam
 private:
     // TimeSynchronizer
     message_filters::Subscriber<ekf_slam::LandmarksMap> aruco_sub_;                                     /**< message_filters subscriber */
-    message_filters::Subscriber<nav_msgs::Odometry> odom_sub_;                                            /**< message_filters subscriber */
+    message_filters::Subscriber<nav_msgs::Odometry> odom_sub_;                                          /**< message_filters subscriber */
     typedef message_filters::TimeSynchronizer<ekf_slam::LandmarksMap, nav_msgs::Odometry> sync_policy_; /**< Defines the sync policy */
-    std::shared_ptr<sync_policy_> sync;                                                                   /**< a shared pointer to the sync policy - has to be std::shared_ptr and has to be reset at the constructor with a new sync_policy_*/
+    std::shared_ptr<sync_policy_> sync;                                                                 /**< a shared pointer to the sync policy - has to be std::shared_ptr and has to be reset at the constructor with a new sync_policy_*/
 
     // Range bearing
     Eigen::Vector2d range_bearing_landmark_h_ = Eigen::Vector2d(0, 0);
@@ -85,6 +85,11 @@ private:
     Eigen::MatrixXd covariance_p_matrix_ = Eigen::MatrixXd(3, 3);
     Eigen::Matrix3d covariance_prr_matrix_ = Eigen::Matrix3d(3, 3);
 
+    // Landmarks detected
+    std::vector<int> landmarks_detected_;
+
+    int aux;
+
 public:
     EkfSlam(ros::NodeHandle &nh)
     {
@@ -102,6 +107,18 @@ public:
         // initialize timers
         current_time_ = ros::Time::now();
         last_time_ = ros::Time::now();
+    }
+
+    /// \todo Make function `contains` commom
+    template <typename T>
+    bool contains(std::vector<T> vec, const T &elem)
+    {
+        bool result = false;
+        if (find(vec.begin(), vec.end(), elem) != vec.end())
+        {
+            result = true;
+        }
+        return result;
     }
 
     /// \brief receive a vector of Eigen::VectorXd and returns a Eigen::VectorXd with the menas of each element index.
@@ -366,13 +383,13 @@ public:
                   << "New covariance matrix with Prr block inserted: " << std::endl
                   << std::endl
                   << covariance_p_matrix_ << std::endl;
+        /// \todo confirm this calculation of Pri = A * Pri
+        // covariance_p_matrix_ = jacobian_a_matrix_ * covariance_p_matrix_;
 
-        covariance_p_matrix_ = jacobian_a_matrix_ * covariance_p_matrix_;
-
-        std::cout << std::endl
-                  << "New covariance matrix Pri = A Pri " << std::endl
-                  << std::endl
-                  << covariance_p_matrix_ << std::endl;
+        // std::cout << std::endl
+        //           << "New covariance matrix Pri = A Pri " << std::endl
+        //           << std::endl
+        //           << covariance_p_matrix_ << std::endl;
 
         std::cout << std::endl
                   << "Finished Phase 1 - Prediction"
@@ -391,8 +408,40 @@ public:
             updateNoiseQ();
             updateCovarianceMatrixP();
             // Phase 3 - Check for new landmarks
+            for (int i = 0; i < landmarks_map->id.size(); i++)
+            {
+                // if the landmark detected is not registered in the landmarks_detected vector, register it.
+                aux = landmarks_map->id[i];
+                if (!contains(landmarks_detected_, aux))
+                {
+                    // update the landmarks_detected vector
+                    landmarks_detected_.emplace_back(aux);
+                    // add 2 rows at the
+                    std::cout << "Old vector size:  " << current_state_.size() << std::endl;
+                    current_state_.resize(current_state_.size() + 2);
 
-            // std::cout << landmarks_map->header.stamp.nsec << std::endl;
+                    //Update all the robot_state_array_ vector sizes
+                    for (int k = 0; k < robot_state_array_.size(); k++)
+                    {
+                        robot_state_array_[k].resize(current_state_.size());
+                        /// \todo make so that the number to add is not zero, maybe a vector that holds the place where it was added and discount from the total length at the means calculation
+                        robot_state_array_[k](current_state_.size() - 2) = 0;
+                        robot_state_array_[k](current_state_.size() - 1) = 0;
+                    }
+                    std::cout << "robot_state_array_ 0 vector size:  " << robot_state_array_[0].size() << std::endl;
+                    current_state_(current_state_.size() - 2) = landmarks_map->x[i];
+                    current_state_(current_state_.size() - 1) = landmarks_map->y[i];
+                    robot_state_array_.emplace_back(current_state_);
+                    std::cout << "Old vector size matrix:  " << covariance_p_matrix_.size() << std::endl;
+                    covariance_p_matrix_.resize((covariance_p_matrix_.rows() + 2), (covariance_p_matrix_.cols() + 2));
+                    std::cout << "New vector size matrix:  " << covariance_p_matrix_.rows() << "x" << covariance_p_matrix_.cols() << std::endl;
+                    //Initialize the new covariant matrix
+                    for (int s = 0; s < covariance_p_matrix_.size(); s++){
+                        covariance_p_matrix_(s) = 0;
+                    }
+                    updateCovarianceMatrixP();
+                }
+            }
 
             has_moved_ = false;
         }
