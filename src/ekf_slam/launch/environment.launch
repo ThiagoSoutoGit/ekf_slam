@@ -6,7 +6,9 @@
         <!-- <arg name="world_file" value="/home/thiago/catkin_ws/src/ekf_slam/config/gazebo/aruco_world"/> -->
         <!-- <arg name="world_file" value="/home/thiago/catkin_ws/src/ekf_slam/config/gazebo/aruco_world_from_0"/> -->
         <!-- <arg name="world_file" value="/home/thiago/catkin_ws/src/ekf_slam/config/gazebo/aruco_world_4_markers"/> -->
-        <arg name="world_file" value="/home/thiago/catkin_ws/src/ekf_slam/config/gazebo/aruco_see_4"/>
+        <!-- <arg name="world_file" value="/home/thiago/catkin_ws/src/ekf_slam/config/gazebo/aruco_see_4"/> -->
+        <arg name="world_file" value="/home/thiago/catkin_ws/src/ekf_slam/config/gazebo/aruco_4"/>
+
 
 
 
@@ -20,7 +22,7 @@
 
 
 
-    <include file="src/aruco_detector/launch/mono_aruco_detector.launch">
+    <include file="src/aruco_detector/launch/mono_aruco_detector.launch" launch-prefix="xterm -e">
         <arg name="dictionary" value="1"/>
         <arg name="image" value="/camera/rgb/image_raw"/>
         <arg name="camera_info" value="/camera/rgb/camera_info"/>

@@ -176,6 +176,7 @@ public:
                         land_map_.y.emplace_back(landmark_position_(1));
                         land_map_.size.emplace_back(size_);
                         land_map_.map.emplace_back(1);
+                        land_map_.header.stamp = ros::Time::now();
                         landmark_pub_.publish(land_map_);
                         marker_ids_.push_back(aruco_marker->marker_ids[i]);
                     }
@@ -202,6 +203,7 @@ public:
                         land_map_.y.emplace_back(landmark_position_(1));
                         land_map_.size.emplace_back(size_);
                         land_map_.map.emplace_back(1);
+                        land_map_.header.stamp = ros::Time::now();
                         landmark_pub_.publish(land_map_);
                         marker_ids_.push_back(aruco_marker->marker_ids[i]);
                     }
@@ -214,6 +216,7 @@ public:
                         land_map_.y[ind] = landmark_position_(1);
                         land_map_.size[ind] = size_;
                         land_map_.map[ind] = 1;
+                        land_map_.header.stamp = ros::Time::now();
                         landmark_pub_.publish(land_map_);
                         // marker_ids_.push_back(aruco_marker->marker_ids[i]);
                     }

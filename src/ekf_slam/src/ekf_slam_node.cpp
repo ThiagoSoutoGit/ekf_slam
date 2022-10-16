@@ -19,9 +19,9 @@ SUBSCRIBERS:
 #include <sensor_msgs/Image.h>
 #include <sensor_msgs/CameraInfo.h>
 
-#include <cares_msgs/StereoCameraInfo.h>
-#include "cares_msgs/ArucoDetect.h"
-#include "cares_msgs/ArucoMarkers.h"
+// #include <cares_msgs/StereoCameraInfo.h>
+// #include "cares_msgs/ArucoDetect.h"
+// #include "cares_msgs/ArucoMarkers.h"
 
 #include "nav_msgs/Odometry.h"
 
@@ -90,7 +90,7 @@ public:
     {
 
         // GOOD TimeSynchronizer
-        aruco_sub_.subscribe(nh, "stereo_pair/markers", 100);
+        aruco_sub_.subscribe(nh, "landmarks", 100);
         odom_sub_.subscribe(nh, "odom", 100);
         sync.reset(new sync_policy_(aruco_sub_, odom_sub_, 10));
         sync->registerCallback(std::bind(&EkfSlam::ekfCallback, this, std::placeholders::_1, std::placeholders::_2));
@@ -392,6 +392,8 @@ public:
             updateCovarianceMatrixP();
             // Phase 3 - Check for new landmarks
 
+            // std::cout << landmarks_map->header.stamp.nsec << std::endl;
+
             has_moved_ = false;
         }
         /// \todo Step 3
@@ -402,7 +404,7 @@ public:
 
 int main(int argc, char **argv)
 {
-    ros::init(argc, argv, "vision_node");
+    ros::init(argc, argv, "ekf_slam_node");
 
     ros::NodeHandle nh;
 
