@@ -24,17 +24,25 @@ $(function() {
 
 <p>This is the complete list of members for <a class="el" href="classEkfSlam.html">EkfSlam</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classEkfSlam.html#a2c7c9b70194ad6426894da24f4f1d0a8">callback</a>(const cares_msgs::ArucoMarkers::ConstPtr &amp;image1, const nav_msgs::Odometry::ConstPtr &amp;msg)</td><td class="entry"><a class="el" href="classEkfSlam.html">EkfSlam</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classEkfSlam.html#ac0fa2a1656204283acb300e034455d0d">ComputeEigenCovariance</a>(int &amp;x, int &amp;y, std::vector&lt; Eigen::VectorXd &gt; &amp;data)</td><td class="entry"><a class="el" href="classEkfSlam.html">EkfSlam</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classEkfSlam.html#a5a3750940d12924fccadd7030cdf3410">EigenMeans</a>(std::vector&lt; Eigen::VectorXd &gt; &amp;data)</td><td class="entry"><a class="el" href="classEkfSlam.html">EkfSlam</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classEkfSlam.html#aa45082eea0c20386f879a59c1cabe27d">EkfSlam</a>(ros::NodeHandle &amp;nh)</td><td class="entry"><a class="el" href="classEkfSlam.html">EkfSlam</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classEkfSlam.html#a1afa94d7237e401745d5583b800ffb19">aruco_sub_</a></td><td class="entry"><a class="el" href="classEkfSlam.html">EkfSlam</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classEkfSlam.html#a95dce19c373250fad5da89be18aeac7b">computeEigenCovariance</a>(int &amp;x, int &amp;y, std::vector&lt; Eigen::VectorXd &gt; &amp;data)</td><td class="entry"><a class="el" href="classEkfSlam.html">EkfSlam</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classEkfSlam.html#a26d4a4ef6f7de3c9e326b1672ba3fd13">current_state_</a></td><td class="entry"><a class="el" href="classEkfSlam.html">EkfSlam</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classEkfSlam.html#ad8379ecf7d5820f80b4ba87914a67294">current_state_changed_threshold_</a></td><td class="entry"><a class="el" href="classEkfSlam.html">EkfSlam</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classEkfSlam.html#a836d27ebd92f12e91ab04886ec52e0a6">eigenMeans</a>(std::vector&lt; Eigen::VectorXd &gt; &amp;data)</td><td class="entry"><a class="el" href="classEkfSlam.html">EkfSlam</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classEkfSlam.html#aa81916d35b732764a00c89fbfa0f8fbe">ekfCallback</a>(const cares_msgs::ArucoMarkers::ConstPtr &amp;aruco_marker, const nav_msgs::Odometry::ConstPtr &amp;msg)</td><td class="entry"><a class="el" href="classEkfSlam.html">EkfSlam</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classEkfSlam.html#aa45082eea0c20386f879a59c1cabe27d">EkfSlam</a>(ros::NodeHandle &amp;nh)</td><td class="entry"><a class="el" href="classEkfSlam.html">EkfSlam</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classEkfSlam.html#af1aa6520d36e670cf8034539cea9d097">odom_sub_</a></td><td class="entry"><a class="el" href="classEkfSlam.html">EkfSlam</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classEkfSlam.html#abe2512c22ea3f62261c56e0678fa4ee8">range_bearing_data_association_z_</a></td><td class="entry"><a class="el" href="classEkfSlam.html">EkfSlam</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classEkfSlam.html#a8b1570fce01306df3a50b9906f4d395f">range_bearing_landmark_h_</a></td><td class="entry"><a class="el" href="classEkfSlam.html">EkfSlam</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classEkfSlam.html#aa19511995c112a48d41ad336b12527a6">sync</a></td><td class="entry"><a class="el" href="classEkfSlam.html">EkfSlam</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classEkfSlam.html#ad538a1ae1ce0666f77decf301494c9ac">sync_policy_</a> typedef</td><td class="entry"><a class="el" href="classEkfSlam.html">EkfSlam</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
 </table></div><!-- contents -->
 
 <br clear="all" />
 <hr size="1"><div style="align: right;">
 <a href="http://wiki.ros.org/ekf_slam">ekf_slam</a><br />
 Author(s): </br />
-<small>autogenerated on Sun Oct 16 2022 09:25:15</small>
+<small>autogenerated on Sun Oct 16 2022 12:58:45</small>
 </div>
 </body>
 </html>

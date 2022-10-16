@@ -7,7 +7,12 @@
 ;//! \htmlinclude LandmarksMap.msg.html
 
 (cl:defclass <LandmarksMap> (roslisp-msg-protocol:ros-message)
-  ((x
+  ((header
+    :reader header
+    :initarg :header
+    :type std_msgs-msg:Header
+    :initform (cl:make-instance 'std_msgs-msg:Header))
+   (x
     :reader x
     :initarg :x
     :type (cl:vector cl:float)
@@ -42,6 +47,11 @@
   (cl:unless (cl:typep m 'LandmarksMap)
     (roslisp-msg-protocol:msg-deprecation-warning "using old message class name ekf_slam-msg:<LandmarksMap> is deprecated: use ekf_slam-msg:LandmarksMap instead.")))
 
+(cl:ensure-generic-function 'header-val :lambda-list '(m))
+(cl:defmethod header-val ((m <LandmarksMap>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader ekf_slam-msg:header-val is deprecated.  Use ekf_slam-msg:header instead.")
+  (header m))
+
 (cl:ensure-generic-function 'x-val :lambda-list '(m))
 (cl:defmethod x-val ((m <LandmarksMap>))
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader ekf_slam-msg:x-val is deprecated.  Use ekf_slam-msg:x instead.")
@@ -68,6 +78,7 @@
   (map m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <LandmarksMap>) ostream)
   "Serializes a message object of type '<LandmarksMap>"
+  (roslisp-msg-protocol:serialize (cl:slot-value msg 'header) ostream)
   (cl:let ((__ros_arr_len (cl:length (cl:slot-value msg 'x))))
     (cl:write-byte (cl:ldb (cl:byte 8 0) __ros_arr_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) __ros_arr_len) ostream)
@@ -148,6 +159,7 @@
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <LandmarksMap>) istream)
   "Deserializes a message object of type '<LandmarksMap>"
+  (roslisp-msg-protocol:deserialize (cl:slot-value msg 'header) istream)
   (cl:let ((__ros_arr_len 0))
     (cl:setf (cl:ldb (cl:byte 8 0) __ros_arr_len) (cl:read-byte istream))
     (cl:setf (cl:ldb (cl:byte 8 8) __ros_arr_len) (cl:read-byte istream))
@@ -248,18 +260,19 @@
   "ekf_slam/LandmarksMap")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<LandmarksMap>)))
   "Returns md5sum for a message object of type '<LandmarksMap>"
-  "e14fd09077d5b90e93fc3b260d94d59d")
+  "be59b8991d90b2ec01f312b7f555e888")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'LandmarksMap)))
   "Returns md5sum for a message object of type 'LandmarksMap"
-  "e14fd09077d5b90e93fc3b260d94d59d")
+  "be59b8991d90b2ec01f312b7f555e888")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<LandmarksMap>)))
   "Returns full string definition for message of type '<LandmarksMap>"
-  (cl:format cl:nil "float64[] x # a list of x coordinate of circle center x~%float64[] y # a list of y coordinate of circle center y~%float64[] size~%int64[] id # id of this landmark (data association)~%int64[] map # type of map~%~%"))
+  (cl:format cl:nil "std_msgs/Header header~%float64[] x # a list of x coordinate of circle center x~%float64[] y # a list of y coordinate of circle center y~%float64[] size~%int64[] id # id of this landmark (data association)~%int64[] map # type of map~%================================================================================~%MSG: std_msgs/Header~%# Standard metadata for higher-level stamped data types.~%# This is generally used to communicate timestamped data ~%# in a particular coordinate frame.~%# ~%# sequence ID: consecutively increasing ID ~%uint32 seq~%#Two-integer timestamp that is expressed as:~%# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')~%# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')~%# time-handling sugar is provided by the client library~%time stamp~%#Frame this data is associated with~%string frame_id~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'LandmarksMap)))
   "Returns full string definition for message of type 'LandmarksMap"
-  (cl:format cl:nil "float64[] x # a list of x coordinate of circle center x~%float64[] y # a list of y coordinate of circle center y~%float64[] size~%int64[] id # id of this landmark (data association)~%int64[] map # type of map~%~%"))
+  (cl:format cl:nil "std_msgs/Header header~%float64[] x # a list of x coordinate of circle center x~%float64[] y # a list of y coordinate of circle center y~%float64[] size~%int64[] id # id of this landmark (data association)~%int64[] map # type of map~%================================================================================~%MSG: std_msgs/Header~%# Standard metadata for higher-level stamped data types.~%# This is generally used to communicate timestamped data ~%# in a particular coordinate frame.~%# ~%# sequence ID: consecutively increasing ID ~%uint32 seq~%#Two-integer timestamp that is expressed as:~%# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')~%# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')~%# time-handling sugar is provided by the client library~%time stamp~%#Frame this data is associated with~%string frame_id~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <LandmarksMap>))
   (cl:+ 0
+     (roslisp-msg-protocol:serialization-length (cl:slot-value msg 'header))
      4 (cl:reduce #'cl:+ (cl:slot-value msg 'x) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 8)))
      4 (cl:reduce #'cl:+ (cl:slot-value msg 'y) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 8)))
      4 (cl:reduce #'cl:+ (cl:slot-value msg 'size) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 8)))
@@ -269,6 +282,7 @@
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <LandmarksMap>))
   "Converts a ROS message object to a list"
   (cl:list 'LandmarksMap
+    (cl:cons ':header (header msg))
     (cl:cons ':x (x msg))
     (cl:cons ':y (y msg))
     (cl:cons ':size (size msg))

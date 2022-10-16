@@ -71,7 +71,8 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "variant": "cpp",
-        "bit": "cpp"
+        "bit": "cpp",
+        "core": "cpp"
     },
     "python.analysis.extraPaths": [
         "/home/thiago/catkin_ws/devel/lib/python3/dist-packages",

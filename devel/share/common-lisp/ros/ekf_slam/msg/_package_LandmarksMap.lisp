@@ -1,5 +1,7 @@
 (cl:in-package ekf_slam-msg)
-(cl:export '(X-VAL
+(cl:export '(HEADER-VAL
+          HEADER
+          X-VAL
           X
           Y-VAL
           Y

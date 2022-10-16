@@ -98,70 +98,70 @@ cares_msgs/CMakeFiles/cares_msgs_generate_messages_cpp: /home/thiago/catkin_ws/d
 
 /home/thiago/catkin_ws/devel/include/cares_msgs/ArucoMarkers.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/ArucoMarkers.h: /home/thiago/catkin_ws/src/cares_msgs/msg/ArucoMarkers.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ArucoMarkers.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ArucoMarkers.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ArucoMarkers.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ArucoMarkers.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ArucoMarkers.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ArucoMarkers.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ArucoMarkers.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from cares_msgs/ArucoMarkers.msg"
 	cd /home/thiago/catkin_ws/src/cares_msgs && /home/thiago/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thiago/catkin_ws/src/cares_msgs/msg/ArucoMarkers.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/include/cares_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/thiago/catkin_ws/devel/include/cares_msgs/InstanceMasks.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/InstanceMasks.h: /home/thiago/catkin_ws/src/cares_msgs/msg/InstanceMasks.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/InstanceMasks.h: /opt/ros/noetic/share/sensor_msgs/msg/Image.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/InstanceMasks.h: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/InstanceMasks.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/InstanceMasks.h: /opt/ros/noetic/share/sensor_msgs/msg/Image.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/InstanceMasks.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from cares_msgs/InstanceMasks.msg"
 	cd /home/thiago/catkin_ws/src/cares_msgs && /home/thiago/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thiago/catkin_ws/src/cares_msgs/msg/InstanceMasks.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/include/cares_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/thiago/catkin_ws/devel/include/cares_msgs/StereoCameraInfo.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/StereoCameraInfo.h: /home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/StereoCameraInfo.h: /opt/ros/noetic/share/sensor_msgs/msg/CameraInfo.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/StereoCameraInfo.h: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/StereoCameraInfo.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/StereoCameraInfo.h: /opt/ros/noetic/share/sensor_msgs/msg/CameraInfo.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/StereoCameraInfo.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from cares_msgs/StereoCameraInfo.msg"
 	cd /home/thiago/catkin_ws/src/cares_msgs && /home/thiago/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/include/cares_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingAction.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /opt/ros/noetic/share/std_msgs/msg/String.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionFeedback.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /opt/ros/noetic/share/std_msgs/msg/Bool.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionGoal.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingResult.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingResult.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionResult.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionGoal.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionFeedback.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /opt/ros/noetic/share/std_msgs/msg/Bool.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /opt/ros/noetic/share/std_msgs/msg/String.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingAction.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from cares_msgs/MappingAction.msg"
 	cd /home/thiago/catkin_ws/src/cares_msgs && /home/thiago/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingAction.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/include/cares_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionGoal.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionGoal.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionGoal.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionGoal.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionGoal.h: /opt/ros/noetic/share/std_msgs/msg/Bool.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionGoal.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionGoal.h: /opt/ros/noetic/share/std_msgs/msg/String.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionGoal.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionGoal.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionGoal.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionGoal.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionGoal.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionGoal.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionGoal.h: /opt/ros/noetic/share/std_msgs/msg/Bool.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionGoal.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from cares_msgs/MappingActionGoal.msg"
 	cd /home/thiago/catkin_ws/src/cares_msgs && /home/thiago/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionGoal.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/include/cares_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
@@ -169,35 +169,35 @@ cares_msgs/CMakeFiles/cares_msgs_generate_messages_cpp: /home/thiago/catkin_ws/d
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionResult.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionResult.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionResult.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionResult.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingResult.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionResult.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionResult.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionResult.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionResult.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionResult.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating C++ code from cares_msgs/MappingActionResult.msg"
 	cd /home/thiago/catkin_ws/src/cares_msgs && /home/thiago/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionResult.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/include/cares_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionFeedback.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionFeedback.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionFeedback.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionFeedback.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionFeedback.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionFeedback.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionFeedback.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionFeedback.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionFeedback.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionFeedback.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionFeedback.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingActionFeedback.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating C++ code from cares_msgs/MappingActionFeedback.msg"
 	cd /home/thiago/catkin_ws/src/cares_msgs && /home/thiago/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionFeedback.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/include/cares_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingGoal.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingGoal.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingGoal.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingGoal.h: /opt/ros/noetic/share/std_msgs/msg/Bool.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingGoal.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingGoal.h: /opt/ros/noetic/share/std_msgs/msg/String.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingGoal.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingGoal.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingGoal.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingGoal.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingGoal.h: /opt/ros/noetic/share/std_msgs/msg/Bool.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingGoal.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating C++ code from cares_msgs/MappingGoal.msg"
@@ -211,44 +211,44 @@ cares_msgs/CMakeFiles/cares_msgs_generate_messages_cpp: /home/thiago/catkin_ws/d
 
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingFeedback.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingFeedback.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MappingFeedback.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingFeedback.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MappingFeedback.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MappingFeedback.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating C++ code from cares_msgs/MappingFeedback.msg"
 	cd /home/thiago/catkin_ws/src/cares_msgs && /home/thiago/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/include/cares_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionAction.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionAction.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionAction.h: /opt/ros/noetic/share/std_msgs/msg/String.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionAction.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionResult.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionFeedback.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionAction.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionAction.h: /opt/ros/noetic/share/std_msgs/msg/String.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionGoal.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionResult.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionAction.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionGoal.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionFeedback.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionResult.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionAction.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating C++ code from cares_msgs/MetricExtractionAction.msg"
 	cd /home/thiago/catkin_ws/src/cares_msgs && /home/thiago/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionAction.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/include/cares_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionActionGoal.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionActionGoal.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionGoal.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionActionGoal.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionActionGoal.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionActionGoal.h: /opt/ros/noetic/share/std_msgs/msg/String.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionActionGoal.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionActionGoal.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionActionGoal.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionActionGoal.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Generating C++ code from cares_msgs/MetricExtractionActionGoal.msg"
 	cd /home/thiago/catkin_ws/src/cares_msgs && /home/thiago/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionGoal.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/include/cares_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionActionResult.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionActionResult.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionResult.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionActionResult.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionActionResult.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionActionResult.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionResult.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionActionResult.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionActionResult.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionActionResult.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionActionResult.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Generating C++ code from cares_msgs/MetricExtractionActionResult.msg"
 	cd /home/thiago/catkin_ws/src/cares_msgs && /home/thiago/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionResult.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/include/cares_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
@@ -256,9 +256,9 @@ cares_msgs/CMakeFiles/cares_msgs_generate_messages_cpp: /home/thiago/catkin_ws/d
 /home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionActionFeedback.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionActionFeedback.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionFeedback.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionActionFeedback.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionActionFeedback.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionActionFeedback.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionActionFeedback.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionActionFeedback.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/MetricExtractionActionFeedback.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Generating C++ code from cares_msgs/MetricExtractionActionFeedback.msg"
 	cd /home/thiago/catkin_ws/src/cares_msgs && /home/thiago/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionFeedback.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/include/cares_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
@@ -284,34 +284,34 @@ cares_msgs/CMakeFiles/cares_msgs_generate_messages_cpp: /home/thiago/catkin_ws/d
 
 /home/thiago/catkin_ws/devel/include/cares_msgs/NavigationAction.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/NavigationAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationAction.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/NavigationAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionGoal.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/NavigationAction.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/NavigationAction.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/NavigationAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/NavigationAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationFeedback.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/NavigationAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionResult.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/NavigationAction.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/NavigationAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationGoal.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/NavigationAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionFeedback.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/NavigationAction.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/NavigationAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/NavigationAction.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/NavigationAction.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/NavigationAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationFeedback.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/NavigationAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionGoal.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/NavigationAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionResult.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/NavigationAction.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Generating C++ code from cares_msgs/NavigationAction.msg"
 	cd /home/thiago/catkin_ws/src/cares_msgs && /home/thiago/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationAction.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/include/cares_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/thiago/catkin_ws/devel/include/cares_msgs/NavigationActionGoal.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/NavigationActionGoal.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionGoal.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/NavigationActionGoal.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/NavigationActionGoal.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationGoal.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/NavigationActionGoal.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/NavigationActionGoal.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/NavigationActionGoal.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Generating C++ code from cares_msgs/NavigationActionGoal.msg"
 	cd /home/thiago/catkin_ws/src/cares_msgs && /home/thiago/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionGoal.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/include/cares_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/thiago/catkin_ws/devel/include/cares_msgs/NavigationActionResult.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/NavigationActionResult.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionResult.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/NavigationActionResult.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/NavigationActionResult.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/NavigationActionResult.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/NavigationActionResult.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/NavigationActionResult.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/NavigationActionResult.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/NavigationActionResult.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Generating C++ code from cares_msgs/NavigationActionResult.msg"
 	cd /home/thiago/catkin_ws/src/cares_msgs && /home/thiago/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionResult.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/include/cares_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
@@ -319,9 +319,9 @@ cares_msgs/CMakeFiles/cares_msgs_generate_messages_cpp: /home/thiago/catkin_ws/d
 /home/thiago/catkin_ws/devel/include/cares_msgs/NavigationActionFeedback.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/NavigationActionFeedback.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionFeedback.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/NavigationActionFeedback.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationFeedback.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/NavigationActionFeedback.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/NavigationActionFeedback.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/NavigationActionFeedback.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/NavigationActionFeedback.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/NavigationActionFeedback.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Generating C++ code from cares_msgs/NavigationActionFeedback.msg"
 	cd /home/thiago/catkin_ws/src/cares_msgs && /home/thiago/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionFeedback.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/include/cares_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
@@ -346,34 +346,34 @@ cares_msgs/CMakeFiles/cares_msgs_generate_messages_cpp: /home/thiago/catkin_ws/d
 
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalAction.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalAction.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionFeedback.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalAction.h: /opt/ros/noetic/share/std_msgs/msg/String.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalAction.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalFeedback.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalAction.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalAction.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalAction.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalAction.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionGoal.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalAction.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalAction.h: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalAction.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionFeedback.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalAction.h: /opt/ros/noetic/share/std_msgs/msg/String.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalAction.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionResult.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalResult.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalAction.h: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalAction.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalAction.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalAction.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Generating C++ code from cares_msgs/PlatformGoalAction.msg"
 	cd /home/thiago/catkin_ws/src/cares_msgs && /home/thiago/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalAction.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/include/cares_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionGoal.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionGoal.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionGoal.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionGoal.h: /opt/ros/noetic/share/std_msgs/msg/String.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionGoal.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionGoal.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionGoal.h: /opt/ros/noetic/share/std_msgs/msg/String.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionGoal.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionGoal.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Generating C++ code from cares_msgs/PlatformGoalActionGoal.msg"
 	cd /home/thiago/catkin_ws/src/cares_msgs && /home/thiago/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionGoal.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/include/cares_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
@@ -381,9 +381,9 @@ cares_msgs/CMakeFiles/cares_msgs_generate_messages_cpp: /home/thiago/catkin_ws/d
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionResult.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionResult.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionResult.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionResult.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalResult.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionResult.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionResult.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionResult.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionResult.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionResult.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Generating C++ code from cares_msgs/PlatformGoalActionResult.msg"
 	cd /home/thiago/catkin_ws/src/cares_msgs && /home/thiago/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionResult.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/include/cares_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
@@ -391,20 +391,20 @@ cares_msgs/CMakeFiles/cares_msgs_generate_messages_cpp: /home/thiago/catkin_ws/d
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionFeedback.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionFeedback.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionFeedback.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionFeedback.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalFeedback.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionFeedback.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionFeedback.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionFeedback.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionFeedback.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalActionFeedback.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Generating C++ code from cares_msgs/PlatformGoalActionFeedback.msg"
 	cd /home/thiago/catkin_ws/src/cares_msgs && /home/thiago/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionFeedback.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/include/cares_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalGoal.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalGoal.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalGoal.h: /opt/ros/noetic/share/std_msgs/msg/String.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalGoal.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalGoal.h: /opt/ros/noetic/share/std_msgs/msg/String.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalGoal.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/PlatformGoalGoal.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Generating C++ code from cares_msgs/PlatformGoalGoal.msg"
@@ -424,36 +424,36 @@ cares_msgs/CMakeFiles/cares_msgs_generate_messages_cpp: /home/thiago/catkin_ws/d
 
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningAction.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionResult.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionFeedback.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /opt/ros/noetic/share/std_msgs/msg/Bool.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionGoal.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningResult.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /opt/ros/noetic/share/std_msgs/msg/String.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionResult.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionFeedback.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionGoal.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningResult.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /opt/ros/noetic/share/std_msgs/msg/Bool.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningAction.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Generating C++ code from cares_msgs/ScanningAction.msg"
 	cd /home/thiago/catkin_ws/src/cares_msgs && /home/thiago/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningAction.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/include/cares_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionGoal.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionGoal.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionGoal.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionGoal.h: /opt/ros/noetic/share/std_msgs/msg/Bool.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionGoal.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionGoal.h: /opt/ros/noetic/share/std_msgs/msg/String.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionGoal.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionGoal.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionGoal.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionGoal.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionGoal.h: /opt/ros/noetic/share/std_msgs/msg/Bool.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionGoal.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Generating C++ code from cares_msgs/ScanningActionGoal.msg"
 	cd /home/thiago/catkin_ws/src/cares_msgs && /home/thiago/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionGoal.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/include/cares_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
@@ -461,31 +461,31 @@ cares_msgs/CMakeFiles/cares_msgs_generate_messages_cpp: /home/thiago/catkin_ws/d
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionResult.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionResult.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionResult.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionResult.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningResult.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionResult.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionResult.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionResult.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionResult.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionResult.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Generating C++ code from cares_msgs/ScanningActionResult.msg"
 	cd /home/thiago/catkin_ws/src/cares_msgs && /home/thiago/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionResult.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/include/cares_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionFeedback.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionFeedback.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionFeedback.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionFeedback.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionFeedback.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionFeedback.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionFeedback.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionFeedback.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionFeedback.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningActionFeedback.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Generating C++ code from cares_msgs/ScanningActionFeedback.msg"
 	cd /home/thiago/catkin_ws/src/cares_msgs && /home/thiago/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionFeedback.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/include/cares_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningGoal.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningGoal.h: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningGoal.h: /opt/ros/noetic/share/std_msgs/msg/String.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningGoal.h: /opt/ros/noetic/share/std_msgs/msg/Bool.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningGoal.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningGoal.h: /opt/ros/noetic/share/std_msgs/msg/String.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningGoal.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ScanningGoal.h: /opt/ros/noetic/share/std_msgs/msg/Bool.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningGoal.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ScanningGoal.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Generating C++ code from cares_msgs/ScanningGoal.msg"
@@ -505,15 +505,15 @@ cares_msgs/CMakeFiles/cares_msgs_generate_messages_cpp: /home/thiago/catkin_ws/d
 
 /home/thiago/catkin_ws/devel/include/cares_msgs/ArucoDetect.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/ArucoDetect.h: /home/thiago/catkin_ws/src/cares_msgs/srv/ArucoDetect.srv
-/home/thiago/catkin_ws/devel/include/cares_msgs/ArucoDetect.h: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ArucoDetect.h: /opt/ros/noetic/share/geometry_msgs/msg/TransformStamped.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ArucoDetect.h: /opt/ros/noetic/share/geometry_msgs/msg/Transform.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ArucoDetect.h: /home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ArucoDetect.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ArucoDetect.h: /opt/ros/noetic/share/sensor_msgs/msg/Image.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ArucoDetect.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/ArucoDetect.h: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ArucoDetect.h: /opt/ros/noetic/share/sensor_msgs/msg/CameraInfo.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ArucoDetect.h: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ArucoDetect.h: /home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/ArucoDetect.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/ArucoDetect.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/thiago/catkin_ws/devel/include/cares_msgs/ArucoDetect.h: /opt/ros/noetic/share/gencpp/srv.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Generating C++ code from cares_msgs/ArucoDetect.srv"
@@ -522,9 +522,9 @@ cares_msgs/CMakeFiles/cares_msgs_generate_messages_cpp: /home/thiago/catkin_ws/d
 /home/thiago/catkin_ws/devel/include/cares_msgs/CalibrationService.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/CalibrationService.h: /home/thiago/catkin_ws/src/cares_msgs/srv/CalibrationService.srv
 /home/thiago/catkin_ws/devel/include/cares_msgs/CalibrationService.h: /opt/ros/noetic/share/sensor_msgs/msg/CameraInfo.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/CalibrationService.h: /home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/CalibrationService.h: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/CalibrationService.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/CalibrationService.h: /home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/CalibrationService.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/thiago/catkin_ws/devel/include/cares_msgs/CalibrationService.h: /opt/ros/noetic/share/gencpp/srv.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Generating C++ code from cares_msgs/CalibrationService.srv"
@@ -533,9 +533,9 @@ cares_msgs/CMakeFiles/cares_msgs_generate_messages_cpp: /home/thiago/catkin_ws/d
 /home/thiago/catkin_ws/devel/include/cares_msgs/Detection.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/thiago/catkin_ws/devel/include/cares_msgs/Detection.h: /home/thiago/catkin_ws/src/cares_msgs/srv/Detection.srv
 /home/thiago/catkin_ws/devel/include/cares_msgs/Detection.h: /opt/ros/noetic/share/sensor_msgs/msg/Image.msg
-/home/thiago/catkin_ws/devel/include/cares_msgs/Detection.h: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/Detection.h: /home/thiago/catkin_ws/src/cares_msgs/msg/InstanceMasks.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/Detection.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/include/cares_msgs/Detection.h: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
 /home/thiago/catkin_ws/devel/include/cares_msgs/Detection.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/thiago/catkin_ws/devel/include/cares_msgs/Detection.h: /opt/ros/noetic/share/gencpp/srv.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Generating C++ code from cares_msgs/Detection.srv"

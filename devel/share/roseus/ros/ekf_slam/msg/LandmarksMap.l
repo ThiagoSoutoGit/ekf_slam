@@ -10,15 +10,18 @@
 
 (in-package "ROS")
 ;;//! \htmlinclude LandmarksMap.msg.html
+(if (not (find-package "STD_MSGS"))
+  (ros::roseus-add-msgs "std_msgs"))
 
 
 (defclass ekf_slam::LandmarksMap
   :super ros::object
-  :slots (_x _y _size _id _map ))
+  :slots (_header _x _y _size _id _map ))
 
 (defmethod ekf_slam::LandmarksMap
   (:init
    (&key
+    ((:header __header) (instance std_msgs::Header :init))
     ((:x __x) (make-array 0 :initial-element 0.0 :element-type :float))
     ((:y __y) (make-array 0 :initial-element 0.0 :element-type :float))
     ((:size __size) (make-array 0 :initial-element 0.0 :element-type :float))
@@ -26,12 +29,20 @@
     ((:map __map) (make-array 0 :initial-element 0 :element-type :integer))
     )
    (send-super :init)
+   (setq _header __header)
    (setq _x __x)
    (setq _y __y)
    (setq _size __size)
    (setq _id __id)
    (setq _map __map)
    self)
+  (:header
+   (&rest __header)
+   (if (keywordp (car __header))
+       (send* _header __header)
+     (progn
+       (if __header (setq _header (car __header)))
+       _header)))
   (:x
    (&optional __x)
    (if __x (setq _x __x)) _x)
@@ -50,6 +61,8 @@
   (:serialization-length
    ()
    (+
+    ;; std_msgs/Header _header
+    (send _header :serialization-length)
     ;; float64[] _x
     (* 8    (length _x)) 4
     ;; float64[] _y
@@ -65,6 +78,8 @@
    (&optional strm)
    (let ((s (if strm strm
               (make-string-output-stream (send self :serialization-length)))))
+     ;; std_msgs/Header _header
+       (send _header :serialize s)
      ;; float64[] _x
      (write-long (length _x) s)
      (dotimes (i (length _x))
@@ -114,6 +129,8 @@
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
    (buf &optional (ptr- 0))
+   ;; std_msgs/Header _header
+     (send _header :deserialize buf ptr-) (incf ptr- (send _header :serialization-length))
    ;; float64[] _x
    (let (n)
      (setq n (sys::peek buf ptr- :integer)) (incf ptr- 4)
@@ -173,18 +190,35 @@
    self)
   )
 
-(setf (get ekf_slam::LandmarksMap :md5sum-) "e14fd09077d5b90e93fc3b260d94d59d")
+(setf (get ekf_slam::LandmarksMap :md5sum-) "be59b8991d90b2ec01f312b7f555e888")
 (setf (get ekf_slam::LandmarksMap :datatype-) "ekf_slam/LandmarksMap")
 (setf (get ekf_slam::LandmarksMap :definition-)
-      "float64[] x # a list of x coordinate of circle center x
+      "std_msgs/Header header
+float64[] x # a list of x coordinate of circle center x
 float64[] y # a list of y coordinate of circle center y
 float64[] size
 int64[] id # id of this landmark (data association)
 int64[] map # type of map
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
 ")
 
 
 
-(provide :ekf_slam/LandmarksMap "e14fd09077d5b90e93fc3b260d94d59d")
+(provide :ekf_slam/LandmarksMap "be59b8991d90b2ec01f312b7f555e888")
 
 

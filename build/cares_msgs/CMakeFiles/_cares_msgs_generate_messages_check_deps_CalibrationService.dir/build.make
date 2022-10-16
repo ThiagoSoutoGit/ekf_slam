@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/thiago/catkin_ws/build
 include cares_msgs/CMakeFiles/_cares_msgs_generate_messages_check_deps_CalibrationService.dir/progress.make
 
 cares_msgs/CMakeFiles/_cares_msgs_generate_messages_check_deps_CalibrationService:
-	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py cares_msgs /home/thiago/catkin_ws/src/cares_msgs/srv/CalibrationService.srv sensor_msgs/CameraInfo:cares_msgs/StereoCameraInfo:sensor_msgs/RegionOfInterest:std_msgs/Header
+	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py cares_msgs /home/thiago/catkin_ws/src/cares_msgs/srv/CalibrationService.srv sensor_msgs/CameraInfo:sensor_msgs/RegionOfInterest:std_msgs/Header:cares_msgs/StereoCameraInfo
 
 _cares_msgs_generate_messages_check_deps_CalibrationService: cares_msgs/CMakeFiles/_cares_msgs_generate_messages_check_deps_CalibrationService
 _cares_msgs_generate_messages_check_deps_CalibrationService: cares_msgs/CMakeFiles/_cares_msgs_generate_messages_check_deps_CalibrationService.dir/build.make

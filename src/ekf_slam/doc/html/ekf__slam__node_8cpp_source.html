@@ -25,132 +25,199 @@ $(function() {
 <div class="title">ekf_slam_node.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="ekf__slam__node_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;message_filters/subscriber.h&gt;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;message_filters/time_synchronizer.h&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;message_filters/synchronizer.h&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;message_filters/sync_policies/approximate_time.h&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;sensor_msgs/Image.h&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;sensor_msgs/CameraInfo.h&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;cares_msgs/StereoCameraInfo.h&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;cares_msgs/ArucoDetect.h&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;cares_msgs/ArucoMarkers.h&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;nav_msgs/Odometry.h&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;Eigen/Core&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;Eigen/Geometry&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;Eigen/Dense&gt;</span></div>
+<a href="ekf__slam__node_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;message_filters/subscriber.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;message_filters/time_synchronizer.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;message_filters/synchronizer.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;message_filters/sync_policies/approximate_time.h&gt;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classEkfSlam.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classEkfSlam.html">EkfSlam</a></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classEkfSlam.html#aa45082eea0c20386f879a59c1cabe27d">   22</a></span>&#160;    <a class="code" href="classEkfSlam.html#aa45082eea0c20386f879a59c1cabe27d">EkfSlam</a>(ros::NodeHandle &amp;nh)</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="comment">// message_filters::Subscriber&lt;cares_msgs::ArucoMarkers&gt; image_sub(nh, &quot;image&quot;, 1);</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="comment">// message_filters::Subscriber&lt;nav_msgs::Odometry&gt; info_sub(nh, &quot;camera_info&quot;, 1);</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="comment">// TimeSynchronizer&lt;cares_msgs::ArucoMarkers, nav_msgs::Odometry&gt; sync(image_sub, info_sub, 10);</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="comment">// sync.registerCallback(boost::bind(&amp;DrawMap::callback, this, _1, _2));</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="comment">// GOODish ApproximateTime</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        message_filters::Subscriber&lt;cares_msgs::ArucoMarkers&gt; aruco_sub_(nh, <span class="stringliteral">&quot;stereo_pair/markers&quot;</span>, 100);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        message_filters::Subscriber&lt;nav_msgs::Odometry&gt; odom_sub_(nh, <span class="stringliteral">&quot;odom&quot;</span>, 100);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">typedef</span> message_filters::sync_policies::ApproximateTime&lt;cares_msgs::ArucoMarkers, nav_msgs::Odometry&gt; MySyncPolicy;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="comment">// ApproximateTime takes a queue size as its constructor argument, hence MySyncPolicy(10)</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        message_filters::Synchronizer&lt;MySyncPolicy&gt; sync(MySyncPolicy(100), aruco_sub_, odom_sub_);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        sync.registerCallback(boost::bind(&amp;<a class="code" href="classEkfSlam.html#a2c7c9b70194ad6426894da24f4f1d0a8">EkfSlam::callback</a>, <span class="keyword">this</span>, _1, _2));</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;sensor_msgs/Image.h&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;sensor_msgs/CameraInfo.h&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;cares_msgs/StereoCameraInfo.h&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;cares_msgs/ArucoDetect.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;cares_msgs/ArucoMarkers.h&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;nav_msgs/Odometry.h&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;Eigen/Core&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;Eigen/Geometry&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;Eigen/Dense&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;geometry_msgs/Pose2D.h&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;tf/tf.h&gt;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="comment">// message_filters::Subscriber&lt;ArucoMarkers&gt; image1_sub(nh, &quot;image1&quot;, 1);</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="comment">// message_filters::Subscriber&lt;Odometry&gt; image2_sub(nh, &quot;image2&quot;, 1);</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment">// typedef sync_policies::ApproximateTime&lt;ArucoMarkers, Odometry&gt; MySyncPolicy;</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="comment">// // ApproximateTime takes a queue size as its constructor argument, hence MySyncPolicy(10)</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">// Synchronizer&lt;MySyncPolicy&gt; sync(MySyncPolicy(10), image1_sub, image2_sub);</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="comment">// sync.registerCallback(boost::bind(&amp;DrawMap::callback, this, _1, _2));</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">// message_filters::Subscriber&lt;nav_msgs::Odometry::ConstPtr&gt; odom_filter_sub_(nh, &quot;odom&quot;, 1);</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="comment">// message_filters::Subscriber&lt;cares_msgs::ArucoMarkers::ConstPtr&gt; aruco_filter_sub_.subscribe(nh, &quot;stereo_pair/markers&quot;, 1);</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">// message_filters::TimeSynchronizer&lt;nav_msgs::Odometry::ConstPtr, cares_msgs::ArucoMarkers&gt; sync(odom_filter_sub_, aruco_filter_sub_, 10);</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">// sync.registerCallback(std::bind(&amp;PublishLandmarks::moveRobot, this,_1, _2));</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classEkfSlam.html#a5a3750940d12924fccadd7030cdf3410">   52</a></span>&#160;    Eigen::VectorXd <a class="code" href="classEkfSlam.html#a5a3750940d12924fccadd7030cdf3410">EigenMeans</a>(std::vector&lt;Eigen::VectorXd&gt; &amp;data)</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        Eigen::VectorXd means(data[0].rows());</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; means.rows(); i++)</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            means(i) = 0;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="comment">// check if not empty</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">if</span> (!data.empty())</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="comment">// sum of peers</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; data.size(); i++)</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> j = 0; j &lt; data[0].rows(); j++)</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                    means(j) += data[i](j);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="comment">// mean</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; data[0].rows(); i++)</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                means(i) /= data.size();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">return</span> means;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classEkfSlam.html#ac0fa2a1656204283acb300e034455d0d">   81</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classEkfSlam.html#ac0fa2a1656204283acb300e034455d0d">ComputeEigenCovariance</a>(<span class="keywordtype">int</span> &amp;x, <span class="keywordtype">int</span> &amp;y, std::vector&lt;Eigen::VectorXd&gt; &amp;data)</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        Eigen::VectorXd componentMeans = <a class="code" href="classEkfSlam.html#a5a3750940d12924fccadd7030cdf3410">EigenMeans</a>(data);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">double</span> covxy;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">double</span> sum;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; data.size(); i++)</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            sum += (data[i](x) - componentMeans(x)) * (data[i](y) - componentMeans(y));</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        covxy = sum / (data.size() - 1);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">return</span> covxy;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classEkfSlam.html#a2c7c9b70194ad6426894da24f4f1d0a8">   97</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classEkfSlam.html#a2c7c9b70194ad6426894da24f4f1d0a8">callback</a>(<span class="keyword">const</span> cares_msgs::ArucoMarkers::ConstPtr &amp;image1, <span class="keyword">const</span> nav_msgs::Odometry::ConstPtr &amp;msg)</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Callback X: &quot;</span> &lt;&lt; msg-&gt;pose.pose.position.x &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;};</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="ekf__slam__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">  105</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="ekf__slam__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv)</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;{</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    ros::init(argc, argv, <span class="stringliteral">&quot;vision_node&quot;</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classEkfSlam.html">   48</a></span>&#160;<span class="keyword">class </span><a class="code" href="classEkfSlam.html">EkfSlam</a></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classEkfSlam.html#aa45082eea0c20386f879a59c1cabe27d">   51</a></span>&#160;    <a class="code" href="classEkfSlam.html#aa45082eea0c20386f879a59c1cabe27d">EkfSlam</a>(ros::NodeHandle &amp;nh)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="comment">// GOOD TimeSynchronizer</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="classEkfSlam.html#a1afa94d7237e401745d5583b800ffb19">aruco_sub_</a>.subscribe(nh, <span class="stringliteral">&quot;stereo_pair/markers&quot;</span>, 100);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="classEkfSlam.html#af1aa6520d36e670cf8034539cea9d097">odom_sub_</a>.subscribe(nh, <span class="stringliteral">&quot;odom&quot;</span>, 100);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="classEkfSlam.html#aa19511995c112a48d41ad336b12527a6">sync</a>.reset(<span class="keyword">new</span> <a class="code" href="classEkfSlam.html#ad538a1ae1ce0666f77decf301494c9ac">sync_policy_</a>(<a class="code" href="classEkfSlam.html#a1afa94d7237e401745d5583b800ffb19">aruco_sub_</a>, <a class="code" href="classEkfSlam.html#af1aa6520d36e670cf8034539cea9d097">odom_sub_</a>, 10));</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="classEkfSlam.html#aa19511995c112a48d41ad336b12527a6">sync</a>-&gt;registerCallback(std::bind(&amp;<a class="code" href="classEkfSlam.html#aa81916d35b732764a00c89fbfa0f8fbe">EkfSlam::ekfCallback</a>, <span class="keyword">this</span>, std::placeholders::_1, std::placeholders::_2));</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="comment">//initialize current position to 0</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="classEkfSlam.html#a26d4a4ef6f7de3c9e326b1672ba3fd13">current_state_</a> &lt;&lt; 0, 0, 0;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classEkfSlam.html#a836d27ebd92f12e91ab04886ec52e0a6">   65</a></span>&#160;    Eigen::VectorXd <a class="code" href="classEkfSlam.html#a836d27ebd92f12e91ab04886ec52e0a6">eigenMeans</a>(std::vector&lt;Eigen::VectorXd&gt; &amp;data)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        Eigen::VectorXd means(data[0].rows());</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; means.rows(); i++)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            means(i) = 0;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="comment">// check if not empty</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">if</span> (!data.empty())</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="comment">// sum of peers</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; data.size(); i++)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> j = 0; j &lt; data[0].rows(); j++)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                    means(j) += data[i](j);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="comment">// mean</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; data[0].rows(); i++)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                means(i) /= data.size();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">return</span> means;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classEkfSlam.html#a95dce19c373250fad5da89be18aeac7b">   94</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classEkfSlam.html#a95dce19c373250fad5da89be18aeac7b">computeEigenCovariance</a>(<span class="keywordtype">int</span> &amp;x, <span class="keywordtype">int</span> &amp;y, std::vector&lt;Eigen::VectorXd&gt; &amp;data)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        Eigen::VectorXd componentMeans = <a class="code" href="classEkfSlam.html#a836d27ebd92f12e91ab04886ec52e0a6">eigenMeans</a>(data);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordtype">double</span> covxy;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordtype">double</span> sum;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; data.size(); i++)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            sum += (data[i](x) - componentMeans(x)) * (data[i](y) - componentMeans(y));</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        covxy = sum / (data.size() - 1);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">return</span> covxy;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    ros::NodeHandle nh;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <a class="code" href="classEkfSlam.html">EkfSlam</a> ekf_slam(nh);</div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classEkfSlam.html#aa81916d35b732764a00c89fbfa0f8fbe">  110</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classEkfSlam.html#aa81916d35b732764a00c89fbfa0f8fbe">ekfCallback</a>(<span class="keyword">const</span> cares_msgs::ArucoMarkers::ConstPtr &amp;aruco_marker, <span class="keyword">const</span> nav_msgs::Odometry::ConstPtr &amp;msg)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    {</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    ros::spin();</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        geometry_msgs::Pose2D pose2d;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        pose2d.x = msg-&gt;pose.pose.position.x;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        pose2d.y = msg-&gt;pose.pose.position.y;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        tf::Quaternion q(</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            msg-&gt;pose.pose.orientation.x,</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            msg-&gt;pose.pose.orientation.y,</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            msg-&gt;pose.pose.orientation.z,</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            msg-&gt;pose.pose.orientation.w);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        tf::Matrix3x3 m(q);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordtype">double</span> yaw, pitch, roll;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        m.getEulerYPR(yaw, pitch, roll);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="comment">// Get the matrix represented as euler angles around YXZ, roundtrip with setEulerYPR.</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="comment">// yaw  Yaw around Z axis</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="comment">// pitch        Pitch around Y axis</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="comment">// roll around X axis</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        pose2d.theta = pitch;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="comment">//check if the robot has move</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">if</span> (((pose2d.x &gt; <a class="code" href="classEkfSlam.html#a26d4a4ef6f7de3c9e326b1672ba3fd13">current_state_</a>(0) + <a class="code" href="classEkfSlam.html#ad8379ecf7d5820f80b4ba87914a67294">current_state_changed_threshold_</a>) || (pose2d.x &lt; <a class="code" href="classEkfSlam.html#a26d4a4ef6f7de3c9e326b1672ba3fd13">current_state_</a>(0) - <a class="code" href="classEkfSlam.html#ad8379ecf7d5820f80b4ba87914a67294">current_state_changed_threshold_</a>)) ||</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            ((pose2d.y &gt; <a class="code" href="classEkfSlam.html#a26d4a4ef6f7de3c9e326b1672ba3fd13">current_state_</a>(1) + <a class="code" href="classEkfSlam.html#ad8379ecf7d5820f80b4ba87914a67294">current_state_changed_threshold_</a>) || (pose2d.y &lt; <a class="code" href="classEkfSlam.html#a26d4a4ef6f7de3c9e326b1672ba3fd13">current_state_</a>(1) - <a class="code" href="classEkfSlam.html#ad8379ecf7d5820f80b4ba87914a67294">current_state_changed_threshold_</a>)) ||</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            ((pose2d.theta &gt; <a class="code" href="classEkfSlam.html#a26d4a4ef6f7de3c9e326b1672ba3fd13">current_state_</a>(2) + <a class="code" href="classEkfSlam.html#ad8379ecf7d5820f80b4ba87914a67294">current_state_changed_threshold_</a>) || (pose2d.theta &lt; <a class="code" href="classEkfSlam.html#a26d4a4ef6f7de3c9e326b1672ba3fd13">current_state_</a>(2) - <a class="code" href="classEkfSlam.html#ad8379ecf7d5820f80b4ba87914a67294">current_state_changed_threshold_</a>)))</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;---------------------------------------------------&quot;</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                      &lt;&lt; std::endl</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot;Phase 1 - Prediction Phase&quot;</span> &lt;&lt; std::endl</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                      &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;Step 1 - Update current state using the odometry data:&quot;</span> &lt;&lt; std::endl</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                      &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;Old state&quot;</span> &lt;&lt; std::endl</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                      &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;X: &quot;</span> &lt;&lt; <a class="code" href="classEkfSlam.html#a26d4a4ef6f7de3c9e326b1672ba3fd13">current_state_</a>(0) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;Y: &quot;</span> &lt;&lt; <a class="code" href="classEkfSlam.html#a26d4a4ef6f7de3c9e326b1672ba3fd13">current_state_</a>(1) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;Theta: &quot;</span> &lt;&lt; <a class="code" href="classEkfSlam.html#a26d4a4ef6f7de3c9e326b1672ba3fd13">current_state_</a>(2) &lt;&lt; std::endl</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                      &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <span class="comment">//Update current position with odometry reading</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <a class="code" href="classEkfSlam.html#a26d4a4ef6f7de3c9e326b1672ba3fd13">current_state_</a>(0) = pose2d.x;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <a class="code" href="classEkfSlam.html#a26d4a4ef6f7de3c9e326b1672ba3fd13">current_state_</a>(1) = pose2d.y;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <a class="code" href="classEkfSlam.html#a26d4a4ef6f7de3c9e326b1672ba3fd13">current_state_</a>(2) = pose2d.theta;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;New state&quot;</span> &lt;&lt; std::endl</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                      &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;X: &quot;</span> &lt;&lt; <a class="code" href="classEkfSlam.html#a26d4a4ef6f7de3c9e326b1672ba3fd13">current_state_</a>(0) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;Y: &quot;</span> &lt;&lt; <a class="code" href="classEkfSlam.html#a26d4a4ef6f7de3c9e326b1672ba3fd13">current_state_</a>(1) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;Theta: &quot;</span> &lt;&lt; <a class="code" href="classEkfSlam.html#a26d4a4ef6f7de3c9e326b1672ba3fd13">current_state_</a>(2) &lt;&lt; std::endl</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                      &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="comment">// TimeSynchronizer</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="classEkfSlam.html#a1afa94d7237e401745d5583b800ffb19">  176</a></span>&#160;    message_filters::Subscriber&lt;cares_msgs::ArucoMarkers&gt; <a class="code" href="classEkfSlam.html#a1afa94d7237e401745d5583b800ffb19">aruco_sub_</a>;                                     </div>
+<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="classEkfSlam.html#af1aa6520d36e670cf8034539cea9d097">  177</a></span>&#160;    message_filters::Subscriber&lt;nav_msgs::Odometry&gt; <a class="code" href="classEkfSlam.html#af1aa6520d36e670cf8034539cea9d097">odom_sub_</a>;                                            </div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="classEkfSlam.html#ad538a1ae1ce0666f77decf301494c9ac">  178</a></span>&#160;    <span class="keyword">typedef</span> message_filters::TimeSynchronizer&lt;cares_msgs::ArucoMarkers, nav_msgs::Odometry&gt; <a class="code" href="classEkfSlam.html#ad538a1ae1ce0666f77decf301494c9ac">sync_policy_</a>; </div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="classEkfSlam.html#aa19511995c112a48d41ad336b12527a6">  179</a></span>&#160;    std::shared_ptr&lt;sync_policy_&gt; <a class="code" href="classEkfSlam.html#aa19511995c112a48d41ad336b12527a6">sync</a>;                                                                   </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="comment">// Range bearing</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="classEkfSlam.html#a8b1570fce01306df3a50b9906f4d395f">  182</a></span>&#160;    Eigen::Vector2d <a class="code" href="classEkfSlam.html#a8b1570fce01306df3a50b9906f4d395f">range_bearing_landmark_h_</a> = Eigen::Vector2d(0,0);</div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="classEkfSlam.html#abe2512c22ea3f62261c56e0678fa4ee8">  183</a></span>&#160;    Eigen::Vector2d <a class="code" href="classEkfSlam.html#abe2512c22ea3f62261c56e0678fa4ee8">range_bearing_data_association_z_</a> = Eigen::Vector2d(0,0);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="comment">// Robot state</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="classEkfSlam.html#a26d4a4ef6f7de3c9e326b1672ba3fd13">  186</a></span>&#160;    Eigen::VectorXd <a class="code" href="classEkfSlam.html#a26d4a4ef6f7de3c9e326b1672ba3fd13">current_state_</a> = Eigen::VectorXd(3);</div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="classEkfSlam.html#ad8379ecf7d5820f80b4ba87914a67294">  187</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classEkfSlam.html#ad8379ecf7d5820f80b4ba87914a67294">current_state_changed_threshold_</a> = 0.01;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;};</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="ekf__slam__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">  190</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="ekf__slam__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv)</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;{</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    ros::init(argc, argv, <span class="stringliteral">&quot;vision_node&quot;</span>);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    ros::NodeHandle nh;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <a class="code" href="classEkfSlam.html">EkfSlam</a> ekf_slam(nh);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    ros::spin();</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassEkfSlam_html_aa45082eea0c20386f879a59c1cabe27d"><div class="ttname"><a href="classEkfSlam.html#aa45082eea0c20386f879a59c1cabe27d">EkfSlam::EkfSlam</a></div><div class="ttdeci">EkfSlam(ros::NodeHandle &amp;nh)</div><div class="ttdef"><b>Definition:</b> <a href="ekf__slam__node_8cpp_source.html#l00022">ekf_slam_node.cpp:22</a></div></div>
-<div class="ttc" id="aclassEkfSlam_html_ac0fa2a1656204283acb300e034455d0d"><div class="ttname"><a href="classEkfSlam.html#ac0fa2a1656204283acb300e034455d0d">EkfSlam::ComputeEigenCovariance</a></div><div class="ttdeci">double ComputeEigenCovariance(int &amp;x, int &amp;y, std::vector&lt; Eigen::VectorXd &gt; &amp;data)</div><div class="ttdoc">Computes the covariance given 2 elements (X and Y).</div><div class="ttdef"><b>Definition:</b> <a href="ekf__slam__node_8cpp_source.html#l00081">ekf_slam_node.cpp:81</a></div></div>
-<div class="ttc" id="aclassEkfSlam_html_a2c7c9b70194ad6426894da24f4f1d0a8"><div class="ttname"><a href="classEkfSlam.html#a2c7c9b70194ad6426894da24f4f1d0a8">EkfSlam::callback</a></div><div class="ttdeci">void callback(const cares_msgs::ArucoMarkers::ConstPtr &amp;image1, const nav_msgs::Odometry::ConstPtr &amp;msg)</div><div class="ttdoc">receive landmark positions</div><div class="ttdef"><b>Definition:</b> <a href="ekf__slam__node_8cpp_source.html#l00097">ekf_slam_node.cpp:97</a></div></div>
-<div class="ttc" id="aclassEkfSlam_html_a5a3750940d12924fccadd7030cdf3410"><div class="ttname"><a href="classEkfSlam.html#a5a3750940d12924fccadd7030cdf3410">EkfSlam::EigenMeans</a></div><div class="ttdeci">Eigen::VectorXd EigenMeans(std::vector&lt; Eigen::VectorXd &gt; &amp;data)</div><div class="ttdoc">receive a vector of Eigen::VectorXd and returns a Eigen::VectorXd with the menas of each element inde...</div><div class="ttdef"><b>Definition:</b> <a href="ekf__slam__node_8cpp_source.html#l00052">ekf_slam_node.cpp:52</a></div></div>
-<div class="ttc" id="aclassEkfSlam_html"><div class="ttname"><a href="classEkfSlam.html">EkfSlam</a></div><div class="ttdef"><b>Definition:</b> <a href="ekf__slam__node_8cpp_source.html#l00019">ekf_slam_node.cpp:19</a></div></div>
-<div class="ttc" id="aekf__slam__node_8cpp_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="ekf__slam__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="ekf__slam__node_8cpp_source.html#l00105">ekf_slam_node.cpp:105</a></div></div>
+<div class="ttc" id="aclassEkfSlam_html_a26d4a4ef6f7de3c9e326b1672ba3fd13"><div class="ttname"><a href="classEkfSlam.html#a26d4a4ef6f7de3c9e326b1672ba3fd13">EkfSlam::current_state_</a></div><div class="ttdeci">Eigen::VectorXd current_state_</div><div class="ttdef"><b>Definition:</b> <a href="ekf__slam__node_8cpp_source.html#l00186">ekf_slam_node.cpp:186</a></div></div>
+<div class="ttc" id="aclassEkfSlam_html_ad538a1ae1ce0666f77decf301494c9ac"><div class="ttname"><a href="classEkfSlam.html#ad538a1ae1ce0666f77decf301494c9ac">EkfSlam::sync_policy_</a></div><div class="ttdeci">message_filters::TimeSynchronizer&lt; cares_msgs::ArucoMarkers, nav_msgs::Odometry &gt; sync_policy_</div><div class="ttdef"><b>Definition:</b> <a href="ekf__slam__node_8cpp_source.html#l00178">ekf_slam_node.cpp:178</a></div></div>
+<div class="ttc" id="aclassEkfSlam_html_a836d27ebd92f12e91ab04886ec52e0a6"><div class="ttname"><a href="classEkfSlam.html#a836d27ebd92f12e91ab04886ec52e0a6">EkfSlam::eigenMeans</a></div><div class="ttdeci">Eigen::VectorXd eigenMeans(std::vector&lt; Eigen::VectorXd &gt; &amp;data)</div><div class="ttdoc">receive a vector of Eigen::VectorXd and returns a Eigen::VectorXd with the menas of each element inde...</div><div class="ttdef"><b>Definition:</b> <a href="ekf__slam__node_8cpp_source.html#l00065">ekf_slam_node.cpp:65</a></div></div>
+<div class="ttc" id="aclassEkfSlam_html_a8b1570fce01306df3a50b9906f4d395f"><div class="ttname"><a href="classEkfSlam.html#a8b1570fce01306df3a50b9906f4d395f">EkfSlam::range_bearing_landmark_h_</a></div><div class="ttdeci">Eigen::Vector2d range_bearing_landmark_h_</div><div class="ttdef"><b>Definition:</b> <a href="ekf__slam__node_8cpp_source.html#l00182">ekf_slam_node.cpp:182</a></div></div>
+<div class="ttc" id="aclassEkfSlam_html_af1aa6520d36e670cf8034539cea9d097"><div class="ttname"><a href="classEkfSlam.html#af1aa6520d36e670cf8034539cea9d097">EkfSlam::odom_sub_</a></div><div class="ttdeci">message_filters::Subscriber&lt; nav_msgs::Odometry &gt; odom_sub_</div><div class="ttdef"><b>Definition:</b> <a href="ekf__slam__node_8cpp_source.html#l00177">ekf_slam_node.cpp:177</a></div></div>
+<div class="ttc" id="aclassEkfSlam_html_aa19511995c112a48d41ad336b12527a6"><div class="ttname"><a href="classEkfSlam.html#aa19511995c112a48d41ad336b12527a6">EkfSlam::sync</a></div><div class="ttdeci">std::shared_ptr&lt; sync_policy_ &gt; sync</div><div class="ttdef"><b>Definition:</b> <a href="ekf__slam__node_8cpp_source.html#l00179">ekf_slam_node.cpp:179</a></div></div>
+<div class="ttc" id="aclassEkfSlam_html_aa45082eea0c20386f879a59c1cabe27d"><div class="ttname"><a href="classEkfSlam.html#aa45082eea0c20386f879a59c1cabe27d">EkfSlam::EkfSlam</a></div><div class="ttdeci">EkfSlam(ros::NodeHandle &amp;nh)</div><div class="ttdef"><b>Definition:</b> <a href="ekf__slam__node_8cpp_source.html#l00051">ekf_slam_node.cpp:51</a></div></div>
+<div class="ttc" id="aclassEkfSlam_html_a95dce19c373250fad5da89be18aeac7b"><div class="ttname"><a href="classEkfSlam.html#a95dce19c373250fad5da89be18aeac7b">EkfSlam::computeEigenCovariance</a></div><div class="ttdeci">double computeEigenCovariance(int &amp;x, int &amp;y, std::vector&lt; Eigen::VectorXd &gt; &amp;data)</div><div class="ttdoc">Computes the covariance given 2 elements (X and Y).</div><div class="ttdef"><b>Definition:</b> <a href="ekf__slam__node_8cpp_source.html#l00094">ekf_slam_node.cpp:94</a></div></div>
+<div class="ttc" id="aclassEkfSlam_html_abe2512c22ea3f62261c56e0678fa4ee8"><div class="ttname"><a href="classEkfSlam.html#abe2512c22ea3f62261c56e0678fa4ee8">EkfSlam::range_bearing_data_association_z_</a></div><div class="ttdeci">Eigen::Vector2d range_bearing_data_association_z_</div><div class="ttdef"><b>Definition:</b> <a href="ekf__slam__node_8cpp_source.html#l00183">ekf_slam_node.cpp:183</a></div></div>
+<div class="ttc" id="aclassEkfSlam_html_a1afa94d7237e401745d5583b800ffb19"><div class="ttname"><a href="classEkfSlam.html#a1afa94d7237e401745d5583b800ffb19">EkfSlam::aruco_sub_</a></div><div class="ttdeci">message_filters::Subscriber&lt; cares_msgs::ArucoMarkers &gt; aruco_sub_</div><div class="ttdef"><b>Definition:</b> <a href="ekf__slam__node_8cpp_source.html#l00176">ekf_slam_node.cpp:176</a></div></div>
+<div class="ttc" id="aclassEkfSlam_html_ad8379ecf7d5820f80b4ba87914a67294"><div class="ttname"><a href="classEkfSlam.html#ad8379ecf7d5820f80b4ba87914a67294">EkfSlam::current_state_changed_threshold_</a></div><div class="ttdeci">double current_state_changed_threshold_</div><div class="ttdef"><b>Definition:</b> <a href="ekf__slam__node_8cpp_source.html#l00187">ekf_slam_node.cpp:187</a></div></div>
+<div class="ttc" id="aclassEkfSlam_html_aa81916d35b732764a00c89fbfa0f8fbe"><div class="ttname"><a href="classEkfSlam.html#aa81916d35b732764a00c89fbfa0f8fbe">EkfSlam::ekfCallback</a></div><div class="ttdeci">void ekfCallback(const cares_msgs::ArucoMarkers::ConstPtr &amp;aruco_marker, const nav_msgs::Odometry::ConstPtr &amp;msg)</div><div class="ttdoc">receive landmark positions</div><div class="ttdef"><b>Definition:</b> <a href="ekf__slam__node_8cpp_source.html#l00110">ekf_slam_node.cpp:110</a></div></div>
+<div class="ttc" id="aclassEkfSlam_html"><div class="ttname"><a href="classEkfSlam.html">EkfSlam</a></div><div class="ttdoc">Node for executing state prediction, state correction, and covariance calculations.</div><div class="ttdef"><b>Definition:</b> <a href="ekf__slam__node_8cpp_source.html#l00048">ekf_slam_node.cpp:48</a></div></div>
+<div class="ttc" id="aekf__slam__node_8cpp_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="ekf__slam__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="ekf__slam__node_8cpp_source.html#l00190">ekf_slam_node.cpp:190</a></div></div>
 
 <br clear="all" />
 <hr size="1"><div style="align: right;">
 <a href="http://wiki.ros.org/ekf_slam">ekf_slam</a><br />
 Author(s): </br />
-<small>autogenerated on Sun Oct 16 2022 09:25:15</small>
+<small>autogenerated on Sun Oct 16 2022 12:58:45</small>
 </div>
 </body>
 </html>

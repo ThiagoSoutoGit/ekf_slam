@@ -99,99 +99,99 @@ cares_msgs/CMakeFiles/cares_msgs_generate_messages_eus: /home/thiago/catkin_ws/d
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ArucoMarkers.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ArucoMarkers.l: /home/thiago/catkin_ws/src/cares_msgs/msg/ArucoMarkers.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ArucoMarkers.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ArucoMarkers.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ArucoMarkers.l: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ArucoMarkers.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ArucoMarkers.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ArucoMarkers.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from cares_msgs/ArucoMarkers.msg"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/src/cares_msgs/msg/ArucoMarkers.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/InstanceMasks.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/InstanceMasks.l: /home/thiago/catkin_ws/src/cares_msgs/msg/InstanceMasks.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/InstanceMasks.l: /opt/ros/noetic/share/sensor_msgs/msg/Image.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/InstanceMasks.l: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/InstanceMasks.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/InstanceMasks.l: /opt/ros/noetic/share/sensor_msgs/msg/Image.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from cares_msgs/InstanceMasks.msg"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/src/cares_msgs/msg/InstanceMasks.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/StereoCameraInfo.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/StereoCameraInfo.l: /home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/StereoCameraInfo.l: /opt/ros/noetic/share/sensor_msgs/msg/CameraInfo.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/StereoCameraInfo.l: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/StereoCameraInfo.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/StereoCameraInfo.l: /opt/ros/noetic/share/sensor_msgs/msg/CameraInfo.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from cares_msgs/StereoCameraInfo.msg"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingAction.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /opt/ros/noetic/share/std_msgs/msg/String.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionFeedback.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /opt/ros/noetic/share/std_msgs/msg/Bool.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionGoal.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingResult.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingResult.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionResult.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionGoal.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionFeedback.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /opt/ros/noetic/share/std_msgs/msg/Bool.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingAction.l: /opt/ros/noetic/share/std_msgs/msg/String.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from cares_msgs/MappingAction.msg"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingAction.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionGoal.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionGoal.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionGoal.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionGoal.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionGoal.l: /opt/ros/noetic/share/std_msgs/msg/Bool.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionGoal.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionGoal.l: /opt/ros/noetic/share/std_msgs/msg/String.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionGoal.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionGoal.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionGoal.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionGoal.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionGoal.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionGoal.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionGoal.l: /opt/ros/noetic/share/std_msgs/msg/Bool.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp code from cares_msgs/MappingActionGoal.msg"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionGoal.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionResult.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionResult.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionResult.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionResult.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingResult.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionResult.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionResult.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionResult.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionResult.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating EusLisp code from cares_msgs/MappingActionResult.msg"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionResult.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionFeedback.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionFeedback.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionFeedback.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionFeedback.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionFeedback.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionFeedback.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionFeedback.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionFeedback.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionFeedback.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionFeedback.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingActionFeedback.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating EusLisp code from cares_msgs/MappingActionFeedback.msg"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingActionFeedback.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingGoal.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingGoal.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingGoal.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingGoal.l: /opt/ros/noetic/share/std_msgs/msg/Bool.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingGoal.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingGoal.l: /opt/ros/noetic/share/std_msgs/msg/String.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingGoal.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingGoal.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingGoal.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingGoal.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingGoal.l: /opt/ros/noetic/share/std_msgs/msg/Bool.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating EusLisp code from cares_msgs/MappingGoal.msg"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingGoal.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg
@@ -203,50 +203,50 @@ cares_msgs/CMakeFiles/cares_msgs_generate_messages_eus: /home/thiago/catkin_ws/d
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingFeedback.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingFeedback.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingFeedback.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingFeedback.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MappingFeedback.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating EusLisp code from cares_msgs/MappingFeedback.msg"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MappingFeedback.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionAction.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionAction.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionAction.l: /opt/ros/noetic/share/std_msgs/msg/String.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionAction.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionResult.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionFeedback.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionAction.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionAction.l: /opt/ros/noetic/share/std_msgs/msg/String.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionGoal.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionResult.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionAction.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionGoal.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionFeedback.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionResult.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating EusLisp code from cares_msgs/MetricExtractionAction.msg"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionAction.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionActionGoal.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionActionGoal.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionGoal.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionActionGoal.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionActionGoal.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionActionGoal.l: /opt/ros/noetic/share/std_msgs/msg/String.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionActionGoal.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionActionGoal.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionGoal.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionActionGoal.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Generating EusLisp code from cares_msgs/MetricExtractionActionGoal.msg"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionGoal.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionActionResult.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionActionResult.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionResult.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionActionResult.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionActionResult.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionActionResult.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionResult.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionActionResult.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionActionResult.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionActionResult.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Generating EusLisp code from cares_msgs/MetricExtractionActionResult.msg"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionResult.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionActionFeedback.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionActionFeedback.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionFeedback.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionActionFeedback.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionFeedback.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionActionFeedback.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionActionFeedback.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionActionFeedback.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/MetricExtractionActionFeedback.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Generating EusLisp code from cares_msgs/MetricExtractionActionFeedback.msg"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/MetricExtractionActionFeedback.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg
 
@@ -268,41 +268,41 @@ cares_msgs/CMakeFiles/cares_msgs_generate_messages_eus: /home/thiago/catkin_ws/d
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationAction.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationAction.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionGoal.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationAction.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationAction.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationFeedback.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionResult.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationAction.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationGoal.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionFeedback.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationAction.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationAction.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationAction.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationFeedback.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionGoal.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionResult.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Generating EusLisp code from cares_msgs/NavigationAction.msg"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationAction.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationActionGoal.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationActionGoal.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionGoal.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationActionGoal.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationActionGoal.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationGoal.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationActionGoal.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationActionGoal.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Generating EusLisp code from cares_msgs/NavigationActionGoal.msg"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionGoal.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationActionResult.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationActionResult.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionResult.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationActionResult.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationActionResult.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationActionResult.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationActionResult.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationActionResult.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationResult.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationActionResult.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Generating EusLisp code from cares_msgs/NavigationActionResult.msg"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionResult.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationActionFeedback.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationActionFeedback.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionFeedback.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationActionFeedback.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationFeedback.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationActionFeedback.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationActionFeedback.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationActionFeedback.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/NavigationActionFeedback.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Generating EusLisp code from cares_msgs/NavigationActionFeedback.msg"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/NavigationActionFeedback.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg
 
@@ -323,61 +323,61 @@ cares_msgs/CMakeFiles/cares_msgs_generate_messages_eus: /home/thiago/catkin_ws/d
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalAction.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalAction.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionFeedback.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalAction.l: /opt/ros/noetic/share/std_msgs/msg/String.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalAction.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalFeedback.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalAction.l: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalAction.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalAction.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalAction.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionGoal.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalAction.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalAction.l: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalAction.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionFeedback.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalAction.l: /opt/ros/noetic/share/std_msgs/msg/String.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalAction.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionResult.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalResult.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalAction.l: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalAction.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalAction.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Generating EusLisp code from cares_msgs/PlatformGoalAction.msg"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalAction.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionGoal.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionGoal.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionGoal.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionGoal.l: /opt/ros/noetic/share/std_msgs/msg/String.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionGoal.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionGoal.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionGoal.l: /opt/ros/noetic/share/std_msgs/msg/String.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionGoal.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Generating EusLisp code from cares_msgs/PlatformGoalActionGoal.msg"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionGoal.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionResult.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionResult.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionResult.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionResult.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalResult.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionResult.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionResult.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionResult.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionResult.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Generating EusLisp code from cares_msgs/PlatformGoalActionResult.msg"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionResult.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionFeedback.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionFeedback.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionFeedback.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionFeedback.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalFeedback.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionFeedback.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionFeedback.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionFeedback.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalActionFeedback.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Generating EusLisp code from cares_msgs/PlatformGoalActionFeedback.msg"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalActionFeedback.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalGoal.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalGoal.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalGoal.l: /opt/ros/noetic/share/std_msgs/msg/String.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalGoal.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalGoal.l: /opt/ros/noetic/share/std_msgs/msg/String.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalGoal.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/PlatformGoalGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Generating EusLisp code from cares_msgs/PlatformGoalGoal.msg"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/PlatformGoalGoal.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg
@@ -394,64 +394,64 @@ cares_msgs/CMakeFiles/cares_msgs_generate_messages_eus: /home/thiago/catkin_ws/d
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningAction.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionResult.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionFeedback.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /opt/ros/noetic/share/std_msgs/msg/Bool.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionGoal.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningResult.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /opt/ros/noetic/share/std_msgs/msg/String.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionResult.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionFeedback.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionGoal.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningResult.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /opt/ros/noetic/share/std_msgs/msg/Bool.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningAction.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Generating EusLisp code from cares_msgs/ScanningAction.msg"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningAction.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionGoal.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionGoal.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionGoal.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionGoal.l: /opt/ros/noetic/share/std_msgs/msg/Bool.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionGoal.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionGoal.l: /opt/ros/noetic/share/std_msgs/msg/String.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionGoal.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionGoal.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionGoal.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionGoal.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionGoal.l: /opt/ros/noetic/share/std_msgs/msg/Bool.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Generating EusLisp code from cares_msgs/ScanningActionGoal.msg"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionGoal.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionResult.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionResult.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionResult.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionResult.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningResult.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionResult.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionResult.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionResult.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionResult.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Generating EusLisp code from cares_msgs/ScanningActionResult.msg"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionResult.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionFeedback.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionFeedback.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionFeedback.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionFeedback.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionFeedback.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionFeedback.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionFeedback.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionFeedback.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningFeedback.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningActionFeedback.l: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Generating EusLisp code from cares_msgs/ScanningActionFeedback.msg"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningActionFeedback.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningGoal.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningGoal.l: /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningGoal.l: /opt/ros/noetic/share/std_msgs/msg/String.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningGoal.l: /opt/ros/noetic/share/std_msgs/msg/Bool.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningGoal.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningGoal.l: /opt/ros/noetic/share/std_msgs/msg/String.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningGoal.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningGoal.l: /opt/ros/noetic/share/std_msgs/msg/Bool.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg/ScanningGoal.l: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Generating EusLisp code from cares_msgs/ScanningGoal.msg"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/devel/share/cares_msgs/msg/ScanningGoal.msg -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/msg
@@ -468,33 +468,33 @@ cares_msgs/CMakeFiles/cares_msgs_generate_messages_eus: /home/thiago/catkin_ws/d
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/ArucoDetect.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/ArucoDetect.l: /home/thiago/catkin_ws/src/cares_msgs/srv/ArucoDetect.srv
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/ArucoDetect.l: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/ArucoDetect.l: /opt/ros/noetic/share/geometry_msgs/msg/TransformStamped.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/ArucoDetect.l: /opt/ros/noetic/share/geometry_msgs/msg/Transform.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/ArucoDetect.l: /home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/ArucoDetect.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/ArucoDetect.l: /opt/ros/noetic/share/sensor_msgs/msg/Image.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/ArucoDetect.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/ArucoDetect.l: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/ArucoDetect.l: /opt/ros/noetic/share/sensor_msgs/msg/CameraInfo.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/ArucoDetect.l: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/ArucoDetect.l: /home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/ArucoDetect.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Generating EusLisp code from cares_msgs/ArucoDetect.srv"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/src/cares_msgs/srv/ArucoDetect.srv -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/CalibrationService.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/CalibrationService.l: /home/thiago/catkin_ws/src/cares_msgs/srv/CalibrationService.srv
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/CalibrationService.l: /opt/ros/noetic/share/sensor_msgs/msg/CameraInfo.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/CalibrationService.l: /home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/CalibrationService.l: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/CalibrationService.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/CalibrationService.l: /home/thiago/catkin_ws/src/cares_msgs/msg/StereoCameraInfo.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Generating EusLisp code from cares_msgs/CalibrationService.srv"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/src/cares_msgs/srv/CalibrationService.srv -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv
 
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/Detection.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/Detection.l: /home/thiago/catkin_ws/src/cares_msgs/srv/Detection.srv
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/Detection.l: /opt/ros/noetic/share/sensor_msgs/msg/Image.msg
-/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/Detection.l: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/Detection.l: /home/thiago/catkin_ws/src/cares_msgs/msg/InstanceMasks.msg
 /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/Detection.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv/Detection.l: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/thiago/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Generating EusLisp code from cares_msgs/Detection.srv"
 	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/thiago/catkin_ws/src/cares_msgs/srv/Detection.srv -Icares_msgs:/home/thiago/catkin_ws/src/cares_msgs/msg -Icares_msgs:/home/thiago/catkin_ws/devel/share/cares_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p cares_msgs -o /home/thiago/catkin_ws/devel/share/roseus/ros/cares_msgs/srv
 

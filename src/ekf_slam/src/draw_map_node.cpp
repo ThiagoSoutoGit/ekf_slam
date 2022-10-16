@@ -17,7 +17,7 @@ SUBSCRIBERS:
 #include <ekf_slam/LandmarksMap.h>
 #include <string>
 
-//!  DrawMap class. 
+//!  DrawMap class.
 /*!
 Reads landmarks and odometry and publishes to rviz:
     1. Reads /landmaks topic
@@ -40,19 +40,20 @@ public:
     /// \brief receive landmark positions
     void sub_landmark(const ekf_slam::LandmarksMap &msg)
     {
-        if(!msg.x.empty())
+        if (!msg.x.empty())
         {
             visualization_msgs::MarkerArray marker_array;
             for (int i = 0; i < msg.x.size(); i++)
             {
-                visualization_msgs::Marker marker_landmark = create_landmark_marker(msg.x.at(i),
-                                                                                    msg.y.at(i),
+                visualization_msgs::Marker marker_landmark = create_landmark_marker(msg.y.at(i),
+                                                                                    -msg.x.at(i),
                                                                                     msg.size.at(i),
                                                                                     msg.map.at(i),
                                                                                     "base_link");
-                // double rotation_angle = 1.5708 + 1.5708 + 1.5708 + 1.5708 + 0.261799 + 0.261799 + 0.261799  + 0.261799;
-                // visualization_msgs::Marker marker_landmark = create_landmark_marker(((-msg.x.at(i) * cos(rotation_angle))+ msg.y.at(i) * sin(rotation_angle)),
-                //                                                                     ((-msg.x.at(i) * sin(rotation_angle))+ msg.y.at(i) * cos(rotation_angle)),
+                // double rotation_angle = 0.261799;
+                // visualization_msgs::Marker marker_landmark = create_landmark_marker(((msg.y.at(i) * sin(rotation_angle))+ -msg.x.at(i) * cos(rotation_angle)),
+                //                                                                     ((msg.y.at(i) * cos(rotation_angle))+ -msg.x.at(i) * sin(rotation_angle)),
+                                                                                    
                 //                                                                     msg.size.at(i),
                 //                                                                     msg.map.at(i),
                 //                                                                     "base_link");
@@ -82,7 +83,7 @@ public:
     /// \brief receive robot paths positions
     void sub_robot_path(const ekf_slam::LandmarksMap &msg)
     {
-        if(!msg.x.empty())
+        if (!msg.x.empty())
         {
             visualization_msgs::MarkerArray marker_array;
             for (int i = 0; i < msg.x.size(); i++)
@@ -106,10 +107,8 @@ public:
         marker.header.frame_id = in_frame;
         marker.header.stamp = ros::Time(0);
 
-        
         marker.id = marker_id_;
         marker_id_++;
-
 
         uint32_t shape = visualization_msgs::Marker::CUBE;
 
@@ -145,7 +144,7 @@ public:
             // 5 Hz publish rate
             marker.lifetime = ros::Duration(1000);
             break;
-        
+
         default:
             break;
         };
@@ -165,8 +164,6 @@ public:
         marker.scale.x = size;
         marker.scale.y = size;
 
-        
-
         // if (what_map_ == "measurements")
         // {
         //     marker.scale.z = 0.2;
@@ -179,9 +176,6 @@ public:
         // {
         //     marker.scale.z = 0.3;
         // }
-
-        
-
 
         // if (what_map_ == "measurements")
         // {
@@ -199,10 +193,7 @@ public:
         //     marker.color.b = 1.0;
         // }
 
-        
         marker.color.a = 1.0;
-
-        
 
         return marker;
     }

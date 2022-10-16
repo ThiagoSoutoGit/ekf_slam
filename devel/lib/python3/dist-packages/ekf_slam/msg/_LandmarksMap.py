@@ -6,18 +6,36 @@ python3 = True if sys.hexversion > 0x03000000 else False
 import genpy
 import struct
 
+import std_msgs.msg
 
 class LandmarksMap(genpy.Message):
-  _md5sum = "e14fd09077d5b90e93fc3b260d94d59d"
+  _md5sum = "be59b8991d90b2ec01f312b7f555e888"
   _type = "ekf_slam/LandmarksMap"
-  _has_header = False  # flag to mark the presence of a Header object
-  _full_text = """float64[] x # a list of x coordinate of circle center x
+  _has_header = True  # flag to mark the presence of a Header object
+  _full_text = """std_msgs/Header header
+float64[] x # a list of x coordinate of circle center x
 float64[] y # a list of y coordinate of circle center y
 float64[] size
 int64[] id # id of this landmark (data association)
-int64[] map # type of map"""
-  __slots__ = ['x','y','size','id','map']
-  _slot_types = ['float64[]','float64[]','float64[]','int64[]','int64[]']
+int64[] map # type of map
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+"""
+  __slots__ = ['header','x','y','size','id','map']
+  _slot_types = ['std_msgs/Header','float64[]','float64[]','float64[]','int64[]','int64[]']
 
   def __init__(self, *args, **kwds):
     """
@@ -27,7 +45,7 @@ int64[] map # type of map"""
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       x,y,size,id,map
+       header,x,y,size,id,map
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -36,6 +54,8 @@ int64[] map # type of map"""
     if args or kwds:
       super(LandmarksMap, self).__init__(*args, **kwds)
       # message fields cannot be None, assign default values for those that are
+      if self.header is None:
+        self.header = std_msgs.msg.Header()
       if self.x is None:
         self.x = []
       if self.y is None:
@@ -47,6 +67,7 @@ int64[] map # type of map"""
       if self.map is None:
         self.map = []
     else:
+      self.header = std_msgs.msg.Header()
       self.x = []
       self.y = []
       self.size = []
@@ -65,6 +86,14 @@ int64[] map # type of map"""
     :param buff: buffer, ``StringIO``
     """
     try:
+      _x = self
+      buff.write(_get_struct_3I().pack(_x.header.seq, _x.header.stamp.secs, _x.header.stamp.nsecs))
+      _x = self.header.frame_id
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
       length = len(self.x)
       buff.write(_struct_I.pack(length))
       pattern = '<%sd'%length
@@ -96,7 +125,22 @@ int64[] map # type of map"""
     if python3:
       codecs.lookup_error("rosmsg").msg_type = self._type
     try:
+      if self.header is None:
+        self.header = std_msgs.msg.Header()
       end = 0
+      _x = self
+      start = end
+      end += 12
+      (_x.header.seq, _x.header.stamp.secs, _x.header.stamp.nsecs,) = _get_struct_3I().unpack(str[start:end])
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.header.frame_id = str[start:end].decode('utf-8', 'rosmsg')
+      else:
+        self.header.frame_id = str[start:end]
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -149,6 +193,14 @@ int64[] map # type of map"""
     :param numpy: numpy python module
     """
     try:
+      _x = self
+      buff.write(_get_struct_3I().pack(_x.header.seq, _x.header.stamp.secs, _x.header.stamp.nsecs))
+      _x = self.header.frame_id
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
       length = len(self.x)
       buff.write(_struct_I.pack(length))
       pattern = '<%sd'%length
@@ -181,7 +233,22 @@ int64[] map # type of map"""
     if python3:
       codecs.lookup_error("rosmsg").msg_type = self._type
     try:
+      if self.header is None:
+        self.header = std_msgs.msg.Header()
       end = 0
+      _x = self
+      start = end
+      end += 12
+      (_x.header.seq, _x.header.stamp.secs, _x.header.stamp.nsecs,) = _get_struct_3I().unpack(str[start:end])
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.header.frame_id = str[start:end].decode('utf-8', 'rosmsg')
+      else:
+        self.header.frame_id = str[start:end]
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -230,3 +297,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
+_struct_3I = None
+def _get_struct_3I():
+    global _struct_3I
+    if _struct_3I is None:
+        _struct_3I = struct.Struct("<3I")
+    return _struct_3I

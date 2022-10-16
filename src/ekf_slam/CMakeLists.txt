@@ -69,6 +69,7 @@ include_directories(${Eigen_INCLUDE_DIRS})
 add_message_files(
   FILES
   LandmarksMap.msg
+  # Header.msg
 )
 
 ## Generate services in the 'srv' folder

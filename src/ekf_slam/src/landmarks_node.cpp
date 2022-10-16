@@ -1,12 +1,15 @@
-/// \file
-/// \brief Node for receiving the detected aruco markers, calculate their positions, check if they are new landmarks, and publishing them.
-///
-/// PUBLISHES:
-///     landmarks (ekf_slam/LandmarksMap): classify and publish the center and radius of the landmarks the aruco detetor node detects
-///     robot_path (ekf_slam/LandmarksMap): publish robot path
-///
-/// SUBSCRIBERS:
-///     /stereo_pair/markers (Cares_msgs/ArucoMarkers): subscribe to the laser data
+//! \file
+/*! \brief Node for receiving the detected aruco markers, calculate their positions, check if they are new landmarks, and publishing them.
+
+PUBLISHES:
+
+    landmarks (ekf_slam/LandmarksMap): classify and publish the center and radius of the landmarks the aruco detetor node detects
+    robot_path (ekf_slam/LandmarksMap): publish robot path
+
+SUBSCRIBERS:
+
+    /stereo_pair/markers (Cares_msgs/ArucoMarkers): subscribe to aruco_detector
+*/
 
 #include <ros/ros.h>
 
@@ -110,7 +113,7 @@ public:
                 double roll, pitch, yaw;
                 m.getEulerYPR(yaw, pitch, roll);
 
-                pose2d.theta = yaw;
+                pose2d.theta = yaw + 1.5708;
 
                 std::cout << std::endl
                           << "Aruco marker pose from stereo_pair:" << std::endl
@@ -122,6 +125,9 @@ public:
 
                 if (current_position_.size() > 0)
                 {
+
+                    /// \todo Improve method of calculating global position.
+
                     // double theta_sum = pose2d.theta + current_position_(2);
                     // double xw = (pose.position.x * cos(theta_sum)) - (pose.position.z * sin(theta_sum) + pose.position.x);
                     // double yw = (pose.position.z * cos(theta_sum)) - (pose.position.x * sin(theta_sum) + pose.position.y);

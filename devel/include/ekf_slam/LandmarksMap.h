@@ -15,6 +15,7 @@
 #include <ros/builtin_message_traits.h>
 #include <ros/message_operations.h>
 
+#include <std_msgs/Header.h>
 
 namespace ekf_slam
 {
@@ -24,14 +25,16 @@ struct LandmarksMap_
   typedef LandmarksMap_<ContainerAllocator> Type;
 
   LandmarksMap_()
-    : x()
+    : header()
+    , x()
     , y()
     , size()
     , id()
     , map()  {
     }
   LandmarksMap_(const ContainerAllocator& _alloc)
-    : x(_alloc)
+    : header(_alloc)
+    , x(_alloc)
     , y(_alloc)
     , size(_alloc)
     , id(_alloc)
@@ -40,6 +43,9 @@ struct LandmarksMap_
     }
 
 
+
+   typedef  ::std_msgs::Header_<ContainerAllocator>  _header_type;
+  _header_type header;
 
    typedef std::vector<double, typename ContainerAllocator::template rebind<double>::other >  _x_type;
   _x_type x;
@@ -85,7 +91,8 @@ return s;
 template<typename ContainerAllocator1, typename ContainerAllocator2>
 bool operator==(const ::ekf_slam::LandmarksMap_<ContainerAllocator1> & lhs, const ::ekf_slam::LandmarksMap_<ContainerAllocator2> & rhs)
 {
-  return lhs.x == rhs.x &&
+  return lhs.header == rhs.header &&
+    lhs.x == rhs.x &&
     lhs.y == rhs.y &&
     lhs.size == rhs.size &&
     lhs.id == rhs.id &&
@@ -132,12 +139,12 @@ struct IsFixedSize< ::ekf_slam::LandmarksMap_<ContainerAllocator> const>
 
 template <class ContainerAllocator>
 struct HasHeader< ::ekf_slam::LandmarksMap_<ContainerAllocator> >
-  : FalseType
+  : TrueType
   { };
 
 template <class ContainerAllocator>
 struct HasHeader< ::ekf_slam::LandmarksMap_<ContainerAllocator> const>
-  : FalseType
+  : TrueType
   { };
 
 
@@ -146,12 +153,12 @@ struct MD5Sum< ::ekf_slam::LandmarksMap_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "e14fd09077d5b90e93fc3b260d94d59d";
+    return "be59b8991d90b2ec01f312b7f555e888";
   }
 
   static const char* value(const ::ekf_slam::LandmarksMap_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xe14fd09077d5b90eULL;
-  static const uint64_t static_value2 = 0x93fc3b260d94d59dULL;
+  static const uint64_t static_value1 = 0xbe59b8991d90b2ecULL;
+  static const uint64_t static_value2 = 0x01f312b7f555e888ULL;
 };
 
 template<class ContainerAllocator>
@@ -170,11 +177,27 @@ struct Definition< ::ekf_slam::LandmarksMap_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "float64[] x # a list of x coordinate of circle center x\n"
+    return "std_msgs/Header header\n"
+"float64[] x # a list of x coordinate of circle center x\n"
 "float64[] y # a list of y coordinate of circle center y\n"
 "float64[] size\n"
 "int64[] id # id of this landmark (data association)\n"
 "int64[] map # type of map\n"
+"================================================================================\n"
+"MSG: std_msgs/Header\n"
+"# Standard metadata for higher-level stamped data types.\n"
+"# This is generally used to communicate timestamped data \n"
+"# in a particular coordinate frame.\n"
+"# \n"
+"# sequence ID: consecutively increasing ID \n"
+"uint32 seq\n"
+"#Two-integer timestamp that is expressed as:\n"
+"# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')\n"
+"# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')\n"
+"# time-handling sugar is provided by the client library\n"
+"time stamp\n"
+"#Frame this data is associated with\n"
+"string frame_id\n"
 ;
   }
 
@@ -193,6 +216,7 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
+      stream.next(m.header);
       stream.next(m.x);
       stream.next(m.y);
       stream.next(m.size);
@@ -216,6 +240,9 @@ struct Printer< ::ekf_slam::LandmarksMap_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::ekf_slam::LandmarksMap_<ContainerAllocator>& v)
   {
+    s << indent << "header: ";
+    s << std::endl;
+    Printer< ::std_msgs::Header_<ContainerAllocator> >::stream(s, indent + "  ", v.header);
     s << indent << "x[]" << std::endl;
     for (size_t i = 0; i < v.x.size(); ++i)
     {

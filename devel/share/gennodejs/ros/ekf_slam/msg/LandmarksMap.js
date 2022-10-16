@@ -11,6 +11,7 @@ const _deserializer = _ros_msg_utils.Deserialize;
 const _arrayDeserializer = _deserializer.Array;
 const _finder = _ros_msg_utils.Find;
 const _getByteLength = _ros_msg_utils.getByteLength;
+let std_msgs = _finder('std_msgs');
 
 //-----------------------------------------------------------
 
@@ -18,6 +19,7 @@ class LandmarksMap {
   constructor(initObj={}) {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
+      this.header = null;
       this.x = null;
       this.y = null;
       this.size = null;
@@ -25,6 +27,12 @@ class LandmarksMap {
       this.map = null;
     }
     else {
+      if (initObj.hasOwnProperty('header')) {
+        this.header = initObj.header
+      }
+      else {
+        this.header = new std_msgs.msg.Header();
+      }
       if (initObj.hasOwnProperty('x')) {
         this.x = initObj.x
       }
@@ -60,6 +68,8 @@ class LandmarksMap {
 
   static serialize(obj, buffer, bufferOffset) {
     // Serializes a message object of type LandmarksMap
+    // Serialize message field [header]
+    bufferOffset = std_msgs.msg.Header.serialize(obj.header, buffer, bufferOffset);
     // Serialize message field [x]
     bufferOffset = _arraySerializer.float64(obj.x, buffer, bufferOffset, null);
     // Serialize message field [y]
@@ -77,6 +87,8 @@ class LandmarksMap {
     //deserializes a message object of type LandmarksMap
     let len;
     let data = new LandmarksMap(null);
+    // Deserialize message field [header]
+    data.header = std_msgs.msg.Header.deserialize(buffer, bufferOffset);
     // Deserialize message field [x]
     data.x = _arrayDeserializer.float64(buffer, bufferOffset, null)
     // Deserialize message field [y]
@@ -92,6 +104,7 @@ class LandmarksMap {
 
   static getMessageSize(object) {
     let length = 0;
+    length += std_msgs.msg.Header.getMessageSize(object.header);
     length += 8 * object.x.length;
     length += 8 * object.y.length;
     length += 8 * object.size.length;
@@ -107,17 +120,34 @@ class LandmarksMap {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'e14fd09077d5b90e93fc3b260d94d59d';
+    return 'be59b8991d90b2ec01f312b7f555e888';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
+    std_msgs/Header header
     float64[] x # a list of x coordinate of circle center x
     float64[] y # a list of y coordinate of circle center y
     float64[] size
     int64[] id # id of this landmark (data association)
     int64[] map # type of map
+    ================================================================================
+    MSG: std_msgs/Header
+    # Standard metadata for higher-level stamped data types.
+    # This is generally used to communicate timestamped data 
+    # in a particular coordinate frame.
+    # 
+    # sequence ID: consecutively increasing ID 
+    uint32 seq
+    #Two-integer timestamp that is expressed as:
+    # * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+    # * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+    # time-handling sugar is provided by the client library
+    time stamp
+    #Frame this data is associated with
+    string frame_id
+    
     `;
   }
 
@@ -127,6 +157,13 @@ class LandmarksMap {
       msg = {};
     }
     const resolved = new LandmarksMap(null);
+    if (msg.header !== undefined) {
+      resolved.header = std_msgs.msg.Header.Resolve(msg.header)
+    }
+    else {
+      resolved.header = new std_msgs.msg.Header()
+    }
+
     if (msg.x !== undefined) {
       resolved.x = msg.x;
     }
