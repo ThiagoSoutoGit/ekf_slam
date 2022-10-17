@@ -23,12 +23,19 @@ find_package(catkin REQUIRED COMPONENTS
   message_generation
   Boost
   message_filters
-  
+ 
 
 )
 
 find_package (Eigen3 3.3 REQUIRED NO_MODULE)
 include_directories ("/usr/include/eigen3")
+# find_path ("/home/thiago/EKF-SLAM-on-Turtlebot3/devel/share/rigid2d/cmake/")
+
+# find_path ("/home/thiago/EKF-SLAM-on-Turtlebot3/build/src/main-assignment-shangzhouye/rigid2d/catkin_generated/installspace/")
+
+
+
+
 include_directories(${Eigen_INCLUDE_DIRS})
 
 

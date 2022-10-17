@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -pthread -pthread  -shared -Wl,-soname,libdiff_drive_lib.so -o /home/thiago/catkin_ws/devel/lib/libdiff_drive_lib.so CMakeFiles/diff_drive_lib.dir/src/rigid2d/diff_drive.cpp.o CMakeFiles/diff_drive_lib.dir/src/rigid2d/rigid2d.cpp.o 

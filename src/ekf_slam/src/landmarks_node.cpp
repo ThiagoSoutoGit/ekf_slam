@@ -63,6 +63,7 @@ public:
         odom_marker_size_threshold_ = 0.1;
         land_map_threshold_ = 0.3;
     }
+    
     /// \todo Make function `contains` commom
     template <typename T>
     bool contains(std::vector<T> vec, const T &elem)
@@ -75,6 +76,7 @@ public:
         return result;
     }
 
+    /// \todo Make function `getIndex` commom
     int getIndex(std::vector<int64_t> v, int K)
     {
         auto it = std::find(v.begin(), v.end(), K);

@@ -10,7 +10,6 @@ SUBSCRIBERS:
 
     /landmaks (efk_slam::LandmarksMap): subscribe landmarks sent by the landmarks node.
 */
-
 #include <message_filters/subscriber.h>
 #include <message_filters/time_synchronizer.h>
 #include <message_filters/synchronizer.h>
@@ -34,6 +33,7 @@ SUBSCRIBERS:
 
 #include <ekf_slam/LandmarksMap.h>
 
+
 //!  EkfSlam class.
 /*!
 Subscribes to 2 topics using message_filters, and coordinate the EKF slam process:
@@ -54,8 +54,17 @@ private:
     message_filters::Subscriber<ekf_slam::LandmarksMap> aruco_sub_;                                     /**< message_filters subscriber */
     message_filters::Subscriber<nav_msgs::Odometry> odom_sub_;                                          /**< message_filters subscriber */
     typedef message_filters::TimeSynchronizer<ekf_slam::LandmarksMap, nav_msgs::Odometry> sync_policy_; /**< Defines the sync policy */
-    std::shared_ptr<sync_policy_> sync;                                                                 /**< a shared pointer to the sync policy - has to be std::shared_ptr and has to be reset at the constructor with a new sync_policy_*/
+    std::shared_ptr<sync_policy_> sync;  /**< a shared pointer to the sync policy - has to be std::shared_ptr and has to be reset at the constructor with a new sync_policy_*/
 
+    ros::Publisher corrected_landmark_pub_;
+    ros::Publisher corrected_odom_pub_; 
+
+
+    ekf_slam::LandmarksMap corrected_land_map_;
+    ekf_slam::LandmarksMap corrected_robot_path_;
+    int corrected_robot_path_id_ = 0;
+    
+                                                           
     // Range bearing
     Eigen::Vector2d range_bearing_landmark_h_ = Eigen::Vector2d(0, 0);
     Eigen::Vector2d range_bearing_data_association_z_ = Eigen::Vector2d(0, 0);
@@ -64,6 +73,11 @@ private:
     Eigen::VectorXd current_state_ = Eigen::VectorXd(3);
     double current_state_changed_threshold_ = 0.01;
     std::vector<Eigen::VectorXd> robot_state_array_;
+
+    Eigen::VectorXd corrected_current_state_ = Eigen::VectorXd(3);
+    std::vector<Eigen::VectorXd> corrected_robot_state_array_;
+
+
     bool has_moved_;
 
     // deltas
@@ -74,9 +88,9 @@ private:
     double delta_t_;
 
     // Jacobians
-    Eigen::Matrix3d jacobian_a_matrix_; /** Jacobian of the prediction model */
-    Eigen::Matrix3d jacobian_h_matrix_; /** Jacobian of the measurement model */
-
+    Eigen::Matrix3d jacobian_a_matrix_;                         /** Jacobian of the prediction model */
+    Eigen::MatrixXd jacobian_h_matrix_ = Eigen::MatrixXd(2, 3); /** Jacobian of the measurement model */
+    Eigen::MatrixXd jacobian_H_matrix_ = Eigen::MatrixXd(2, 3);
     // Noise matrix
     Eigen::Matrix3d noise_q_matrix_; /** Noise Matrix Q */
     double c_ = 0.01;                /** gausian sample -  it's a representation of how exact the odometer is*/
@@ -88,7 +102,19 @@ private:
     // Landmarks detected
     std::vector<int> landmarks_detected_;
 
-    int aux;
+    int addLandmarksCovariance_aux = 0;
+
+    // Error matrix R
+    const Eigen::Matrix<double, 2, 2> R_ = (Eigen::Matrix<double, 2, 2>() << 0.01, 0, 0, 0.01).finished();
+
+    //Eigen::Vector2d measurement_diff
+    Eigen::Vector2d measurement_diff = Eigen::Vector2d(2);
+
+    //Kalman gain
+    Eigen::MatrixXd K_ = Eigen::MatrixXd(3,3);
+
+    //Pi
+    double PI = 3.14159265358979311600;
 
 public:
     EkfSlam(ros::NodeHandle &nh)
@@ -100,6 +126,9 @@ public:
         sync.reset(new sync_policy_(aruco_sub_, odom_sub_, 10));
         sync->registerCallback(std::bind(&EkfSlam::ekfCallback, this, std::placeholders::_1, std::placeholders::_2));
 
+        corrected_landmark_pub_ = nh.advertise<ekf_slam::LandmarksMap>("corrected_landmarks", 100, true);
+        corrected_odom_pub_ = nh.advertise<ekf_slam::LandmarksMap>("corrected_robot_path", 100, true);   
+
         // initialize current position to 0
         current_state_ << 0, 0, 0;
         has_moved_ = false;
@@ -107,6 +136,12 @@ public:
         // initialize timers
         current_time_ = ros::Time::now();
         last_time_ = ros::Time::now();
+    }
+
+    double normalize_angle(double rad)
+    {
+        double result = std::remainder(rad, 2.0 * PI);
+        return result;
     }
 
     /// \todo Make function `contains` commom
@@ -119,6 +154,14 @@ public:
             result = true;
         }
         return result;
+    }
+
+    /// \todo Make function `getIndex` commom
+    int getIndex(std::vector<int> v, int64_t K)
+    {
+        auto it = std::find(v.begin(), v.end(), K);
+        int index = it - v.begin();
+        return index;
     }
 
     /// \brief receive a vector of Eigen::VectorXd and returns a Eigen::VectorXd with the menas of each element index.
@@ -397,6 +440,116 @@ public:
                   << std::endl;
     }
 
+    /// \brief Calculates the noise matrix Q
+    void addLandmarksCovariance(const ekf_slam::LandmarksMap::ConstPtr &landmarks_map)
+    {
+        // Phase 3 - Check for new landmarks
+        for (int i = 0; i < landmarks_map->id.size(); i++)
+        {
+            // if the landmark detected is not registered in the landmarks_detected vector, register it.
+            addLandmarksCovariance_aux = landmarks_map->id[i];
+            if (!contains(landmarks_detected_, addLandmarksCovariance_aux))
+            {
+                // update the landmarks_detected vector
+                landmarks_detected_.emplace_back(addLandmarksCovariance_aux);
+                // add 2 rows at the
+                std::cout << "Old vector size:  " << current_state_.size() << std::endl;
+                current_state_.resize(current_state_.size() + 2);
+
+                // Update all the robot_state_array_ vector sizes
+                for (int k = 0; k < robot_state_array_.size(); k++)
+                {
+                    robot_state_array_[k].resize(current_state_.size());
+                    /// \todo make so that the number to add is not zero, maybe a vector that holds the place where it was added and discount from the total length at the means calculation
+                    robot_state_array_[k](current_state_.size() - 2) = 0;
+                    robot_state_array_[k](current_state_.size() - 1) = 0;
+                }
+                // std::cout << "robot_state_array_ 0 vector size:  " << robot_state_array_[0].size() << std::endl;
+                current_state_(current_state_.size() - 2) = landmarks_map->x[i];
+                current_state_(current_state_.size() - 1) = landmarks_map->y[i];
+                robot_state_array_.emplace_back(current_state_);
+                // std::cout << "Old vector size matrix:  " << covariance_p_matrix_.size() << std::endl;
+                covariance_p_matrix_.resize((covariance_p_matrix_.rows() + 2), (covariance_p_matrix_.cols() + 2));
+                // std::cout << "New vector size matrix:  " << covariance_p_matrix_.rows() << "x" << covariance_p_matrix_.cols() << std::endl;
+                // Initialize the new covariant matrix
+                for (int s = 0; s < covariance_p_matrix_.size(); s++)
+                {
+                    covariance_p_matrix_(s) = 0;
+                }
+                updateCovarianceMatrixP();
+            }
+        }
+    }
+
+    /// \brief Calculates the jacobian of the measurement model
+    void updateStateFromReObservation(const ekf_slam::LandmarksMap::ConstPtr &landmarks_map)
+    {
+        // Calculate the jacobian of the measurement model - H
+        // For each matched landmark
+
+        for (int i = 0; i < landmarks_map->id.size(); i++)
+        {
+            // long int re_observe_aux = landmarks_map->id[i];
+            int matched_landmark_x_ind = (getIndex(landmarks_detected_, landmarks_map->id[i]) * 2) + 3; /** Calculating the landmark x on the current_state_ vector (2*i)+3 */
+            int matched_landmark_y_ind = matched_landmark_x_ind + 1;
+
+            jacobian_h_matrix_(0, 0) = (current_state_(0) - current_state_(matched_landmark_x_ind)) / current_state_(2);
+            jacobian_h_matrix_(0, 1) = (current_state_(1) - current_state_(matched_landmark_y_ind)) / current_state_(2);
+            jacobian_h_matrix_(0, 2) = 0;
+            jacobian_h_matrix_(1, 0) = (current_state_(matched_landmark_y_ind) - current_state_(1)) / pow(current_state_(2), 2);
+            jacobian_h_matrix_(1, 1) = (current_state_(matched_landmark_x_ind) - current_state_(0)) / pow(current_state_(2), 2);
+            jacobian_h_matrix_(1, 2) = -1;
+
+            // std::cout << std::endl << "jacobian_h_matrix_ : " << std::endl << std::endl;
+            // std::cout << jacobian_h_matrix_ << std::endl;
+
+            // // Calculate the Kalman gain
+            K_ = covariance_prr_matrix_ * jacobian_h_matrix_.transpose() * (jacobian_h_matrix_ * covariance_prr_matrix_ * jacobian_h_matrix_.transpose() + R_).inverse();
+            // std::cout << std::endl << "covariance_prr_matrix_ : "<< std::endl << std::endl  << covariance_prr_matrix_<< std::endl << std::endl;
+
+            // calculate expected [range bearing] h
+            double range_expected = std::sqrt(std::pow(current_state_(matched_landmark_x_ind) - current_state_(0), 2) + std::pow(current_state_(matched_landmark_y_ind) - current_state_(1), 2));
+            double bearing_expected = normalize_angle(std::atan2(current_state_(matched_landmark_y_ind) - current_state_(1), current_state_(matched_landmark_x_ind) - current_state_(0)) - current_state_(2));
+            // calculate observed [range bearing] z
+            double range_observed = std::sqrt(std::pow(landmarks_map->x[i] - current_state_(0), 2) + std::pow(landmarks_map->y[i] - current_state_(1), 2));
+            double bearing_observed = normalize_angle(std::atan2(landmarks_map->y[i] - current_state_(1), landmarks_map->x[i] - current_state_(0)) - current_state_(2));
+            // Normalize bearing diference
+            double bearing_diff = normalize_angle(bearing_expected - bearing_observed);
+
+            measurement_diff << range_expected - range_observed, bearing_diff;
+
+            // Calculate H
+
+            jacobian_H_matrix_(0,0) = (current_state_(matched_landmark_x_ind) - current_state_(0)/range_expected - range_observed);
+            jacobian_H_matrix_(0,1) = (current_state_(matched_landmark_y_ind) - current_state_(1)/range_expected - range_observed);
+            jacobian_H_matrix_(0,2) = 0;
+            jacobian_H_matrix_(1,0) = (current_state_(matched_landmark_y_ind) - current_state_(1)/pow(range_expected - range_observed, 2));
+            jacobian_H_matrix_(1,1) = (current_state_(matched_landmark_x_ind) - current_state_(0)/pow(range_expected - range_observed, 2));
+            jacobian_H_matrix_(1,2) = -1;
+
+            // Calculate the new state of the vector
+
+            
+            // corrected_current_state_.resize(current_state_.size());
+            // std::cout << "current_state_ " << std::endl << std::endl << current_state_ <<std::endl;
+            
+            // std::cout << "k " << std::endl << std::endl << K_ <<std::endl;
+
+            // std::cout << "measurement_diff" << std::endl << std::endl << measurement_diff <<std::endl;
+
+            // corrected_current_state_ = current_state_ + K_ * jacobian_H_matrix_;
+            // Publish corrected path
+            corrected_robot_path_.header.stamp = ros::Time::now();
+            corrected_robot_path_.id.emplace_back(corrected_robot_path_id_);
+            corrected_robot_path_.map.emplace_back(4);
+            corrected_robot_path_.size.emplace_back(0.3);
+            corrected_robot_path_.x.emplace_back(corrected_current_state_(0));
+            corrected_robot_path_.y.emplace_back(corrected_current_state_(1));
+            corrected_robot_path_id_++;
+            corrected_odom_pub_.publish(corrected_robot_path_);
+        }
+    }
+
     /// \brief Update current state and if it has changed, update the Jacobian of the prediction model, A, the process noise matrix Q, and update the Covariance matrix P.
     void ekfCallback(const ekf_slam::LandmarksMap::ConstPtr &landmarks_map, const nav_msgs::Odometry::ConstPtr &msg)
     {
@@ -407,41 +560,11 @@ public:
             updateJacobianPredictionModel();
             updateNoiseQ();
             updateCovarianceMatrixP();
-            // Phase 3 - Check for new landmarks
-            for (int i = 0; i < landmarks_map->id.size(); i++)
-            {
-                // if the landmark detected is not registered in the landmarks_detected vector, register it.
-                aux = landmarks_map->id[i];
-                if (!contains(landmarks_detected_, aux))
-                {
-                    // update the landmarks_detected vector
-                    landmarks_detected_.emplace_back(aux);
-                    // add 2 rows at the
-                    std::cout << "Old vector size:  " << current_state_.size() << std::endl;
-                    current_state_.resize(current_state_.size() + 2);
+            // Phase 3 - add new landmarks
+            addLandmarksCovariance(landmarks_map);
 
-                    //Update all the robot_state_array_ vector sizes
-                    for (int k = 0; k < robot_state_array_.size(); k++)
-                    {
-                        robot_state_array_[k].resize(current_state_.size());
-                        /// \todo make so that the number to add is not zero, maybe a vector that holds the place where it was added and discount from the total length at the means calculation
-                        robot_state_array_[k](current_state_.size() - 2) = 0;
-                        robot_state_array_[k](current_state_.size() - 1) = 0;
-                    }
-                    std::cout << "robot_state_array_ 0 vector size:  " << robot_state_array_[0].size() << std::endl;
-                    current_state_(current_state_.size() - 2) = landmarks_map->x[i];
-                    current_state_(current_state_.size() - 1) = landmarks_map->y[i];
-                    robot_state_array_.emplace_back(current_state_);
-                    std::cout << "Old vector size matrix:  " << covariance_p_matrix_.size() << std::endl;
-                    covariance_p_matrix_.resize((covariance_p_matrix_.rows() + 2), (covariance_p_matrix_.cols() + 2));
-                    std::cout << "New vector size matrix:  " << covariance_p_matrix_.rows() << "x" << covariance_p_matrix_.cols() << std::endl;
-                    //Initialize the new covariant matrix
-                    for (int s = 0; s < covariance_p_matrix_.size(); s++){
-                        covariance_p_matrix_(s) = 0;
-                    }
-                    updateCovarianceMatrixP();
-                }
-            }
+            // Phase 2 - Update state from re-observed landmarks
+            updateStateFromReObservation(landmarks_map);
 
             has_moved_ = false;
         }

@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -pthread -pthread  -shared -Wl,-soname,libwaypoints_lib.so -o /home/thiago/catkin_ws/devel/lib/libwaypoints_lib.so CMakeFiles/waypoints_lib.dir/src/rigid2d/waypoints.cpp.o CMakeFiles/waypoints_lib.dir/src/rigid2d/diff_drive.cpp.o CMakeFiles/waypoints_lib.dir/src/rigid2d/rigid2d.cpp.o 

@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -pthread -pthread  -shared -Wl,-soname,librigid2d_lib.so -o /home/thiago/catkin_ws/devel/lib/librigid2d_lib.so CMakeFiles/rigid2d_lib.dir/src/rigid2d/rigid2d.cpp.o 

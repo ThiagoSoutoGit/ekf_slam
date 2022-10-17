@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/thiago/catkin_ws/build
 include cares_msgs/CMakeFiles/_cares_msgs_generate_messages_check_deps_ArucoDetect.dir/progress.make
 
 cares_msgs/CMakeFiles/_cares_msgs_generate_messages_check_deps_ArucoDetect:
-	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py cares_msgs /home/thiago/catkin_ws/src/cares_msgs/srv/ArucoDetect.srv geometry_msgs/Quaternion:geometry_msgs/Transform:sensor_msgs/RegionOfInterest:geometry_msgs/TransformStamped:sensor_msgs/Image:geometry_msgs/Vector3:sensor_msgs/CameraInfo:cares_msgs/StereoCameraInfo:std_msgs/Header
+	cd /home/thiago/catkin_ws/build/cares_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py cares_msgs /home/thiago/catkin_ws/src/cares_msgs/srv/ArucoDetect.srv sensor_msgs/CameraInfo:sensor_msgs/Image:geometry_msgs/TransformStamped:cares_msgs/StereoCameraInfo:std_msgs/Header:geometry_msgs/Transform:sensor_msgs/RegionOfInterest:geometry_msgs/Quaternion:geometry_msgs/Vector3
 
 _cares_msgs_generate_messages_check_deps_ArucoDetect: cares_msgs/CMakeFiles/_cares_msgs_generate_messages_check_deps_ArucoDetect
 _cares_msgs_generate_messages_check_deps_ArucoDetect: cares_msgs/CMakeFiles/_cares_msgs_generate_messages_check_deps_ArucoDetect.dir/build.make

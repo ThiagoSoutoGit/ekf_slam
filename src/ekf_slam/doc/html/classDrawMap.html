@@ -37,6 +37,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a805fd62ac5373cc010714ccfce366b00"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDrawMap.html#a805fd62ac5373cc010714ccfce366b00">DrawMap</a> (ros::NodeHandle &amp;nh)</td></tr>
 <tr class="memdesc:a805fd62ac5373cc010714ccfce366b00"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor initializes the publishers (<code>map_pub_</code> and <code>robot_path_pub_</code>) and subscribers (<code>map_sub_</code> and <code>robot_path_sub_</code>).  <a href="classDrawMap.html#a805fd62ac5373cc010714ccfce366b00">More...</a><br /></td></tr>
 <tr class="separator:a805fd62ac5373cc010714ccfce366b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac123940a6792110b307cab43dee048b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDrawMap.html#ac123940a6792110b307cab43dee048b2">sub_corrected_robot_path</a> (const ekf_slam::LandmarksMap &amp;msg)</td></tr>
+<tr class="memdesc:ac123940a6792110b307cab43dee048b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">receive robot paths positions  <a href="classDrawMap.html#ac123940a6792110b307cab43dee048b2">More...</a><br /></td></tr>
+<tr class="separator:ac123940a6792110b307cab43dee048b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f73896a59209c7a9bf3a83c2f3f5ecd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDrawMap.html#a6f73896a59209c7a9bf3a83c2f3f5ecd">sub_landmark</a> (const ekf_slam::LandmarksMap &amp;msg)</td></tr>
 <tr class="memdesc:a6f73896a59209c7a9bf3a83c2f3f5ecd"><td class="mdescLeft">&#160;</td><td class="mdescRight">receive landmark positions  <a href="classDrawMap.html#a6f73896a59209c7a9bf3a83c2f3f5ecd">More...</a><br /></td></tr>
 <tr class="separator:a6f73896a59209c7a9bf3a83c2f3f5ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -46,6 +49,10 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:ad5a7775348885c1dce134de42970b40c"><td class="memItemLeft" align="right" valign="top">ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDrawMap.html#ad5a7775348885c1dce134de42970b40c">corrected_robot_path_pub_</a></td></tr>
+<tr class="separator:ad5a7775348885c1dce134de42970b40c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a921651ad2c0fad5b9ffa0dd04549fe5f"><td class="memItemLeft" align="right" valign="top">ros::Subscriber&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDrawMap.html#a921651ad2c0fad5b9ffa0dd04549fe5f">corrected_robot_path_sub_</a></td></tr>
+<tr class="separator:a921651ad2c0fad5b9ffa0dd04549fe5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a734e939e382f899df14d5f97e88c02"><td class="memItemLeft" align="right" valign="top">ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDrawMap.html#a3a734e939e382f899df14d5f97e88c02">map_pub_</a></td></tr>
 <tr class="separator:a3a734e939e382f899df14d5f97e88c02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb24e87cbc03e3a46f061b5ada5baf13"><td class="memItemLeft" align="right" valign="top">ros::Subscriber&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDrawMap.html#afb24e87cbc03e3a46f061b5ada5baf13">map_sub_</a></td></tr>
@@ -162,7 +169,37 @@ robot_path_rviz (visualization_msgs::MarkerArray): publish positions of odometer
 
 <p>create markers </p>
 
-<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00103">103</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00120">120</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac123940a6792110b307cab43dee048b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac123940a6792110b307cab43dee048b2">&#9670;&nbsp;</a></span>sub_corrected_robot_path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawMap::sub_corrected_robot_path </td>
+          <td>(</td>
+          <td class="paramtype">const ekf_slam::LandmarksMap &amp;&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>receive robot paths positions </p>
+
+<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00100">100</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -192,7 +229,7 @@ robot_path_rviz (visualization_msgs::MarkerArray): publish positions of odometer
 
 <p>receive landmark positions </p>
 
-<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00041">41</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00043">43</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -222,11 +259,59 @@ robot_path_rviz (visualization_msgs::MarkerArray): publish positions of odometer
 
 <p>receive robot paths positions </p>
 
-<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00083">83</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00080">80</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="ad5a7775348885c1dce134de42970b40c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5a7775348885c1dce134de42970b40c">&#9670;&nbsp;</a></span>corrected_robot_path_pub_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::Publisher DrawMap::corrected_robot_path_pub_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00233">233</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a921651ad2c0fad5b9ffa0dd04549fe5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a921651ad2c0fad5b9ffa0dd04549fe5f">&#9670;&nbsp;</a></span>corrected_robot_path_sub_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::Subscriber DrawMap::corrected_robot_path_sub_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00234">234</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a3a734e939e382f899df14d5f97e88c02"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3a734e939e382f899df14d5f97e88c02">&#9670;&nbsp;</a></span>map_pub_</h2>
 
@@ -247,7 +332,7 @@ robot_path_rviz (visualization_msgs::MarkerArray): publish positions of odometer
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00211">211</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00229">229</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -271,7 +356,7 @@ robot_path_rviz (visualization_msgs::MarkerArray): publish positions of odometer
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00212">212</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00230">230</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -295,7 +380,7 @@ robot_path_rviz (visualization_msgs::MarkerArray): publish positions of odometer
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00216">216</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00236">236</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -319,7 +404,7 @@ robot_path_rviz (visualization_msgs::MarkerArray): publish positions of odometer
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00217">217</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00237">237</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -343,7 +428,7 @@ robot_path_rviz (visualization_msgs::MarkerArray): publish positions of odometer
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00213">213</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00231">231</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -367,7 +452,7 @@ robot_path_rviz (visualization_msgs::MarkerArray): publish positions of odometer
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00214">214</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00232">232</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -391,7 +476,7 @@ robot_path_rviz (visualization_msgs::MarkerArray): publish positions of odometer
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00218">218</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="draw__map__node_8cpp_source.html#l00238">238</a> of file <a class="el" href="draw__map__node_8cpp_source.html">draw_map_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -404,7 +489,7 @@ robot_path_rviz (visualization_msgs::MarkerArray): publish positions of odometer
 <hr size="1"><div style="align: right;">
 <a href="http://wiki.ros.org/ekf_slam">ekf_slam</a><br />
 Author(s): </br />
-<small>autogenerated on Sun Oct 16 2022 12:58:45</small>
+<small>autogenerated on Mon Oct 17 2022 16:47:25</small>
 </div>
 </body>
 </html>

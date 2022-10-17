@@ -35,6 +35,8 @@ public:
         map_sub_ = nh.subscribe("landmarks", 1000, &DrawMap::sub_landmark, this);
         robot_path_pub_ = nh.advertise<visualization_msgs::MarkerArray>("robot_path_rviz", 100, true);
         robot_path_sub_ = nh.subscribe("robot_path", 1000, &DrawMap::sub_robot_path, this);
+        corrected_robot_path_pub_ = nh.advertise<visualization_msgs::MarkerArray>("corrected_robot_path_rviz", 100, true);
+        corrected_robot_path_sub_ = nh.subscribe("corrected_robot_path", 1000, &DrawMap::sub_corrected_robot_path, this);
     }
 
     /// \brief receive landmark positions
@@ -94,6 +96,26 @@ public:
         }
     }
 
+    /// \brief receive robot paths positions
+    void sub_corrected_robot_path(const ekf_slam::LandmarksMap &msg)
+    {
+        if (!msg.x.empty())
+        {
+            visualization_msgs::MarkerArray marker_array;
+            for (int i = 0; i < msg.x.size(); i++)
+            {
+                visualization_msgs::Marker marker_landmark = create_landmark_marker(msg.x.at(i),
+                                                                                    msg.y.at(i),
+                                                                                    msg.size.at(i),
+                                                                                    msg.map.at(i),
+                                                                                    "base_link");
+                marker_array.markers.push_back(marker_landmark);
+            }
+            robot_path_pub_.publish(marker_array);
+            ros::spinOnce();
+        }
+    }
+
     /// \brief create markers
     visualization_msgs::Marker create_landmark_marker(double x, double y, double size, int type_of_map, std::string in_frame)
     {
@@ -121,8 +143,8 @@ public:
         case 2:
             shape = visualization_msgs::Marker::SPHERE;
             marker.ns = "robot_path_rviz";
-            marker.color.r = 0;
-            marker.color.g = 1.0;
+            marker.color.r = 1.0;
+            marker.color.g = 0;
             marker.color.b = 0;
             marker.scale.z = size;
             // 5 Hz publish rate
@@ -137,6 +159,17 @@ public:
             marker.scale.z = 2.0;
             // 5 Hz publish rate
             marker.lifetime = ros::Duration(1000);
+            break;
+        case 4:
+            shape = visualization_msgs::Marker::SPHERE;
+            marker.ns = "corrected_robot_path_rviz";
+            marker.color.r = 0;
+            marker.color.g = 1.0;
+            marker.color.b = 0;
+            marker.scale.z = size;
+            // 5 Hz publish rate
+            marker.lifetime = ros::Duration(1000);
+            break;
             break;
 
         default:
@@ -197,6 +230,8 @@ private:
     ros::Subscriber map_sub_;
     ros::Publisher robot_path_pub_;
     ros::Subscriber robot_path_sub_;
+    ros::Publisher corrected_robot_path_pub_;
+    ros::Subscriber corrected_robot_path_sub_;
 
     int marker_id_ = 0;
     std::string publish_frame_;

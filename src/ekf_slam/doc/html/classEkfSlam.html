@@ -32,38 +32,119 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aafe071af7913025bc872ca23928d6ebe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#aafe071af7913025bc872ca23928d6ebe">addLandmarksCovariance</a> (const ekf_slam::LandmarksMap::ConstPtr &amp;landmarks_map)</td></tr>
+<tr class="memdesc:aafe071af7913025bc872ca23928d6ebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the noise matrix Q.  <a href="classEkfSlam.html#aafe071af7913025bc872ca23928d6ebe">More...</a><br /></td></tr>
+<tr class="separator:aafe071af7913025bc872ca23928d6ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95dce19c373250fad5da89be18aeac7b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a95dce19c373250fad5da89be18aeac7b">computeEigenCovariance</a> (int &amp;x, int &amp;y, std::vector&lt; Eigen::VectorXd &gt; &amp;data)</td></tr>
 <tr class="memdesc:a95dce19c373250fad5da89be18aeac7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the covariance given 2 elements (X and Y).  <a href="classEkfSlam.html#a95dce19c373250fad5da89be18aeac7b">More...</a><br /></td></tr>
 <tr class="separator:a95dce19c373250fad5da89be18aeac7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa211fd7dfa89d23aefde347ab61a5f17"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#aa211fd7dfa89d23aefde347ab61a5f17">computeEigenCovarianceMatrix</a> (std::vector&lt; Eigen::VectorXd &gt; &amp;m)</td></tr>
+<tr class="separator:aa211fd7dfa89d23aefde347ab61a5f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e1937829df98cb85db88c4117ad10f2"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a9e1937829df98cb85db88c4117ad10f2"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a9e1937829df98cb85db88c4117ad10f2">contains</a> (std::vector&lt; T &gt; vec, const T &amp;elem)</td></tr>
+<tr class="separator:a9e1937829df98cb85db88c4117ad10f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a836d27ebd92f12e91ab04886ec52e0a6"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a836d27ebd92f12e91ab04886ec52e0a6">eigenMeans</a> (std::vector&lt; Eigen::VectorXd &gt; &amp;data)</td></tr>
 <tr class="memdesc:a836d27ebd92f12e91ab04886ec52e0a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">receive a vector of Eigen::VectorXd and returns a Eigen::VectorXd with the menas of each element index.  <a href="classEkfSlam.html#a836d27ebd92f12e91ab04886ec52e0a6">More...</a><br /></td></tr>
 <tr class="separator:a836d27ebd92f12e91ab04886ec52e0a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa81916d35b732764a00c89fbfa0f8fbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#aa81916d35b732764a00c89fbfa0f8fbe">ekfCallback</a> (const cares_msgs::ArucoMarkers::ConstPtr &amp;aruco_marker, const nav_msgs::Odometry::ConstPtr &amp;msg)</td></tr>
-<tr class="memdesc:aa81916d35b732764a00c89fbfa0f8fbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">receive landmark positions  <a href="classEkfSlam.html#aa81916d35b732764a00c89fbfa0f8fbe">More...</a><br /></td></tr>
-<tr class="separator:aa81916d35b732764a00c89fbfa0f8fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13da70ac36c9220b6fe23c8c82bace64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a13da70ac36c9220b6fe23c8c82bace64">ekfCallback</a> (const ekf_slam::LandmarksMap::ConstPtr &amp;landmarks_map, const nav_msgs::Odometry::ConstPtr &amp;msg)</td></tr>
+<tr class="memdesc:a13da70ac36c9220b6fe23c8c82bace64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update current state and if it has changed, update the Jacobian of the prediction model, A, the process noise matrix Q, and update the Covariance matrix P.  <a href="classEkfSlam.html#a13da70ac36c9220b6fe23c8c82bace64">More...</a><br /></td></tr>
+<tr class="separator:a13da70ac36c9220b6fe23c8c82bace64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa45082eea0c20386f879a59c1cabe27d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#aa45082eea0c20386f879a59c1cabe27d">EkfSlam</a> (ros::NodeHandle &amp;nh)</td></tr>
 <tr class="separator:aa45082eea0c20386f879a59c1cabe27d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8710532d6ad342e9849a74df8e49dc7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#aa8710532d6ad342e9849a74df8e49dc7">getIndex</a> (std::vector&lt; int &gt; v, int64_t <a class="el" href="classEkfSlam.html#a393a1da708aa3da24ccb45936732fa7d">K</a>)</td></tr>
+<tr class="separator:aa8710532d6ad342e9849a74df8e49dc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1428410bba8992ed1cddea791507bf7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#ab1428410bba8992ed1cddea791507bf7">normalize_angle</a> (double rad)</td></tr>
+<tr class="separator:ab1428410bba8992ed1cddea791507bf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b709b837d5cfce67510fec40d1ef34f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a7b709b837d5cfce67510fec40d1ef34f">updateCovarianceMatrixP</a> ()</td></tr>
+<tr class="memdesc:a7b709b837d5cfce67510fec40d1ef34f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the noise matrix Q.  <a href="classEkfSlam.html#a7b709b837d5cfce67510fec40d1ef34f">More...</a><br /></td></tr>
+<tr class="separator:a7b709b837d5cfce67510fec40d1ef34f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4e9fea6ee76de71d28ba961db466617"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#ac4e9fea6ee76de71d28ba961db466617">updateCurrentState</a> (const nav_msgs::Odometry::ConstPtr &amp;msg)</td></tr>
+<tr class="memdesc:ac4e9fea6ee76de71d28ba961db466617"><td class="mdescLeft">&#160;</td><td class="mdescRight">receive odometry data update robot's position state and deltas (x, y, theta, and time)  <a href="classEkfSlam.html#ac4e9fea6ee76de71d28ba961db466617">More...</a><br /></td></tr>
+<tr class="separator:ac4e9fea6ee76de71d28ba961db466617"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63165d4ab3f5fe4f3f1f5336d4408477"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a63165d4ab3f5fe4f3f1f5336d4408477">updateJacobianPredictionModel</a> ()</td></tr>
+<tr class="memdesc:a63165d4ab3f5fe4f3f1f5336d4408477"><td class="mdescLeft">&#160;</td><td class="mdescRight">receive landmark positions  <a href="classEkfSlam.html#a63165d4ab3f5fe4f3f1f5336d4408477">More...</a><br /></td></tr>
+<tr class="separator:a63165d4ab3f5fe4f3f1f5336d4408477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a727a7a3c1ea245346acbf84c1731560b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a727a7a3c1ea245346acbf84c1731560b">updateNoiseQ</a> ()</td></tr>
+<tr class="memdesc:a727a7a3c1ea245346acbf84c1731560b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the noise matrix Q.  <a href="classEkfSlam.html#a727a7a3c1ea245346acbf84c1731560b">More...</a><br /></td></tr>
+<tr class="separator:a727a7a3c1ea245346acbf84c1731560b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af333ea7848e5bd24d8e6faa038ee5d66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#af333ea7848e5bd24d8e6faa038ee5d66">updateStateFromReObservation</a> (const ekf_slam::LandmarksMap::ConstPtr &amp;landmarks_map)</td></tr>
+<tr class="memdesc:af333ea7848e5bd24d8e6faa038ee5d66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the jacobian of the measurement model.  <a href="classEkfSlam.html#af333ea7848e5bd24d8e6faa038ee5d66">More...</a><br /></td></tr>
+<tr class="separator:af333ea7848e5bd24d8e6faa038ee5d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
 Private Types</h2></td></tr>
-<tr class="memitem:ad538a1ae1ce0666f77decf301494c9ac"><td class="memItemLeft" align="right" valign="top">typedef message_filters::TimeSynchronizer&lt; cares_msgs::ArucoMarkers, nav_msgs::Odometry &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#ad538a1ae1ce0666f77decf301494c9ac">sync_policy_</a></td></tr>
-<tr class="separator:ad538a1ae1ce0666f77decf301494c9ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af677535a7aa1b4764f7d57a219a76c82"><td class="memItemLeft" align="right" valign="top">typedef message_filters::TimeSynchronizer&lt; ekf_slam::LandmarksMap, nav_msgs::Odometry &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#af677535a7aa1b4764f7d57a219a76c82">sync_policy_</a></td></tr>
+<tr class="separator:af677535a7aa1b4764f7d57a219a76c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a1afa94d7237e401745d5583b800ffb19"><td class="memItemLeft" align="right" valign="top">message_filters::Subscriber&lt; cares_msgs::ArucoMarkers &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a1afa94d7237e401745d5583b800ffb19">aruco_sub_</a></td></tr>
-<tr class="separator:a1afa94d7237e401745d5583b800ffb19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3512010ec3bc358180db0fe9dad1ee59"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a3512010ec3bc358180db0fe9dad1ee59">addLandmarksCovariance_aux</a> = 0</td></tr>
+<tr class="separator:a3512010ec3bc358180db0fe9dad1ee59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4202409fea5d95b58a656a1de298534b"><td class="memItemLeft" align="right" valign="top">message_filters::Subscriber&lt; ekf_slam::LandmarksMap &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a4202409fea5d95b58a656a1de298534b">aruco_sub_</a></td></tr>
+<tr class="separator:a4202409fea5d95b58a656a1de298534b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01dc04c0b2147d01ba640e68c2395a32"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a01dc04c0b2147d01ba640e68c2395a32">c_</a> = 0.01</td></tr>
+<tr class="separator:a01dc04c0b2147d01ba640e68c2395a32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6c9ee716a4723ca1218ec38fae7894f"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#ac6c9ee716a4723ca1218ec38fae7894f">corrected_current_state_</a> = Eigen::VectorXd(3)</td></tr>
+<tr class="separator:ac6c9ee716a4723ca1218ec38fae7894f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0c985d8cbcadc92e115120125da5c18"><td class="memItemLeft" align="right" valign="top">ekf_slam::LandmarksMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#aa0c985d8cbcadc92e115120125da5c18">corrected_land_map_</a></td></tr>
+<tr class="separator:aa0c985d8cbcadc92e115120125da5c18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93fb0cedc192059c9d9f76976b117ff2"><td class="memItemLeft" align="right" valign="top">ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a93fb0cedc192059c9d9f76976b117ff2">corrected_landmark_pub_</a></td></tr>
+<tr class="separator:a93fb0cedc192059c9d9f76976b117ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a9aef3ef3a00bdd07b194fcb195b258"><td class="memItemLeft" align="right" valign="top">ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a8a9aef3ef3a00bdd07b194fcb195b258">corrected_odom_pub_</a></td></tr>
+<tr class="separator:a8a9aef3ef3a00bdd07b194fcb195b258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae317a756352938ed2675a050793b4feb"><td class="memItemLeft" align="right" valign="top">ekf_slam::LandmarksMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#ae317a756352938ed2675a050793b4feb">corrected_robot_path_</a></td></tr>
+<tr class="separator:ae317a756352938ed2675a050793b4feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bd719ac8e54c58aeb2ef253adecb868"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a7bd719ac8e54c58aeb2ef253adecb868">corrected_robot_path_id_</a> = 0</td></tr>
+<tr class="separator:a7bd719ac8e54c58aeb2ef253adecb868"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7445af24f4dccf63e470822a37702278"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Eigen::VectorXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a7445af24f4dccf63e470822a37702278">corrected_robot_state_array_</a></td></tr>
+<tr class="separator:a7445af24f4dccf63e470822a37702278"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab043c174f387caefe465f42684c43c19"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#ab043c174f387caefe465f42684c43c19">covariance_p_matrix_</a> = Eigen::MatrixXd(3, 3)</td></tr>
+<tr class="separator:ab043c174f387caefe465f42684c43c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89931c3d2c01f02d4bd36d68dc6b5b64"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a89931c3d2c01f02d4bd36d68dc6b5b64">covariance_prr_matrix_</a> = Eigen::Matrix3d(3, 3)</td></tr>
+<tr class="separator:a89931c3d2c01f02d4bd36d68dc6b5b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26d4a4ef6f7de3c9e326b1672ba3fd13"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a26d4a4ef6f7de3c9e326b1672ba3fd13">current_state_</a> = Eigen::VectorXd(3)</td></tr>
 <tr class="separator:a26d4a4ef6f7de3c9e326b1672ba3fd13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8379ecf7d5820f80b4ba87914a67294"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#ad8379ecf7d5820f80b4ba87914a67294">current_state_changed_threshold_</a> = 0.01</td></tr>
 <tr class="separator:ad8379ecf7d5820f80b4ba87914a67294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a417ba3967f3e6fe75cc09135a83e876a"><td class="memItemLeft" align="right" valign="top">ros::Time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a417ba3967f3e6fe75cc09135a83e876a">current_time_</a></td></tr>
+<tr class="separator:a417ba3967f3e6fe75cc09135a83e876a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81a71da8c52c2026bdbf9ffc01ba5cc3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a81a71da8c52c2026bdbf9ffc01ba5cc3">delta_t_</a></td></tr>
+<tr class="separator:a81a71da8c52c2026bdbf9ffc01ba5cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61431b500f4b3e41832c008116f2455d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a61431b500f4b3e41832c008116f2455d">delta_theta_</a></td></tr>
+<tr class="separator:a61431b500f4b3e41832c008116f2455d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfd52a3212da0adb71b60c91d66d6c82"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#adfd52a3212da0adb71b60c91d66d6c82">delta_x_</a></td></tr>
+<tr class="separator:adfd52a3212da0adb71b60c91d66d6c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ce3a8d42857105719fab15c40c4c048"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a8ce3a8d42857105719fab15c40c4c048">delta_y_</a></td></tr>
+<tr class="separator:a8ce3a8d42857105719fab15c40c4c048"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a429e7a6fdf7995c8ee7f51beffa3ddaa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a429e7a6fdf7995c8ee7f51beffa3ddaa">has_moved_</a></td></tr>
+<tr class="separator:a429e7a6fdf7995c8ee7f51beffa3ddaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a223ee45a5a787b6c4fa8eb06b1e604a6"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a223ee45a5a787b6c4fa8eb06b1e604a6">jacobian_a_matrix_</a></td></tr>
+<tr class="separator:a223ee45a5a787b6c4fa8eb06b1e604a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af81902b98c3217ad2e56bff75053f1d2"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#af81902b98c3217ad2e56bff75053f1d2">jacobian_h_matrix_</a> = Eigen::MatrixXd(2, 3)</td></tr>
+<tr class="separator:af81902b98c3217ad2e56bff75053f1d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a393a1da708aa3da24ccb45936732fa7d"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a393a1da708aa3da24ccb45936732fa7d">K</a> = Eigen::MatrixXd(3,3)</td></tr>
+<tr class="separator:a393a1da708aa3da24ccb45936732fa7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9deaca3e9ee8f0363f9804e19ee12b75"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a9deaca3e9ee8f0363f9804e19ee12b75">landmarks_detected_</a></td></tr>
+<tr class="separator:a9deaca3e9ee8f0363f9804e19ee12b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca96ef366c7613f60940cbb103a9d898"><td class="memItemLeft" align="right" valign="top">ros::Time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#aca96ef366c7613f60940cbb103a9d898">last_time_</a></td></tr>
+<tr class="separator:aca96ef366c7613f60940cbb103a9d898"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03fd717d5f488ecb49899ccd0d39f68f"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a03fd717d5f488ecb49899ccd0d39f68f">measurement_diff</a> = Eigen::Vector2d(2,2)</td></tr>
+<tr class="separator:a03fd717d5f488ecb49899ccd0d39f68f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a152ba8496a7925c0d5986d03dae1dbfc"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a152ba8496a7925c0d5986d03dae1dbfc">noise_q_matrix_</a></td></tr>
+<tr class="separator:a152ba8496a7925c0d5986d03dae1dbfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1aa6520d36e670cf8034539cea9d097"><td class="memItemLeft" align="right" valign="top">message_filters::Subscriber&lt; nav_msgs::Odometry &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#af1aa6520d36e670cf8034539cea9d097">odom_sub_</a></td></tr>
 <tr class="separator:af1aa6520d36e670cf8034539cea9d097"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe2512c22ea3f62261c56e0678fa4ee8"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#abe2512c22ea3f62261c56e0678fa4ee8">range_bearing_data_association_z_</a> = Eigen::Vector2d(0,0)</td></tr>
+<tr class="memitem:a8900c34779bb176a7089a8f1f390da73"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a8900c34779bb176a7089a8f1f390da73">PI</a> = 3.14159265358979311600</td></tr>
+<tr class="separator:a8900c34779bb176a7089a8f1f390da73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c519d19b4ce98064a5d2e7b036305b2"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; double, 2, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a6c519d19b4ce98064a5d2e7b036305b2">R_</a> = (Eigen::Matrix&lt;double, 2, 2&gt;() &lt;&lt; 0.01, 0, 0, 0.01).finished()</td></tr>
+<tr class="separator:a6c519d19b4ce98064a5d2e7b036305b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe2512c22ea3f62261c56e0678fa4ee8"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#abe2512c22ea3f62261c56e0678fa4ee8">range_bearing_data_association_z_</a> = Eigen::Vector2d(0, 0)</td></tr>
 <tr class="separator:abe2512c22ea3f62261c56e0678fa4ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b1570fce01306df3a50b9906f4d395f"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a8b1570fce01306df3a50b9906f4d395f">range_bearing_landmark_h_</a> = Eigen::Vector2d(0,0)</td></tr>
+<tr class="memitem:a8b1570fce01306df3a50b9906f4d395f"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#a8b1570fce01306df3a50b9906f4d395f">range_bearing_landmark_h_</a> = Eigen::Vector2d(0, 0)</td></tr>
 <tr class="separator:a8b1570fce01306df3a50b9906f4d395f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa19511995c112a48d41ad336b12527a6"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classEkfSlam.html#ad538a1ae1ce0666f77decf301494c9ac">sync_policy_</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#aa19511995c112a48d41ad336b12527a6">sync</a></td></tr>
+<tr class="memitem:ae651d8abe4536790eeba087188df71e4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Eigen::VectorXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#ae651d8abe4536790eeba087188df71e4">robot_state_array_</a></td></tr>
+<tr class="separator:ae651d8abe4536790eeba087188df71e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa19511995c112a48d41ad336b12527a6"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classEkfSlam.html#af677535a7aa1b4764f7d57a219a76c82">sync_policy_</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEkfSlam.html#aa19511995c112a48d41ad336b12527a6">sync</a></td></tr>
 <tr class="separator:aa19511995c112a48d41ad336b12527a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -88,10 +169,10 @@ robot_path (ekf_slam/LandmarksMap): publish robot path
 <li>Phase 2 - Update state from re-observed landmarks: </li>
 </ol>
 
-<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00048">48</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00050">50</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ad538a1ae1ce0666f77decf301494c9ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad538a1ae1ce0666f77decf301494c9ac">&#9670;&nbsp;</a></span>sync_policy_</h2>
+<a id="af677535a7aa1b4764f7d57a219a76c82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af677535a7aa1b4764f7d57a219a76c82">&#9670;&nbsp;</a></span>sync_policy_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -100,7 +181,7 @@ robot_path (ekf_slam/LandmarksMap): publish robot path
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">typedef message_filters::TimeSynchronizer&lt;cares_msgs::ArucoMarkers, nav_msgs::Odometry&gt; <a class="el" href="classEkfSlam.html#ad538a1ae1ce0666f77decf301494c9ac">EkfSlam::sync_policy_</a></td>
+          <td class="memname">typedef message_filters::TimeSynchronizer&lt;ekf_slam::LandmarksMap, nav_msgs::Odometry&gt; <a class="el" href="classEkfSlam.html#af677535a7aa1b4764f7d57a219a76c82">EkfSlam::sync_policy_</a></td>
         </tr>
       </table>
   </td>
@@ -111,7 +192,7 @@ robot_path (ekf_slam/LandmarksMap): publish robot path
 </div><div class="memdoc">
 <p>Defines the sync policy </p>
 
-<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00178">178</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00056">56</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -140,11 +221,42 @@ robot_path (ekf_slam/LandmarksMap): publish robot path
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00051">51</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00120">120</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aafe071af7913025bc872ca23928d6ebe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafe071af7913025bc872ca23928d6ebe">&#9670;&nbsp;</a></span>addLandmarksCovariance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EkfSlam::addLandmarksCovariance </td>
+          <td>(</td>
+          <td class="paramtype">const ekf_slam::LandmarksMap::ConstPtr &amp;&#160;</td>
+          <td class="paramname"><em>landmarks_map</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculates the noise matrix Q. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>make so that the number to add is not zero, maybe a vector that holds the place where it was added and discount from the total length at the means calculation </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00444">444</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a95dce19c373250fad5da89be18aeac7b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a95dce19c373250fad5da89be18aeac7b">&#9670;&nbsp;</a></span>computeEigenCovariance()</h2>
 
@@ -187,7 +299,76 @@ robot_path (ekf_slam/LandmarksMap): publish robot path
 
 <p>Computes the covariance given 2 elements (X and Y). </p>
 
-<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00094">94</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00197">197</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa211fd7dfa89d23aefde347ab61a5f17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa211fd7dfa89d23aefde347ab61a5f17">&#9670;&nbsp;</a></span>computeEigenCovarianceMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd EkfSlam::computeEigenCovarianceMatrix </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00212">212</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9e1937829df98cb85db88c4117ad10f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e1937829df98cb85db88c4117ad10f2">&#9670;&nbsp;</a></span>contains()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EkfSlam::contains </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>vec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>elem</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Make function <code>contains</code> commom </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00149">149</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -217,12 +398,12 @@ robot_path (ekf_slam/LandmarksMap): publish robot path
 
 <p>receive a vector of Eigen::VectorXd and returns a Eigen::VectorXd with the menas of each element index. </p>
 
-<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00065">65</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00168">168</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
 
 </div>
 </div>
-<a id="aa81916d35b732764a00c89fbfa0f8fbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa81916d35b732764a00c89fbfa0f8fbe">&#9670;&nbsp;</a></span>ekfCallback()</h2>
+<a id="a13da70ac36c9220b6fe23c8c82bace64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13da70ac36c9220b6fe23c8c82bace64">&#9670;&nbsp;</a></span>ekfCallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -233,8 +414,8 @@ robot_path (ekf_slam/LandmarksMap): publish robot path
         <tr>
           <td class="memname">void EkfSlam::ekfCallback </td>
           <td>(</td>
-          <td class="paramtype">const cares_msgs::ArucoMarkers::ConstPtr &amp;&#160;</td>
-          <td class="paramname"><em>aruco_marker</em>, </td>
+          <td class="paramtype">const ekf_slam::LandmarksMap::ConstPtr &amp;&#160;</td>
+          <td class="paramname"><em>landmarks_map</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -255,16 +436,15 @@ robot_path (ekf_slam/LandmarksMap): publish robot path
 </table>
 </div><div class="memdoc">
 
-<p>receive landmark positions </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Step 2 </dd></dl>
+<p>Update current state and if it has changed, update the Jacobian of the prediction model, A, the process noise matrix Q, and update the Covariance matrix P. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>Step 3 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00110">110</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00535">535</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a1afa94d7237e401745d5583b800ffb19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1afa94d7237e401745d5583b800ffb19">&#9670;&nbsp;</a></span>aruco_sub_</h2>
+<a id="aa8710532d6ad342e9849a74df8e49dc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8710532d6ad342e9849a74df8e49dc7">&#9670;&nbsp;</a></span>getIndex()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -273,7 +453,248 @@ robot_path (ekf_slam/LandmarksMap): publish robot path
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">message_filters::Subscriber&lt;cares_msgs::ArucoMarkers&gt; EkfSlam::aruco_sub_</td>
+          <td class="memname">int EkfSlam::getIndex </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>K</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Make function <code>getIndex</code> commom </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00160">160</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab1428410bba8992ed1cddea791507bf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1428410bba8992ed1cddea791507bf7">&#9670;&nbsp;</a></span>normalize_angle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double EkfSlam::normalize_angle </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>rad</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00141">141</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7b709b837d5cfce67510fec40d1ef34f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b709b837d5cfce67510fec40d1ef34f">&#9670;&nbsp;</a></span>updateCovarianceMatrixP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EkfSlam::updateCovarianceMatrixP </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculates the noise matrix Q. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>confirm this calculation of Pri = A * Pri </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00381">381</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac4e9fea6ee76de71d28ba961db466617"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4e9fea6ee76de71d28ba961db466617">&#9670;&nbsp;</a></span>updateCurrentState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EkfSlam::updateCurrentState </td>
+          <td>(</td>
+          <td class="paramtype">const nav_msgs::Odometry::ConstPtr &amp;&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>receive odometry data update robot's position state and deltas (x, y, theta, and time) </p>
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00239">239</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a63165d4ab3f5fe4f3f1f5336d4408477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63165d4ab3f5fe4f3f1f5336d4408477">&#9670;&nbsp;</a></span>updateJacobianPredictionModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EkfSlam::updateJacobianPredictionModel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>receive landmark positions </p>
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00321">321</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a727a7a3c1ea245346acbf84c1731560b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a727a7a3c1ea245346acbf84c1731560b">&#9670;&nbsp;</a></span>updateNoiseQ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EkfSlam::updateNoiseQ </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculates the noise matrix Q. </p>
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00356">356</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af333ea7848e5bd24d8e6faa038ee5d66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af333ea7848e5bd24d8e6faa038ee5d66">&#9670;&nbsp;</a></span>updateStateFromReObservation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EkfSlam::updateStateFromReObservation </td>
+          <td>(</td>
+          <td class="paramtype">const ekf_slam::LandmarksMap::ConstPtr &amp;&#160;</td>
+          <td class="paramname"><em>landmarks_map</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculates the jacobian of the measurement model. </p>
+<p>Calculating the landmark x on the current_state_ vector (2*i)+3</p>
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00485">485</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a3512010ec3bc358180db0fe9dad1ee59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3512010ec3bc358180db0fe9dad1ee59">&#9670;&nbsp;</a></span>addLandmarksCovariance_aux</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int EkfSlam::addLandmarksCovariance_aux = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00105">105</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4202409fea5d95b58a656a1de298534b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4202409fea5d95b58a656a1de298534b">&#9670;&nbsp;</a></span>aruco_sub_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">message_filters::Subscriber&lt;ekf_slam::LandmarksMap&gt; EkfSlam::aruco_sub_</td>
         </tr>
       </table>
   </td>
@@ -284,7 +705,249 @@ robot_path (ekf_slam/LandmarksMap): publish robot path
 </div><div class="memdoc">
 <p>message_filters subscriber </p>
 
-<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00176">176</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00054">54</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a01dc04c0b2147d01ba640e68c2395a32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01dc04c0b2147d01ba640e68c2395a32">&#9670;&nbsp;</a></span>c_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double EkfSlam::c_ = 0.01</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Noise Matrix Q </p>
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00096">96</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac6c9ee716a4723ca1218ec38fae7894f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6c9ee716a4723ca1218ec38fae7894f">&#9670;&nbsp;</a></span>corrected_current_state_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd EkfSlam::corrected_current_state_ = Eigen::VectorXd(3)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00077">77</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa0c985d8cbcadc92e115120125da5c18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0c985d8cbcadc92e115120125da5c18">&#9670;&nbsp;</a></span>corrected_land_map_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ekf_slam::LandmarksMap EkfSlam::corrected_land_map_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00063">63</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a93fb0cedc192059c9d9f76976b117ff2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93fb0cedc192059c9d9f76976b117ff2">&#9670;&nbsp;</a></span>corrected_landmark_pub_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::Publisher EkfSlam::corrected_landmark_pub_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00059">59</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8a9aef3ef3a00bdd07b194fcb195b258"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a9aef3ef3a00bdd07b194fcb195b258">&#9670;&nbsp;</a></span>corrected_odom_pub_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::Publisher EkfSlam::corrected_odom_pub_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00060">60</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae317a756352938ed2675a050793b4feb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae317a756352938ed2675a050793b4feb">&#9670;&nbsp;</a></span>corrected_robot_path_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ekf_slam::LandmarksMap EkfSlam::corrected_robot_path_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00064">64</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7bd719ac8e54c58aeb2ef253adecb868"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bd719ac8e54c58aeb2ef253adecb868">&#9670;&nbsp;</a></span>corrected_robot_path_id_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int EkfSlam::corrected_robot_path_id_ = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00065">65</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7445af24f4dccf63e470822a37702278"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7445af24f4dccf63e470822a37702278">&#9670;&nbsp;</a></span>corrected_robot_state_array_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;Eigen::VectorXd&gt; EkfSlam::corrected_robot_state_array_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00078">78</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab043c174f387caefe465f42684c43c19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab043c174f387caefe465f42684c43c19">&#9670;&nbsp;</a></span>covariance_p_matrix_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd EkfSlam::covariance_p_matrix_ = Eigen::MatrixXd(3, 3)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>gausian sample - it's a representation of how exact the odometer is </p>
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00099">99</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a89931c3d2c01f02d4bd36d68dc6b5b64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89931c3d2c01f02d4bd36d68dc6b5b64">&#9670;&nbsp;</a></span>covariance_prr_matrix_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Matrix3d EkfSlam::covariance_prr_matrix_ = Eigen::Matrix3d(3, 3)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00100">100</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -308,7 +971,7 @@ robot_path (ekf_slam/LandmarksMap): publish robot path
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00186">186</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00073">73</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -332,7 +995,321 @@ robot_path (ekf_slam/LandmarksMap): publish robot path
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00187">187</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00074">74</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a417ba3967f3e6fe75cc09135a83e876a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a417ba3967f3e6fe75cc09135a83e876a">&#9670;&nbsp;</a></span>current_time_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::Time EkfSlam::current_time_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00087">87</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a81a71da8c52c2026bdbf9ffc01ba5cc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81a71da8c52c2026bdbf9ffc01ba5cc3">&#9670;&nbsp;</a></span>delta_t_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double EkfSlam::delta_t_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00088">88</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a61431b500f4b3e41832c008116f2455d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61431b500f4b3e41832c008116f2455d">&#9670;&nbsp;</a></span>delta_theta_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double EkfSlam::delta_theta_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00086">86</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="adfd52a3212da0adb71b60c91d66d6c82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfd52a3212da0adb71b60c91d66d6c82">&#9670;&nbsp;</a></span>delta_x_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double EkfSlam::delta_x_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00084">84</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8ce3a8d42857105719fab15c40c4c048"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ce3a8d42857105719fab15c40c4c048">&#9670;&nbsp;</a></span>delta_y_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double EkfSlam::delta_y_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00085">85</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a429e7a6fdf7995c8ee7f51beffa3ddaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a429e7a6fdf7995c8ee7f51beffa3ddaa">&#9670;&nbsp;</a></span>has_moved_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EkfSlam::has_moved_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00081">81</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a223ee45a5a787b6c4fa8eb06b1e604a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a223ee45a5a787b6c4fa8eb06b1e604a6">&#9670;&nbsp;</a></span>jacobian_a_matrix_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Matrix3d EkfSlam::jacobian_a_matrix_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00091">91</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af81902b98c3217ad2e56bff75053f1d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af81902b98c3217ad2e56bff75053f1d2">&#9670;&nbsp;</a></span>jacobian_h_matrix_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd EkfSlam::jacobian_h_matrix_ = Eigen::MatrixXd(2, 3)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Jacobian of the prediction model </p>
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00092">92</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a393a1da708aa3da24ccb45936732fa7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a393a1da708aa3da24ccb45936732fa7d">&#9670;&nbsp;</a></span>K</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd EkfSlam::K = Eigen::MatrixXd(3,3)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00114">114</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9deaca3e9ee8f0363f9804e19ee12b75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9deaca3e9ee8f0363f9804e19ee12b75">&#9670;&nbsp;</a></span>landmarks_detected_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; EkfSlam::landmarks_detected_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00103">103</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aca96ef366c7613f60940cbb103a9d898"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca96ef366c7613f60940cbb103a9d898">&#9670;&nbsp;</a></span>last_time_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::Time EkfSlam::last_time_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00087">87</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a03fd717d5f488ecb49899ccd0d39f68f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03fd717d5f488ecb49899ccd0d39f68f">&#9670;&nbsp;</a></span>measurement_diff</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Vector2d EkfSlam::measurement_diff = Eigen::Vector2d(2,2)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00111">111</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a152ba8496a7925c0d5986d03dae1dbfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a152ba8496a7925c0d5986d03dae1dbfc">&#9670;&nbsp;</a></span>noise_q_matrix_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Matrix3d EkfSlam::noise_q_matrix_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Jacobian of the measurement model </p>
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00095">95</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -357,7 +1334,55 @@ robot_path (ekf_slam/LandmarksMap): publish robot path
 </div><div class="memdoc">
 <p>message_filters subscriber </p>
 
-<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00177">177</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00055">55</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8900c34779bb176a7089a8f1f390da73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8900c34779bb176a7089a8f1f390da73">&#9670;&nbsp;</a></span>PI</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double EkfSlam::PI = 3.14159265358979311600</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00117">117</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6c519d19b4ce98064a5d2e7b036305b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c519d19b4ce98064a5d2e7b036305b2">&#9670;&nbsp;</a></span>R_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::Matrix&lt;double, 2, 2&gt; EkfSlam::R_ = (Eigen::Matrix&lt;double, 2, 2&gt;() &lt;&lt; 0.01, 0, 0, 0.01).finished()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00108">108</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -371,7 +1396,7 @@ robot_path (ekf_slam/LandmarksMap): publish robot path
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::Vector2d EkfSlam::range_bearing_data_association_z_ = Eigen::Vector2d(0,0)</td>
+          <td class="memname">Eigen::Vector2d EkfSlam::range_bearing_data_association_z_ = Eigen::Vector2d(0, 0)</td>
         </tr>
       </table>
   </td>
@@ -381,7 +1406,7 @@ robot_path (ekf_slam/LandmarksMap): publish robot path
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00183">183</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00070">70</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -395,7 +1420,7 @@ robot_path (ekf_slam/LandmarksMap): publish robot path
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::Vector2d EkfSlam::range_bearing_landmark_h_ = Eigen::Vector2d(0,0)</td>
+          <td class="memname">Eigen::Vector2d EkfSlam::range_bearing_landmark_h_ = Eigen::Vector2d(0, 0)</td>
         </tr>
       </table>
   </td>
@@ -405,7 +1430,31 @@ robot_path (ekf_slam/LandmarksMap): publish robot path
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00182">182</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00069">69</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae651d8abe4536790eeba087188df71e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae651d8abe4536790eeba087188df71e4">&#9670;&nbsp;</a></span>robot_state_array_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;Eigen::VectorXd&gt; EkfSlam::robot_state_array_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00075">75</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -419,7 +1468,7 @@ robot_path (ekf_slam/LandmarksMap): publish robot path
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classEkfSlam.html#ad538a1ae1ce0666f77decf301494c9ac">sync_policy_</a>&gt; EkfSlam::sync</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classEkfSlam.html#af677535a7aa1b4764f7d57a219a76c82">sync_policy_</a>&gt; EkfSlam::sync</td>
         </tr>
       </table>
   </td>
@@ -430,7 +1479,7 @@ robot_path (ekf_slam/LandmarksMap): publish robot path
 </div><div class="memdoc">
 <p>a shared pointer to the sync policy - has to be std::shared_ptr and has to be reset at the constructor with a new sync_policy_ </p>
 
-<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00179">179</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ekf__slam__node_8cpp_source.html#l00057">57</a> of file <a class="el" href="ekf__slam__node_8cpp_source.html">ekf_slam_node.cpp</a>.</p>
 
 </div>
 </div>
@@ -443,7 +1492,7 @@ robot_path (ekf_slam/LandmarksMap): publish robot path
 <hr size="1"><div style="align: right;">
 <a href="http://wiki.ros.org/ekf_slam">ekf_slam</a><br />
 Author(s): </br />
-<small>autogenerated on Sun Oct 16 2022 12:58:45</small>
+<small>autogenerated on Mon Oct 17 2022 16:47:25</small>
 </div>
 </body>
 </html>

@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/thiago/catkin_ws/src/rigid2d/include/rigid2d/rigid2d.hpp
+iosfwd
+-
+cmath
+-
+iostream
+-
+
+/home/thiago/catkin_ws/src/rigid2d/src/rigid2d/rigid2d.cpp
+rigid2d/rigid2d.hpp
+/home/thiago/catkin_ws/src/rigid2d/src/rigid2d/rigid2d/rigid2d.hpp
+iostream
+-
+string
+-
+sstream
+-
+cmath
+-
+

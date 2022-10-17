@@ -1,0 +1,8 @@
+prefix=/home/thiago/catkin_ws/install
+
+Name: rigid2d
+Description: Description of rigid2d
+Version: 0.0.1
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp message_runtime std_msgs

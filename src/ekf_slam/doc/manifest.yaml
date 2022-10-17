@@ -3,20 +3,20 @@ authors: ''
 brief: ''
 bugtracker: ''
 depends:
-- roscpp
-- cv_bridge
-- std_msgs
-- visualization_msgs
-- nav_msgs
+- message_generation
+- geometry_msgs
+- pcl_ros
 - message_filters
+- image_transport
+- nav_msgs
+- roscpp
+- visualization_msgs
 - catkin
 - rospy
-- image_transport
-- message_generation
-- pcl_ros
+- cv_bridge
+- std_msgs
 - message_runtime
 - pcl_conversions
-- geometry_msgs
 description: The ekf_slam package
 license: TODO
 maintainers: thiago <thiago@todo.todo>
